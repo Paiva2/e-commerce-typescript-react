@@ -1,4 +1,4 @@
-import { styled } from "../../../config/config";
+import { styled } from "../../../../config/config";
 
 export const MiddleContainer = styled("div", {
   display: "flex",
@@ -27,11 +27,19 @@ export const PageButtonsContainer = styled("div", {
   ".active": {
     backgroundColor: "red",
   },
+
+  button: {
+    display: "grid",
+    placeItems: "center",
+  },
 });
 
 export const ProductsStyle = styled("div", {
   border: "1px solid red",
   w: "23.125rem",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 
   img: {
     w: "100%",
@@ -39,4 +47,13 @@ export const ProductsStyle = styled("div", {
   },
 });
 
-export const ProductActionsContainer = styled("div", {});
+export const ProductActionsContainer = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around",
+  w: "100%",
+
+  ".icon": {
+    cursor: "pointer",
+  },
+});

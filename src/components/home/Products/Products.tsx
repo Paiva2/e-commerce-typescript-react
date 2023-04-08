@@ -9,6 +9,12 @@ import {
   ProductsStyle,
   ProductActionsContainer,
 } from "./styles";
+import {
+  BsCartPlus,
+  BsHeart,
+  BsArrowLeftShort,
+  BsArrowRightShort,
+} from "react-icons/bs";
 
 const Products = () => {
   const [data, setData] = useState<IProduct[]>([]);
@@ -71,9 +77,12 @@ const Products = () => {
                   <p>{product.name}</p>
                   <span>{product.rating}</span>
                   <ProductActionsContainer>
-                    <div>Add to cart - Add wish list</div>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <BsCartPlus className="icon" /> -
+                      <BsHeart className="icon" />
+                    </div>
                     <div>
-                      <p>{product.price}</p>
+                      <p>$ {product.price}</p>
                     </div>
                   </ProductActionsContainer>
                 </ProductsStyle>
@@ -81,7 +90,9 @@ const Products = () => {
             })}
         </ProductsWrapper>
         <PageButtonsContainer>
-          <button onClick={handlePreviousPage}>Prev</button>
+          <button onClick={handlePreviousPage}>
+            <BsArrowLeftShort />
+          </button>
           {totalPages.map((_, index) => (
             <button
               key={index}
@@ -91,7 +102,9 @@ const Products = () => {
               {index + 1}
             </button>
           ))}
-          <button onClick={handleNextPage}>Next</button>
+          <button onClick={handleNextPage}>
+            <BsArrowRightShort />
+          </button>
         </PageButtonsContainer>
       </ProductsContainer>
     </MiddleContainer>
