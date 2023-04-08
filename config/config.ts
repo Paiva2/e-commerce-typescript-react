@@ -61,4 +61,13 @@ export const globalStyles = globalCss({
     boxSizing: "border-box",
     fontFamily: "Roboto, sans-serif",
   },
+
+  body: {
+    backgroundColor: "#f3f4f6",
+  },
+
+  "a:-webkit-any-link": {
+    textDecoration: "none",
+    color: "inherit",
+  },
 });
