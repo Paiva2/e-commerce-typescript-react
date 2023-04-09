@@ -201,6 +201,28 @@
       "colors": ["red"]
     }
   ],
-  "cart": [],
-  "wishlist": []
+  "cart": [
+    {
+      "id": "19",
+      "name": "Men's Denim Jacket",
+      "description": "Classic denim jacket with button closure",
+      "price": 89.99,
+      "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
+      "rating": 4.4,
+      "quantity": 1,
+      "colors": ["brown", "black"]
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "17",
+      "name": "Women's Tank Top",
+      "description": "Sleeveless tank top with lace detail",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
+      "rating": 4.3,
+      "quantity": 1,
+      "colors": ["black"]
+    }
+  ]
 }

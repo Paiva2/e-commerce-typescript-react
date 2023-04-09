@@ -4,6 +4,7 @@ export const MiddleContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
   minHeight: "100vh",
+  pd: "1.25rem",
 });
 
 export const AsideContainer = styled("div", {

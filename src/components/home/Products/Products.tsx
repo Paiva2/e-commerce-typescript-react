@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import {
   AsideContainer,
   MiddleContainer,
@@ -15,37 +15,17 @@ import {
   BsArrowLeftShort,
   BsArrowRightShort,
 } from "react-icons/bs";
+import { ProductsContext } from "../../../context/ProductsContext";
 
 const Products = () => {
-  const [data, setData] = useState<IProduct[]>([]);
+  const { data, loading } = useContext(ProductsContext);
+
   const [itensPerPage, setItensOnPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState(0);
-  const [loading, setLoading] = useState(true);
   const initialPage = currentPage * itensPerPage;
   const finalPage = initialPage + itensPerPage;
   const showItens = data.slice(initialPage, finalPage);
   const totalPages = [...Array(data.length / itensPerPage)];
-
-  interface IProduct {
-    id: string;
-    name: string;
-    description: string;
-    price: number;
-    image: string;
-    rating: number;
-    quantity: number;
-    colors: Array<string>;
-  }
-
-  useEffect(() => {
-    axios
-      .get<Array<IProduct>>("http://localhost:3000/products")
-      .then((res) => res)
-      .then((responseJson) => {
-        setData(responseJson.data);
-        setLoading(false);
-      });
-  }, []);
 
   const handlePreviousPage = () => {
     if (currentPage <= 0) return;

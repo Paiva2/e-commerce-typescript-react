@@ -3,6 +3,7 @@ import { styled } from "../../../config/config";
 export const HeaderContainer = styled("div", {
   display: "flex",
   border: "1px solid red",
+  pd: "20px",
 });
 
 export const HeaderWrapper = styled("div", {
@@ -15,6 +16,17 @@ export const HeaderWrapper = styled("div", {
 export const PurchaserContainer = styled("div", {
   display: "flex",
   gap: "1.25rem",
+
+  "> div": {
+    display: "flex",
+    placeContent: "center",
+    gap: ".9375rem",
+
+    ".icon": {
+      cursor: "pointer",
+      fontSize: "1.4375rem",
+    },
+  },
 });
 
 export const LogoContainer = styled("div", {});
