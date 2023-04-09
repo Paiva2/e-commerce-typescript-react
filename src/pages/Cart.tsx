@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const Cart = () => {
-  const { data, loading } = useContext(CartContext);
+  const { cartData, loading } = useContext(CartContext);
 
   return (
     <div
@@ -19,7 +19,6 @@ const Cart = () => {
           gap: ".9375rem",
         }}
       >
-        {/* titulo dos produtos */}
         <div
           style={{
             display: "flex",
@@ -47,7 +46,7 @@ const Cart = () => {
             alignItems: "center",
           }}
         >
-          {data.map(({ image, price, name, quantity }) => {
+          {cartData.map(({ image, price, name, quantity }) => {
             return (
               <div
                 style={{

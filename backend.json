@@ -268,32 +268,6 @@
   ],
   "cart": [
     {
-      "id": "19",
-      "name": "Men's Denim Jacket",
-      "description": "Classic denim jacket with button closure",
-      "price": 89.99,
-      "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
-      "rating": 4.4,
-      "quantity": 1,
-      "colors": [
-        "brown",
-        "black"
-      ]
-    },
-    {
-      "id": "18",
-      "name": "Men's Leather Belt",
-      "description": "Brown leather belt with silver buckle",
-      "price": 39.99,
-      "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
-      "rating": 2,
-      "quantity": 1,
-      "colors": [
-        "brown",
-        "black"
-      ]
-    },
-    {
       "id": "2",
       "name": "Men's T-Shirt",
       "description": "Classic black t-shirt with white logo",

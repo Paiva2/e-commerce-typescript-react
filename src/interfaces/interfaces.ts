@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode, Dispatch, SetStateAction } from "react";
 
 export interface IProduct {
   id: string;
@@ -16,11 +16,17 @@ export interface IProductContext {
   loading: boolean;
 }
 
+export interface ICartContext {
+  cartData: IProduct[];
+  setCartData: Dispatch<SetStateAction<IProduct[]>>;
+  loading: boolean;
+}
+
 export interface Props {
   children: ReactNode;
 }
 
-export const defaultContext = {
+export const productDefault = {
   data: [
     {
       id: "",
@@ -35,3 +41,23 @@ export const defaultContext = {
   ],
   loading: true,
 } as IProductContext;
+
+const cartData = [
+  {
+    id: "",
+    name: "",
+    description: "",
+    price: 0,
+    image: "",
+    quantity: 0,
+    rating: 0,
+    colors: [],
+  },
+];
+
+//! NEED A FIX LATER ON SETCARTDATA
+export const cartDefault = {
+  cartData,
+  setCartData: () => [],
+  loading: true,
+} as ICartContext;

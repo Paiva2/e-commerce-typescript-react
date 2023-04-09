@@ -17,10 +17,12 @@ import {
 } from "react-icons/bs";
 import { ProductsContext } from "../../../context/ProductsContext";
 import { IProduct } from "../../../interfaces/interfaces";
-import { insertProduct } from "../../../context/apiData";
+import { insertItem } from "../../../context/apiData";
+import { CartContext } from "../../../context/CartContext";
 
 const Products = () => {
   const { data, loading } = useContext(ProductsContext);
+  const { setCartData } = useContext(CartContext);
 
   const [itensPerPage, setItensOnPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState(0);
@@ -62,7 +64,7 @@ const Products = () => {
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <BsCartPlus
                         className="icon"
-                        onClick={() => insertProduct("cart", product)}
+                        onClick={() => insertItem("cart", product, setCartData)}
                       />
                       <BsHeart className="icon" />
                     </div>

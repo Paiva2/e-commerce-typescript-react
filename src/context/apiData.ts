@@ -12,12 +12,12 @@ export function callApi(
     .get<Array<IProduct>>(`http://localhost:3000/${endpoint}`)
     .then((res) => res)
     .then((responseJson) => {
-      if (setData && setLoading) {
+      if (setData) {
         setData(
           responseJson.data.sort((a, b) => Number(a.price) - Number(b.price))
         );
-        setLoading(false);
       }
+      setLoading && setLoading(false);
     })
     .catch((error) => {
       if (error.response) console.warn("Error. Try Again Later.");
@@ -27,6 +27,12 @@ export function callApi(
     });
 }
 
-export function insertProduct(endpoint: string, body: IProduct) {
-  axios.post(`http://localhost:3000/${endpoint}`, body);
-}
+export const insertItem = (
+  endpoint: string,
+  body: IProduct,
+  setData: Dispatch<SetStateAction<IProduct[]>>
+) => {
+  axios
+    .post(`http://localhost:3000/${endpoint}`, body)
+    .then(() => callApi(endpoint, setData));
+};
