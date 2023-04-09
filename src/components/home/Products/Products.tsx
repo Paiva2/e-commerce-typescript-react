@@ -16,6 +16,8 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import { ProductsContext } from "../../../context/ProductsContext";
+import { IProduct } from "../../../interfaces/interfaces";
+import { insertProduct } from "../../../context/apiData";
 
 const Products = () => {
   const { data, loading } = useContext(ProductsContext);
@@ -58,7 +60,10 @@ const Products = () => {
                   <span>{product.rating}</span>
                   <ProductActionsContainer>
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      <BsCartPlus className="icon" /> -
+                      <BsCartPlus
+                        className="icon"
+                        onClick={() => insertProduct("cart", product)}
+                      />
                       <BsHeart className="icon" />
                     </div>
                     <div>

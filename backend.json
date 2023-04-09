@@ -8,7 +8,11 @@
       "image": "https://i.postimg.cc/yWqRwhxg/Floral-Women-s-Blouse.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": ["blue", "red", "grey"]
+      "colors": [
+        "blue",
+        "red",
+        "grey"
+      ]
     },
     {
       "id": "2",
@@ -18,7 +22,9 @@
       "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": ["black"]
+      "colors": [
+        "black"
+      ]
     },
     {
       "id": "3",
@@ -28,7 +34,11 @@
       "image": "https://i.postimg.cc/mZ59H4bX/Women-s-Jeans.jpg",
       "rating": 4.7,
       "quantity": 1,
-      "colors": ["blue", "apricot", "beige"]
+      "colors": [
+        "blue",
+        "apricot",
+        "beige"
+      ]
     },
     {
       "id": "4",
@@ -38,7 +48,11 @@
       "image": "https://i.postimg.cc/SsvCGbpG/Men-s-Hoodie.jpg",
       "rating": 4.1,
       "quantity": 1,
-      "colors": ["black", "rust", "navy"]
+      "colors": [
+        "black",
+        "rust",
+        "navy"
+      ]
     },
     {
       "id": "5",
@@ -48,7 +62,10 @@
       "image": "https://i.postimg.cc/mgY3WnQb/Women-s-Cardigan.jpg",
       "rating": 4.6,
       "quantity": 1,
-      "colors": ["red", "violet"]
+      "colors": [
+        "red",
+        "violet"
+      ]
     },
     {
       "id": "6",
@@ -58,7 +75,9 @@
       "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
       "rating": 4,
       "quantity": 1,
-      "colors": ["white"]
+      "colors": [
+        "white"
+      ]
     },
     {
       "id": "7",
@@ -68,7 +87,10 @@
       "image": "https://i.postimg.cc/59XRWxjb/Women-s-Denim-Jacket.jpg",
       "rating": 4.3,
       "quantity": 1,
-      "colors": ["black", "maroon"]
+      "colors": [
+        "black",
+        "maroon"
+      ]
     },
     {
       "id": "8",
@@ -78,7 +100,10 @@
       "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": ["black", "maroon"]
+      "colors": [
+        "black",
+        "maroon"
+      ]
     },
     {
       "id": "9",
@@ -88,7 +113,10 @@
       "image": "https://i.postimg.cc/bvqxyRT1/Women-s-Leather-Jacket.jpg",
       "rating": 4.8,
       "quantity": 1,
-      "colors": ["black", "red"]
+      "colors": [
+        "black",
+        "red"
+      ]
     },
     {
       "id": "10",
@@ -98,7 +126,11 @@
       "image": "https://i.postimg.cc/VkQ9Tw0G/Men-s-Bomber-Jacket.jpg",
       "rating": 4.4,
       "quantity": 1,
-      "colors": ["navy", "cyan", "black"]
+      "colors": [
+        "navy",
+        "cyan",
+        "black"
+      ]
     },
     {
       "id": "11",
@@ -108,7 +140,11 @@
       "image": "https://i.postimg.cc/63x6CH8m/Women-s-Midi-Dress.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": ["purple", "pink", "lilac"]
+      "colors": [
+        "purple",
+        "pink",
+        "lilac"
+      ]
     },
     {
       "id": "12",
@@ -118,7 +154,11 @@
       "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": ["brown", "white", "black"]
+      "colors": [
+        "brown",
+        "white",
+        "black"
+      ]
     },
     {
       "id": "13",
@@ -128,7 +168,10 @@
       "image": "https://i.postimg.cc/bNmv4H5Z/Women-s-Blazer.jpg",
       "rating": 4.7,
       "quantity": 1,
-      "colors": ["salmon", "black"]
+      "colors": [
+        "salmon",
+        "black"
+      ]
     },
     {
       "id": "14",
@@ -138,7 +181,11 @@
       "image": "https://i.postimg.cc/J7c05Wcc/Men-s-Dress-Shirt.jpg",
       "rating": 4.1,
       "quantity": 1,
-      "colors": ["navy", "blue", "cyan blue"]
+      "colors": [
+        "navy",
+        "blue",
+        "cyan blue"
+      ]
     },
     {
       "id": "15",
@@ -148,7 +195,11 @@
       "image": "https://i.postimg.cc/g0ZkX92h/Women-s-Wide-Leg-Pants.jpg",
       "rating": 4.6,
       "quantity": 1,
-      "colors": ["blue", "black", "grey"]
+      "colors": [
+        "blue",
+        "black",
+        "grey"
+      ]
     },
     {
       "id": "16",
@@ -158,7 +209,11 @@
       "image": "https://i.postimg.cc/CLnqC25F/Men-s-Jogger-Pants.jpg",
       "rating": 4,
       "quantity": 1,
-      "colors": ["salmon", "navy", "beige"]
+      "colors": [
+        "salmon",
+        "navy",
+        "beige"
+      ]
     },
     {
       "id": "17",
@@ -168,7 +223,9 @@
       "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
       "rating": 4.3,
       "quantity": 1,
-      "colors": ["black"]
+      "colors": [
+        "black"
+      ]
     },
     {
       "id": "18",
@@ -178,7 +235,10 @@
       "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
       "rating": 2,
       "quantity": 1,
-      "colors": ["brown", "black"]
+      "colors": [
+        "brown",
+        "black"
+      ]
     },
     {
       "id": "19",
@@ -188,7 +248,10 @@
       "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
       "rating": 4.4,
       "quantity": 1,
-      "colors": ["brown", "black"]
+      "colors": [
+        "brown",
+        "black"
+      ]
     },
     {
       "id": "20",
@@ -198,7 +261,9 @@
       "image": "https://i.postimg.cc/0Q7Q3ggv/Women-s-Trench-Coat.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": ["red"]
+      "colors": [
+        "red"
+      ]
     }
   ],
   "cart": [
@@ -210,7 +275,35 @@
       "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
       "rating": 4.4,
       "quantity": 1,
-      "colors": ["brown", "black"]
+      "colors": [
+        "brown",
+        "black"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Men's Leather Belt",
+      "description": "Brown leather belt with silver buckle",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
+      "rating": 2,
+      "quantity": 1,
+      "colors": [
+        "brown",
+        "black"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Men's T-Shirt",
+      "description": "Classic black t-shirt with white logo",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "colors": [
+        "black"
+      ]
     }
   ],
   "wishlist": [
@@ -222,7 +315,9 @@
       "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
       "rating": 4.3,
       "quantity": 1,
-      "colors": ["black"]
+      "colors": [
+        "black"
+      ]
     }
   ]
 }

@@ -16,6 +16,7 @@ const Cart = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          gap: ".9375rem",
         }}
       >
         {/* titulo dos produtos */}
@@ -30,7 +31,7 @@ const Cart = () => {
           <div>
             <p>product</p>
           </div>
-          <div style={{ display: "flex", gap: "70px" }}>
+          <div style={{ display: "flex", gap: "70px", width: "18.125rem" }}>
             <p>price</p>
             <p>quantity</p>
             <p>total</p>
@@ -41,17 +42,52 @@ const Cart = () => {
           style={{
             width: "90%",
             display: "flex",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            gap: "1.875rem",
+            alignItems: "center",
           }}
         >
-          <div>
-            <h2>IMAGEM</h2>
-          </div>
-          <div style={{ display: "flex", gap: "70px" }}>
-            <p>$ 380.00</p>
-            <p>1</p>
-            <p>$ 880.00</p>
-          </div>
+          {data.map(({ image, price, name, quantity }) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "20px",
+                    width: "300px",
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={name}
+                    style={{ width: "120px", height: "120px" }}
+                  />
+                  <p style={{ fontSize: "14px" }}>{name}</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    width: "18.125rem",
+                  }}
+                >
+                  <p>$ {price}</p>
+                  <div style={{ display: "flex", gap: "10px" }}>
+                    +<p>{quantity}</p>-
+                  </div>
+                  <p>$ {quantity * price}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
