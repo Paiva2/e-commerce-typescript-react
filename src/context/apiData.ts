@@ -35,3 +35,13 @@ export const insertItem = (
     .post(`http://localhost:3000/${endpoint}`, body)
     .then(() => callApi(endpoint, setData));
 };
+
+export const deleteItem = (
+  endpoint: string,
+  id: string,
+  setData: Dispatch<SetStateAction<IProduct[]>>
+) => {
+  axios
+    .delete(`http://localhost:3000/${endpoint}/${id}`)
+    .then(() => callApi(endpoint, setData));
+};
