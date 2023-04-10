@@ -1,6 +1,8 @@
 import React from "react";
 import { CopyrightContainer, FooterContainer, NavContainer } from "./styles";
 
+const year = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -35,7 +37,7 @@ const Footer = () => {
         </div>
         <div>newsletter</div>
       </NavContainer>
-      <CopyrightContainer>Copyright</CopyrightContainer>
+      <CopyrightContainer>Copyright {year}</CopyrightContainer>
     </FooterContainer>
   );
 };

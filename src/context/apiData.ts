@@ -5,18 +5,17 @@ import { IProduct } from "../interfaces/interfaces";
 
 export function callApi(
   endpoint: string,
-  setData?: Dispatch<SetStateAction<IProduct[]>>,
+  setData: Dispatch<SetStateAction<IProduct[]>>,
   setLoading?: Dispatch<SetStateAction<boolean>>
 ) {
   axios
     .get<Array<IProduct>>(`http://localhost:3000/${endpoint}`)
     .then((res) => res)
     .then((responseJson) => {
-      if (setData) {
+      setData &&
         setData(
           responseJson.data.sort((a, b) => Number(a.price) - Number(b.price))
         );
-      }
       setLoading && setLoading(false);
     })
     .catch((error) => {

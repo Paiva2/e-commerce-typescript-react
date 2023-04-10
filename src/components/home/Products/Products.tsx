@@ -1,5 +1,5 @@
-import axios from "axios";
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
+
 import {
   AsideContainer,
   MiddleContainer,
@@ -15,14 +15,16 @@ import {
   BsArrowLeftShort,
   BsArrowRightShort,
 } from "react-icons/bs";
+
 import { ProductsContext } from "../../../context/ProductsContext";
-import { IProduct } from "../../../interfaces/interfaces";
 import { insertItem } from "../../../context/apiData";
 import { CartContext } from "../../../context/CartContext";
+import { WishListContext } from "../../../context/WishListContext";
 
 const Products = () => {
   const { data, loading } = useContext(ProductsContext);
   const { setCartData } = useContext(CartContext);
+  const { setWishListData } = useContext(WishListContext);
 
   const [itensPerPage, setItensOnPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState(0);
@@ -66,7 +68,12 @@ const Products = () => {
                         className="icon"
                         onClick={() => insertItem("cart", product, setCartData)}
                       />
-                      <BsHeart className="icon" />
+                      <BsHeart
+                        className="icon"
+                        onClick={() =>
+                          insertItem("wish-list", product, setWishListData)
+                        }
+                      />
                     </div>
                     <div>
                       <p>$ {product.price}</p>

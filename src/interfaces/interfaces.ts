@@ -22,6 +22,12 @@ export interface ICartContext {
   loading: boolean;
 }
 
+export interface IWishListContext {
+  wishListData: IProduct[];
+  setWishListData: Dispatch<SetStateAction<IProduct[]>>;
+  loading: boolean;
+}
+
 export interface Props {
   children: ReactNode;
 }
@@ -42,22 +48,36 @@ export const productDefault = {
   loading: true,
 } as IProductContext;
 
-const cartData = [
-  {
-    id: "",
-    name: "",
-    description: "",
-    price: 0,
-    image: "",
-    quantity: 0,
-    rating: 0,
-    colors: [],
-  },
-];
-
-//! NEED A FIX LATER ON SETCARTDATA
 export const cartDefault = {
-  cartData,
+  cartData: [
+    {
+      id: "",
+      name: "",
+      description: "",
+      price: 0,
+      image: "",
+      quantity: 0,
+      rating: 0,
+      colors: [],
+    },
+  ],
   setCartData: () => [],
   loading: true,
 } as ICartContext;
+
+export const wishListDefault = {
+  wishListData: [
+    {
+      id: "",
+      name: "",
+      description: "",
+      price: 0,
+      image: "",
+      quantity: 0,
+      rating: 0,
+      colors: [],
+    },
+  ],
+  setWishListData: () => [],
+  loading: true,
+} as IWishListContext;
