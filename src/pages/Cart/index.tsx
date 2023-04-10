@@ -1,7 +1,4 @@
 import React, { useContext } from "react";
-
-import { AiOutlineDelete } from "react-icons/ai";
-import { CartContext } from "../../context/CartContext";
 import {
   ActionsContainer,
   CartContainer,
@@ -12,6 +9,9 @@ import {
   QuantityWrapper,
   UpSideContainer,
 } from "../../pages/Cart/styles";
+
+import { AiOutlineDelete } from "react-icons/ai";
+import { CartContext } from "../../context/CartContext";
 import { deleteItem } from "../../context/apiData";
 
 const Cart = () => {
@@ -31,7 +31,6 @@ const Cart = () => {
             <p>total</p>
           </div>
         </UpSideContainer>
-
         <CartProducts>
           {cartData.map((product) => {
             return (

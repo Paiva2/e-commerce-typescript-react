@@ -9,13 +9,11 @@ import WishListContext from "./context/WishListContext";
 globalStyles();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <ProductsContext>
-      <WishListContext>
-        <CartContext>
-          <MainRoutes />
-        </CartContext>
-      </WishListContext>
-    </ProductsContext>
-  </React.StrictMode>
+  <ProductsContext>
+    <WishListContext>
+      <CartContext>
+        <MainRoutes />
+      </CartContext>
+    </WishListContext>
+  </ProductsContext>
 );

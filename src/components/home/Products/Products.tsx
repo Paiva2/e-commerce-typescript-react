@@ -20,6 +20,7 @@ import { ProductsContext } from "../../../context/ProductsContext";
 import { insertItem } from "../../../context/apiData";
 import { CartContext } from "../../../context/CartContext";
 import { WishListContext } from "../../../context/WishListContext";
+import StarIcon from "../../../icons/StarIcon";
 
 const Products = () => {
   const { data, loading } = useContext(ProductsContext);
@@ -61,7 +62,9 @@ const Products = () => {
                 <ProductsStyle key={product.id}>
                   <img src={product.image} alt={product.name} loading="lazy" />
                   <p>{product.name}</p>
-                  <span>{product.rating}</span>
+                  <span>
+                    <StarIcon rating={product.rating} />
+                  </span>
                   <ProductActionsContainer>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <BsCartPlus

@@ -266,20 +266,7 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": "6",
-      "name": "Men's Polo Shirt",
-      "description": "Classic polo shirt with logo",
-      "price": 39.99,
-      "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
-      "rating": 4,
-      "quantity": 1,
-      "colors": [
-        "white"
-      ]
-    }
-  ],
+  "cart": [],
   "wish-list": [
     {
       "id": "20",
