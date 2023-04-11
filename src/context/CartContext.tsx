@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, FC } from "react";
 
-import { Props, cartDefault, IProduct } from "../interfaces/interfaces";
+import { Props, cartDefault, IProduct } from "../../interfaces/interfaces";
 import { callApi } from "./apiData";
 
 export const CartContext = createContext(cartDefault);

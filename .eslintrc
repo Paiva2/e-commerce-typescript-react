@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/no-unescaped-entities": 0
+  }
+}

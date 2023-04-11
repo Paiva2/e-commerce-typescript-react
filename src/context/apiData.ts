@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import axios from "axios";
 
-import { IProduct } from "../interfaces/interfaces";
+import { IProduct } from "../../interfaces/interfaces";
 
 export function callApi(
   endpoint: string,

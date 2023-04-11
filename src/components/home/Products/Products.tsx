@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react";
-
+import { useState, useContext } from "react";
 import {
   AsideContainer,
   MiddleContainer,
@@ -19,6 +18,7 @@ import {
 import { ProductsContext } from "../../../context/ProductsContext";
 import { insertItem } from "../../../context/apiData";
 import { CartContext } from "../../../context/CartContext";
+
 import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
 
@@ -48,10 +48,8 @@ const Products = () => {
 
   const searchParams = searchValue.toLowerCase();
   const showProducts = searchValue
-    ? data.filter((product) =>
-        product.name.toLowerCase().includes(searchParams)
-      )
-    : data;
+    ? data.filter(({ name }) => name.toLowerCase().includes(searchParams))
+    : showItens;
 
   return (
     <MiddleContainer>
