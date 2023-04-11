@@ -1,4 +1,6 @@
 import { useState, useContext } from "react";
+// @ts-ignore
+import { Helmet } from "react-helmet";
 import {
   AsideContainer,
   MiddleContainer,
@@ -8,6 +10,7 @@ import {
   ProductsStyle,
   ProductActionsContainer,
 } from "./styles";
+
 import {
   BsCartPlus,
   BsHeart,
@@ -52,64 +55,76 @@ const Products = () => {
     : showItens;
 
   return (
-    <MiddleContainer>
-      <AsideContainer>
-        <div>Genre</div>
-        <div>Price</div>
-      </AsideContainer>
-      <ProductsContainer>
-        <h1>Products</h1>
-        <ProductsWrapper>
-          {loading && <h1>Loading...</h1>}
-          {data &&
-            showProducts.map((product) => {
-              return (
-                <ProductsStyle key={product.id}>
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                  <p>{product.name}</p>
-                  <span>
-                    <StarIcon rating={product.rating} />
-                  </span>
-                  <ProductActionsContainer>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                      <BsCartPlus
-                        className="icon"
-                        onClick={() => insertItem("cart", product, setCartData)}
-                      />
-                      <BsHeart
-                        className="icon"
-                        onClick={() =>
-                          insertItem("wish-list", product, setWishListData)
-                        }
-                      />
-                    </div>
-                    <div>
-                      <p>$ {product.price}</p>
-                    </div>
-                  </ProductActionsContainer>
-                </ProductsStyle>
-              );
-            })}
-        </ProductsWrapper>
-        <PageButtonsContainer>
-          <button onClick={handlePreviousPage}>
-            <BsArrowLeftShort />
-          </button>
-          {totalPages.map((_, index) => (
-            <button
-              key={index}
-              className={index === currentPage ? "active" : ""}
-              onClick={() => setCurrentPage(index)}
-            >
-              {index + 1}
+    <>
+      <Helmet>
+        <title>Home - Products</title>
+        <meta name="home" content="Products component" />
+      </Helmet>
+      <MiddleContainer>
+        <AsideContainer>
+          <div>Genre</div>
+          <div>Price</div>
+        </AsideContainer>
+        <ProductsContainer>
+          <h1>Products</h1>
+          <ProductsWrapper>
+            {loading && <h1>Loading...</h1>}
+            {data &&
+              showProducts.map((product) => {
+                return (
+                  <ProductsStyle key={product.id}>
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                    />
+                    <p>{product.name}</p>
+                    <span>
+                      <StarIcon rating={product.rating} />
+                    </span>
+                    <ProductActionsContainer>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <BsCartPlus
+                          className="icon"
+                          onClick={() =>
+                            insertItem("cart", product, setCartData)
+                          }
+                        />
+                        <BsHeart
+                          className="icon"
+                          onClick={() =>
+                            insertItem("wish-list", product, setWishListData)
+                          }
+                        />
+                      </div>
+                      <div>
+                        <p>$ {product.price}</p>
+                      </div>
+                    </ProductActionsContainer>
+                  </ProductsStyle>
+                );
+              })}
+          </ProductsWrapper>
+          <PageButtonsContainer>
+            <button onClick={handlePreviousPage}>
+              <BsArrowLeftShort />
             </button>
-          ))}
-          <button onClick={handleNextPage}>
-            <BsArrowRightShort />
-          </button>
-        </PageButtonsContainer>
-      </ProductsContainer>
-    </MiddleContainer>
+            {totalPages.map((_, index) => (
+              <button
+                key={index}
+                className={index === currentPage ? "active" : ""}
+                onClick={() => setCurrentPage(index)}
+              >
+                {index + 1}
+              </button>
+            ))}
+            <button onClick={handleNextPage}>
+              <BsArrowRightShort />
+            </button>
+          </PageButtonsContainer>
+        </ProductsContainer>
+      </MiddleContainer>
+    </>
   );
 };
 
