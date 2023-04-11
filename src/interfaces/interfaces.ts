@@ -14,6 +14,8 @@ export interface IProduct {
 export interface IProductContext {
   data: IProduct[];
   loading: boolean;
+  searchValue: string;
+  setSearchValue: Dispatch<SetStateAction<string>>;
 }
 
 export interface ICartContext {
@@ -45,6 +47,8 @@ export const productDefault = {
       colors: [],
     },
   ],
+  setSearchValue: () => "",
+  searchValue: "",
   loading: true,
 } as IProductContext;
 

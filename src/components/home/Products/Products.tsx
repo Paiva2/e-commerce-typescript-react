@@ -23,7 +23,7 @@ import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
 
 const Products = () => {
-  const { data, loading } = useContext(ProductsContext);
+  const { data, loading, searchValue } = useContext(ProductsContext);
   const { setCartData } = useContext(CartContext);
   const { setWishListData } = useContext(WishListContext);
 
@@ -46,6 +46,13 @@ const Products = () => {
     setCurrentPage((oldVal) => oldVal + 1);
   };
 
+  const searchParams = searchValue.toLowerCase();
+  const showProducts = searchValue
+    ? data.filter((product) =>
+        product.name.toLowerCase().includes(searchParams)
+      )
+    : data;
+
   return (
     <MiddleContainer>
       <AsideContainer>
@@ -57,7 +64,7 @@ const Products = () => {
         <ProductsWrapper>
           {loading && <h1>Loading...</h1>}
           {data &&
-            showItens.map((product) => {
+            showProducts.map((product) => {
               return (
                 <ProductsStyle key={product.id}>
                   <img src={product.image} alt={product.name} loading="lazy" />

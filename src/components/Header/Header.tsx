@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import { BsHeartFill, BsCart } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
@@ -9,13 +9,21 @@ import {
   PurchaserContainer,
   SearchContainer,
 } from "./styles";
+import { ProductsContext } from "../../context/ProductsContext";
 
 const Header = () => {
+  const { setSearchValue } = useContext(ProductsContext);
+
   return (
     <HeaderContainer>
       <HeaderWrapper>
         <LogoContainer>LOGO</LogoContainer>
-        <SearchContainer>Search</SearchContainer>
+        <SearchContainer>
+          <input
+            type="search"
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+        </SearchContainer>
         <PurchaserContainer>
           <div>
             <Link to="/wish-list">
