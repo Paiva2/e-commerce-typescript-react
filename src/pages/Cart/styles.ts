@@ -25,6 +25,7 @@ export const UpSideContainer = styled("div", {
   justifyContent: "space-between",
   borderBottom: "1px solid red",
   w: "90%",
+  pd: ".9375rem",
 
   "> div:last-child": {
     display: "flex",
@@ -45,6 +46,7 @@ export const ProductWrapper = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
+  pd: ".9375rem",
 });
 
 export const ProductResume = styled("div", {

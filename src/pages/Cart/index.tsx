@@ -41,20 +41,23 @@ const Cart = () => {
           <CartProducts>
             {cartData.map((product) => {
               return (
-                <ProductWrapper>
+                <ProductWrapper key={product.id}>
                   <ProductResume>
                     <div>
                       <img src={product.image} alt={product.name} />
                     </div>
                     <div>
                       <p>{product.name}</p>
+                      <p>{product.description}</p>
+                      <div>
+                        <AiOutlineDelete
+                          onClick={() =>
+                            deleteItem("cart", product.id, setCartData)
+                          }
+                          className="icon"
+                        />
+                      </div>
                     </div>
-                    <AiOutlineDelete
-                      onClick={() =>
-                        deleteItem("cart", product.id, setCartData)
-                      }
-                      className="icon"
-                    />
                   </ProductResume>
                   <ActionsContainer>
                     <p>$ {product.price}</p>

@@ -266,7 +266,20 @@
       ]
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "2",
+      "name": "Men's T-Shirt",
+      "description": "Classic black t-shirt with white logo",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "colors": [
+        "black"
+      ]
+    }
+  ],
   "wish-list": [
     {
       "id": "2",
