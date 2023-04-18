@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { WishListContext } from "../../context/WishListContext";
 // @ts-ignore
 import { Helmet } from "react-helmet";
+import { BsCartPlus } from "react-icons/bs";
 
 import { AiOutlineDelete } from "react-icons/ai";
 import {
@@ -14,11 +15,21 @@ import {
   WishListContainer,
   WishListWrapper,
 } from "./styles";
-import { deleteItem } from "../../context/apiData";
+import { deleteItem, insertItem } from "../../context/apiMethods";
+import { CartContext } from "../../context/CartContext";
+import { IProduct } from "../../../interfaces/interfaces";
 
 const WishList = () => {
   const { wishListData, loading, setWishListData } =
     useContext(WishListContext);
+
+  const { setCartData } = useContext(CartContext);
+
+  const handleSendWishItemToCart = (product: IProduct) => {
+    insertItem("cart", product, setCartData);
+
+    deleteItem("wish-list", product.id, setWishListData);
+  };
 
   return (
     <>
@@ -56,6 +67,10 @@ const WishList = () => {
                     <div>
                       <p>$ {product.price}</p>
                     </div>
+                    <BsCartPlus
+                      className="icon"
+                      onClick={() => handleSendWishItemToCart(product)}
+                    />
                     <AiOutlineDelete
                       onClick={() =>
                         deleteItem("wish-list", product.id, setWishListData)

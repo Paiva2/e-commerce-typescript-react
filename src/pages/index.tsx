@@ -8,14 +8,16 @@ import WishList from "./WishList";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Products from "../components/home/Products/Products";
+import ProductResume from "./ProductResume";
 
 const MainRoutes = () => {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Products />} />
+        <Route path="/" element={<Navigate to="/products" />} />
+        <Route path="/products" element={<Products />} />
+        <Route path={"/:id"} element={<ProductResume />} />
         <Route path={"/wish-list"} element={<WishList />} />
         <Route path={"/cart"} element={<Cart />} />
         <Route path="*" element={<NotFound />} />

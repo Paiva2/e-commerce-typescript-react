@@ -7,7 +7,7 @@ import React, {
 } from "react";
 
 import { IProduct, Props, productDefault } from "../../interfaces/interfaces";
-import { callApi } from "./apiData";
+import { callApi } from "./apiMethods";
 
 export const ProductsContext = createContext(productDefault);
 

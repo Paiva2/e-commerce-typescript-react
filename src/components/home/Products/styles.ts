@@ -42,9 +42,13 @@ export const ProductsStyle = styled("div", {
   flexDirection: "column",
   alignItems: "center",
 
-  img: {
-    w: "100%",
-    h: "23.75rem",
+  a: {
+    width: "100%",
+
+    img: {
+      w: "100%",
+      h: "23.75rem",
+    },
   },
 });
 

@@ -17,7 +17,9 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <LogoContainer>LOGO</LogoContainer>
+        <LogoContainer>
+          <Link to="/">e-Commerce</Link>
+        </LogoContainer>
         <SearchContainer>
           <input
             type="search"

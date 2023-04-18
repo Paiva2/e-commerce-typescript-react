@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect, FC } from "react";
 import { Props, wishListDefault, IProduct } from "../../interfaces/interfaces";
 
-import { callApi } from "./apiData";
+import { callApi } from "./apiMethods";
 
 export const WishListContext = createContext(wishListDefault);
 

@@ -14,7 +14,7 @@ import {
 
 import { AiOutlineDelete } from "react-icons/ai";
 import { CartContext } from "../../context/CartContext";
-import { deleteItem } from "../../context/apiData";
+import { deleteItem } from "../../context/apiMethods";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);

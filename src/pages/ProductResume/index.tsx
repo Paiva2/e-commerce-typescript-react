@@ -1,0 +1,59 @@
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { IProduct } from "../../../interfaces/interfaces";
+
+const ProductResume = () => {
+  const param = useParams();
+  const [singleProduct, setSingleProduct] = useState<IProduct>();
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/products/${param.id}`)
+      .then((res) => res)
+      .then((responseJson) => {
+        setSingleProduct(responseJson.data);
+      });
+  }, []);
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <div>
+        <img
+          style={{ width: "500px", height: "500px" }}
+          src={singleProduct?.image}
+          alt={singleProduct?.name}
+        />
+      </div>
+      <div>
+        <div>
+          <p>Price: ${singleProduct?.price}</p>
+
+          <p>Description: {singleProduct?.description}</p>
+        </div>
+        <div>
+          Available Colors:
+          <select>
+            {singleProduct?.colors.map((color) => (
+              <option value={color}>{color}</option>
+            ))}
+          </select>
+        </div>
+        <div>Add to cart</div>
+        <div>Add to wish list</div>
+      </div>
+      <Link to="/">
+        <button>Back to home</button>
+      </Link>
+    </div>
+  );
+};
+
+export default ProductResume;

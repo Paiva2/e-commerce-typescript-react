@@ -19,11 +19,12 @@ import {
 } from "react-icons/bs";
 
 import { ProductsContext } from "../../../context/ProductsContext";
-import { insertItem } from "../../../context/apiData";
+import { insertItem } from "../../../context/apiMethods";
 import { CartContext } from "../../../context/CartContext";
 
 import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const { data, loading, searchValue } = useContext(ProductsContext);
@@ -73,11 +74,13 @@ const Products = () => {
               showProducts.map((product) => {
                 return (
                   <ProductsStyle key={product.id}>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                    />
+                    <Link to={`/${product.id}`}>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                      />
+                    </Link>
                     <p>{product.name}</p>
                     <span>
                       <StarIcon rating={product.rating} />

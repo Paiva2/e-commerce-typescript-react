@@ -12,7 +12,7 @@ const StarIcon = ({ rating }: { rating: number }) => {
 
     if (ratingStars) {
       for (let i = 0; i < rating; i++) {
-        ratingStars[i].setAttribute("fill", "yellow");
+        ratingStars[i].setAttribute("fill", "#E5CB14");
       }
     }
   };
@@ -24,11 +24,9 @@ const StarIcon = ({ rating }: { rating: number }) => {
         width="20px"
         height="22px"
         viewBox="0 0 24 24"
-        fill="none"
       >
         <path
           d="M12 17L6 20L7.5 14L3 9L9.5 8.5L12 3L14.5 8.5L21 9L16.5 14L18 20L12 17Z"
-          stroke="#383636"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -39,11 +37,10 @@ const StarIcon = ({ rating }: { rating: number }) => {
         width="20px"
         height="22px"
         viewBox="0 0 24 24"
-        fill="none"
+        fill="#C0BDA6"
       >
         <path
           d="M12 17L6 20L7.5 14L3 9L9.5 8.5L12 3L14.5 8.5L21 9L16.5 14L18 20L12 17Z"
-          stroke="#383636"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -54,11 +51,10 @@ const StarIcon = ({ rating }: { rating: number }) => {
         width="20px"
         height="22px"
         viewBox="0 0 24 24"
-        fill="none"
+        fill="#C0BDA6"
       >
         <path
           d="M12 17L6 20L7.5 14L3 9L9.5 8.5L12 3L14.5 8.5L21 9L16.5 14L18 20L12 17Z"
-          stroke="#383636"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -69,11 +65,10 @@ const StarIcon = ({ rating }: { rating: number }) => {
         width="20px"
         height="22px"
         viewBox="0 0 24 24"
-        fill="none"
+        fill="#C0BDA6"
       >
         <path
           d="M12 17L6 20L7.5 14L3 9L9.5 8.5L12 3L14.5 8.5L21 9L16.5 14L18 20L12 17Z"
-          stroke="#383636"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -84,11 +79,10 @@ const StarIcon = ({ rating }: { rating: number }) => {
         width="20px"
         height="22px"
         viewBox="0 0 24 24"
-        fill="none"
+        fill="#C0BDA6"
       >
         <path
           d="M12 17L6 20L7.5 14L3 9L9.5 8.5L12 3L14.5 8.5L21 9L16.5 14L18 20L12 17Z"
-          stroke="#383636"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
