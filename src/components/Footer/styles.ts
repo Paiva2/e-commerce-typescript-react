@@ -1,4 +1,4 @@
-import { styled } from "../../../config/config";
+import { styled } from "../../../config/styles-config";
 
 export const FooterContainer = styled("div", {
   border: "1px solid red",

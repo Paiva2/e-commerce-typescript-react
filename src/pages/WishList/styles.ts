@@ -1,4 +1,4 @@
-import { styled } from "../../../config/config";
+import { styled } from "../../../config/styles-config";
 
 export const WishListContainer = styled("div", {
   display: "flex",

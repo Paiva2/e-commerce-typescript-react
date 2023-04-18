@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction } from "react";
 import axios from "axios";
 
 import { IProduct } from "../../interfaces/interfaces";
+import { AlertMessage } from "../components/AlertMessage";
 
 export function callApi(
   endpoint: string,
@@ -14,7 +15,11 @@ export function callApi(
     .then((responseJson) => {
       setData &&
         setData(
-          responseJson.data.sort((a, b) => Number(a.price) - Number(b.price))
+          endpoint.includes("products/") //don't sort if its an unique product
+            ? responseJson.data
+            : responseJson.data.sort(
+                (a, b) => Number(a.price) - Number(b.price)
+              )
         );
       setLoading && setLoading(false);
     })
@@ -33,7 +38,24 @@ export const insertItem = (
 ) => {
   axios
     .post(`http://localhost:3000/${endpoint}`, body)
-    .then(() => callApi(endpoint, setData));
+    .then(() => {
+      callApi(endpoint, setData);
+      AlertMessage("success", `Product added to ${endpoint}!`);
+    })
+    .catch((err) => {
+      const isItemAlreadyOnEndpoint = err.response.data.match(
+        "Error: Insert failed, duplicate id"
+      );
+      err &&
+        AlertMessage(
+          "warning",
+          `${
+            isItemAlreadyOnEndpoint
+              ? `This product is already on ${endpoint}!`
+              : "Undefined, please contact system support."
+          }`
+        );
+    });
 };
 
 export const deleteItem = (

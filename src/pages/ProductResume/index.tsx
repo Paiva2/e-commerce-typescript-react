@@ -2,18 +2,15 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IProduct } from "../../../interfaces/interfaces";
+import { callApi } from "../../context/apiMethods";
 
 const ProductResume = () => {
   const param = useParams();
   const [singleProduct, setSingleProduct] = useState<IProduct>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/products/${param.id}`)
-      .then((res) => res)
-      .then((responseJson) => {
-        setSingleProduct(responseJson.data);
-      });
+    callApi(`products/${param.id}`, setSingleProduct, setIsLoading);
   }, []);
 
   return (
@@ -26,6 +23,7 @@ const ProductResume = () => {
       }}
     >
       <div>
+        {isLoading && <h1>Loading...</h1>}
         <img
           style={{ width: "500px", height: "500px" }}
           src={singleProduct?.image}

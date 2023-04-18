@@ -1,4 +1,4 @@
-import { styled } from "../../../config/config";
+import { styled } from "../../../config/styles-config";
 
 export const HeaderContainer = styled("div", {
   display: "flex",

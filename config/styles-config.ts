@@ -63,7 +63,8 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    backgroundColor: "#f3f4f6",
+    backgroundColor: "#323238",
+    color: "#E1E1E6",
   },
 
   "a:-webkit-any-link": {

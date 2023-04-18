@@ -16,6 +16,7 @@ import {
   WishListWrapper,
 } from "./styles";
 import { deleteItem, insertItem } from "../../context/apiMethods";
+
 import { CartContext } from "../../context/CartContext";
 import { IProduct } from "../../../interfaces/interfaces";
 
@@ -27,7 +28,9 @@ const WishList = () => {
 
   const handleSendWishItemToCart = (product: IProduct) => {
     insertItem("cart", product, setCartData);
+  };
 
+  const handleDeleteItemFromWishList = (product: IProduct) => {
     deleteItem("wish-list", product.id, setWishListData);
   };
 
@@ -72,9 +75,7 @@ const WishList = () => {
                       onClick={() => handleSendWishItemToCart(product)}
                     />
                     <AiOutlineDelete
-                      onClick={() =>
-                        deleteItem("wish-list", product.id, setWishListData)
-                      }
+                      onClick={() => handleDeleteItemFromWishList(product)}
                       className="icon"
                     />
                   </PriceWrapper>

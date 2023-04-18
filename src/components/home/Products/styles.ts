@@ -1,9 +1,8 @@
-import { styled } from "../../../../config/config";
+import { styled } from "../../../../config/styles-config";
 
 export const MiddleContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
-  minHeight: "100vh",
   pd: "1.25rem",
 });
 
