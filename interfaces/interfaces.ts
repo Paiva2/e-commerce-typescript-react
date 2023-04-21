@@ -20,13 +20,13 @@ export interface IProductContext {
 
 export interface ICartContext {
   cartData: IProduct[];
-  setCartData: Dispatch<SetStateAction<IProduct[] | IProduct>>;
+  setCartData: Dispatch<SetStateAction<IProduct[]>>;
   loading: boolean;
 }
 
 export interface IWishListContext {
   wishListData: IProduct[];
-  setWishListData: Dispatch<SetStateAction<IProduct[] | IProduct>>;
+  setWishListData: Dispatch<SetStateAction<IProduct[]>>;
   loading: boolean;
 }
 

@@ -14,7 +14,7 @@ const sortData = (response: IProduct[] | IProduct) => {
 
 export function callApi(
   endpoint: string,
-  setData: Dispatch<SetStateAction<IProduct[] | IProduct>>,
+  setData: Dispatch<SetStateAction<IProduct[]>>,
   setLoading?: Dispatch<SetStateAction<boolean>>
 ) {
   axios
@@ -37,7 +37,7 @@ export function callApi(
 export const insertItem = (
   endpoint: string,
   body: IProduct,
-  setData: Dispatch<SetStateAction<IProduct[] | IProduct>>
+  setData: Dispatch<SetStateAction<IProduct[]>>
 ) => {
   axios
     .post(`http://localhost:3000/${endpoint}`, body)
@@ -66,7 +66,7 @@ export const insertItem = (
 export const deleteItem = (
   endpoint: string,
   id: string,
-  setData: Dispatch<SetStateAction<IProduct[] | IProduct>>
+  setData: Dispatch<SetStateAction<IProduct[]>>
 ) => {
   axios
     .delete(`http://localhost:3000/${endpoint}/${id}`)
