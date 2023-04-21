@@ -25,6 +25,7 @@ import { CartContext } from "../../../context/CartContext";
 import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
 import { Link } from "react-router-dom";
+import Carousel from "../Carousel";
 
 const Products = () => {
   const { data, loading, searchValue } = useContext(ProductsContext);
@@ -61,6 +62,7 @@ const Products = () => {
         <title>Home - Products</title>
         <meta name="home" content="Products component" />
       </Helmet>
+      <Carousel />
       <MiddleContainer>
         <AsideContainer>
           <div>Genre</div>
