@@ -4,13 +4,67 @@ export const MiddleContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
   pd: "1.25rem",
+  gap: "1.25rem",
+  w: "100%",
 });
 
 export const AsideContainer = styled("div", {
-  border: "1px solid red",
+  display: "flex",
+  flexDirection: "column",
+  gap: ".625rem",
+
+  "> div": {
+    display: "flex",
+    flexDirection: "column",
+    gap: ".625rem",
+    background: "#202024",
+    width: "11.25rem",
+    padding: ".625rem",
+    borderRadius: "5px",
+  },
+
+  ul: {
+    listStyle: "none",
+    margin: ".3125rem",
+  },
 });
 
-export const ProductsContainer = styled("div", {});
+export const ColorsWrapper = styled("div", {
+  display: "flex",
+  gap: ".3125rem",
+  cursor: "pointer",
+
+  li: {
+    textTransform: "capitalize",
+
+    "&:hover": {
+      color: "#00875F",
+    },
+  },
+
+  ".closeVisible": {
+    visibility: "1",
+    opacity: "1",
+  },
+
+  svg: {
+    color: "#fff",
+    fontSize: "1.25rem",
+    visibility: "0",
+    opacity: "0",
+
+    "&:hover": {
+      color: "#F80A0A",
+    },
+  },
+});
+
+export const ProductsContainer = styled("div", {
+  display: "flex",
+  w: "100%",
+  flexDirection: "column",
+  justifyContent: "center",
+});
 
 export const ProductsWrapper = styled("div", {
   display: "grid",
@@ -26,6 +80,7 @@ export const ProductsStyle = styled("div", {
   background: "#202024",
   overflow: "hidden",
   color: "#C4C4CC",
+  br: "5px",
 
   a: {
     width: "100%",

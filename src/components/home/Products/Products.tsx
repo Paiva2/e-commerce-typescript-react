@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 // @ts-ignore
 import { Helmet } from "react-helmet";
 import {
@@ -10,8 +10,10 @@ import {
   ProductActionsContainer,
   PriceWrapper,
   IconsWrapper,
+  ColorsWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
+import { IoIosClose } from "react-icons/io";
 
 import { ProductsContext } from "../../../context/ProductsContext";
 import { insertItem } from "../../../context/apiMethods";
@@ -32,6 +34,9 @@ const Products = () => {
   const { setWishListData } = useContext(WishListContext);
 
   const showItens = data.slice(initialPage, finalPage);
+  const searchParams = searchValue.toLowerCase();
+
+  const [colorFilter, setColorsFilter] = useState("");
 
   const getUniqueColors = () => {
     let colorsAccumulator: string[] = [];
@@ -47,10 +52,39 @@ const Products = () => {
 
   const uniqueColorsForAside = [...new Set(getUniqueColors())];
 
-  const searchParams = searchValue.toLowerCase();
-  const showProducts = searchValue
-    ? data.filter(({ name }) => name.toLowerCase().includes(searchParams))
-    : showItens;
+  const handleGetSelectedColor = (firstFilterParam: string) => {
+    let filtersAccumulator = [];
+
+    filtersAccumulator.push(firstFilterParam).toString;
+
+    setColorsFilter(filtersAccumulator[0]);
+  };
+
+  const handleDisplaySearchedProducts = (filterParam: string) => {
+    return data.filter((dataFilter) =>
+      dataFilter.name.toLowerCase().includes(filterParam)
+    );
+  };
+
+  const searchedProductExists =
+    handleDisplaySearchedProducts(searchParams).length > 0 ? true : false;
+
+  const handleDisplaySelectedColorProducts = (colorFilterParam: string) => {
+    return data.filter((dataFilter) =>
+      dataFilter.filterParams.colors.includes(colorFilterParam)
+    );
+  };
+
+  const handleClearColorFilter = () => {
+    setColorsFilter("");
+  };
+
+  const showProducts =
+    searchValue && searchedProductExists
+      ? handleDisplaySearchedProducts(searchParams)
+      : colorFilter
+      ? handleDisplaySelectedColorProducts(colorFilter)
+      : showItens;
 
   return (
     <>
@@ -63,14 +97,33 @@ const Products = () => {
         <AsideContainer>
           <div>
             <h2>Genre</h2>
-            <p>Male</p>
-            <p>Female</p>
+            <ul style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex" }}>
+                <li>Male</li>
+                <IoIosClose />
+              </div>
+              <div style={{ display: "flex" }}>
+                <li>Female</li>
+                <IoIosClose />
+              </div>
+            </ul>
           </div>
+
           <div>
             <h2>Color</h2>
-            {uniqueColorsForAside.map((color) => (
-              <p>{color}</p>
-            ))}
+            <ul
+              style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+            >
+              {uniqueColorsForAside.map((color) => (
+                <ColorsWrapper>
+                  <li onClick={() => handleGetSelectedColor(color)}>{color}</li>
+                  <IoIosClose
+                    className={colorFilter === color ? "closeVisible" : ""}
+                    onClick={handleClearColorFilter}
+                  />
+                </ColorsWrapper>
+              ))}
+            </ul>
           </div>
         </AsideContainer>
         <ProductsContainer>
