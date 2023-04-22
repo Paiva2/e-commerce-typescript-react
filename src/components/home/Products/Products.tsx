@@ -9,6 +9,8 @@ import {
   ProductsWrapper,
   ProductsStyle,
   ProductActionsContainer,
+  PriceWrapper,
+  IconsWrapper,
 } from "./styles";
 
 import {
@@ -26,6 +28,7 @@ import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
 import { Link } from "react-router-dom";
 import Carousel from "../Carousel";
+import GoToTopButton from "../../GoToTopButton";
 
 const Products = () => {
   const { data, loading, searchValue } = useContext(ProductsContext);
@@ -88,23 +91,23 @@ const Products = () => {
                       <StarIcon rating={product.rating} />
                     </span>
                     <ProductActionsContainer>
-                      <div style={{ display: "flex", alignItems: "center" }}>
+                      <IconsWrapper>
                         <BsCartPlus
-                          className="icon"
+                          className="cart-icon"
                           onClick={() =>
                             insertItem("cart", product, setCartData)
                           }
                         />
                         <BsHeart
-                          className="icon"
+                          className="wishlist-icon"
                           onClick={() =>
                             insertItem("wish-list", product, setWishListData)
                           }
                         />
-                      </div>
-                      <div>
+                      </IconsWrapper>
+                      <PriceWrapper>
                         <p>$ {product.price}</p>
-                      </div>
+                      </PriceWrapper>
                     </ProductActionsContainer>
                   </ProductsStyle>
                 );
@@ -129,6 +132,7 @@ const Products = () => {
           </PageButtonsContainer>
         </ProductsContainer>
       </MiddleContainer>
+      <GoToTopButton />
     </>
   );
 };

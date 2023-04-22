@@ -4,7 +4,7 @@ export const CarouselContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
   w: "100%",
-  gap: "10px",
+  gap: ".625rem",
 });
 
 export const CarouselItemsWrapper = styled("div", {

@@ -2,8 +2,12 @@ import { styled } from "../../../config/styles-config";
 
 export const HeaderContainer = styled("div", {
   display: "flex",
+  position: "sticky",
+  background: "#121214",
+  top: "0",
   border: "1px solid red",
-  pd: "20px",
+  pd: "1.25rem",
+  zIndex: "1000",
 });
 
 export const HeaderWrapper = styled("div", {

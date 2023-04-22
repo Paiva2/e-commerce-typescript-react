@@ -56,8 +56,8 @@ export const ProductResume = styled("div", {
 
   "> div:first-child": {
     img: {
-      w: "120px",
-      h: "120px",
+      w: "7.5rem",
+      h: "7.5rem",
     },
   },
 
@@ -84,11 +84,11 @@ export const Paragraph = styled("p", {
   variants: {
     type: {
       titleProduct: {
-        fontSize: "16px",
+        fontSize: "1rem",
         fontWeight: "bold",
       },
       description: {
-        fontSize: "12px",
+        fontSize: ".75rem",
       },
     },
   },

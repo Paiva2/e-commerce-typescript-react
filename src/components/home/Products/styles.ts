@@ -35,11 +35,14 @@ export const PageButtonsContainer = styled("div", {
 });
 
 export const ProductsStyle = styled("div", {
-  border: "1px solid red",
   w: "23.125rem",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  br: "8px",
+  background: "#202024",
+  overflow: "hidden",
+  color: "#C4C4CC",
 
   a: {
     width: "100%",
@@ -54,10 +57,51 @@ export const ProductsStyle = styled("div", {
 export const ProductActionsContainer = styled("div", {
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-around",
-  w: "100%",
+  justifyContent: "space-between",
+  borderTop: "1px solid grey",
 
-  ".icon": {
+  w: "80%",
+  pd: ".625rem",
+});
+
+export const IconsWrapper = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  gap: ".625rem",
+  justifyContent: "center",
+  width: "4.375rem",
+
+  svg: {
     cursor: "pointer",
+  },
+
+  ".cart-icon": {
+    fontSize: "1.4375rem",
+    transition: "color 0.3s",
+
+    "&:hover": {
+      color: "#3D88E8",
+    },
+  },
+
+  ".wishlist-icon": {
+    fontSize: "1.375rem",
+    transition: "color 0.3s",
+    mt: ".1875rem",
+
+    "&:hover": {
+      color: "#DB1D1D",
+    },
+  },
+});
+
+export const PriceWrapper = styled("div", {
+  p: {
+    color: "#00B37E",
+    fontSize: "1.125rem",
+
+    "&:hover": {
+      color: "#00875F",
+    },
   },
 });

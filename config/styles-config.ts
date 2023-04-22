@@ -63,7 +63,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    backgroundColor: "#323238",
+    backgroundColor: "#121214",
     color: "#E1E1E6",
   },
 
