@@ -10,13 +10,29 @@ const ProductsStorage: FC<Props> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState("");
 
+  const [itensPerPage, setItensOnPage] = useState<number>(10);
+  const [currentPage, setCurrentPage] = useState(0);
+  const initialPage = currentPage * itensPerPage;
+  const finalPage = initialPage + itensPerPage;
+  const totalPages: number[] = [...Array(data.length / itensPerPage)];
+
   useEffect(() => {
     callApi("products", setData, setLoading);
   }, []);
 
   return (
     <ProductsContext.Provider
-      value={{ data, loading, setSearchValue, searchValue }}
+      value={{
+        data,
+        loading,
+        searchValue,
+        currentPage,
+        totalPages,
+        initialPage,
+        finalPage,
+        setSearchValue,
+        setCurrentPage,
+      }}
     >
       {children}
     </ProductsContext.Provider>

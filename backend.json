@@ -8,11 +8,10 @@
       "image": "https://i.postimg.cc/yWqRwhxg/Floral-Women-s-Blouse.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": [
-        "blue",
-        "red",
-        "grey"
-      ]
+      "filterParams": {
+        "colors": ["blue", "red", "grey"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "2",
@@ -22,9 +21,10 @@
       "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": [
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["black"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "3",
@@ -34,11 +34,10 @@
       "image": "https://i.postimg.cc/mZ59H4bX/Women-s-Jeans.jpg",
       "rating": 4.7,
       "quantity": 1,
-      "colors": [
-        "blue",
-        "apricot",
-        "beige"
-      ]
+      "filterParams": {
+        "colors": ["blue", "apricot", "beige"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "4",
@@ -48,11 +47,10 @@
       "image": "https://i.postimg.cc/SsvCGbpG/Men-s-Hoodie.jpg",
       "rating": 4.1,
       "quantity": 1,
-      "colors": [
-        "black",
-        "rust",
-        "navy"
-      ]
+      "filterParams": {
+        "colors": ["black", "rust", "navy"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "5",
@@ -62,10 +60,10 @@
       "image": "https://i.postimg.cc/mgY3WnQb/Women-s-Cardigan.jpg",
       "rating": 4.6,
       "quantity": 1,
-      "colors": [
-        "red",
-        "violet"
-      ]
+      "filterParams": {
+        "colors": ["red", "violet"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "6",
@@ -75,9 +73,10 @@
       "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
       "rating": 4,
       "quantity": 1,
-      "colors": [
-        "white"
-      ]
+      "filterParams": {
+        "colors": ["white"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "7",
@@ -87,10 +86,10 @@
       "image": "https://i.postimg.cc/59XRWxjb/Women-s-Denim-Jacket.jpg",
       "rating": 4.3,
       "quantity": 1,
-      "colors": [
-        "black",
-        "maroon"
-      ]
+      "filterParams": {
+        "colors": ["black", "maroon"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "8",
@@ -100,10 +99,10 @@
       "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": [
-        "black",
-        "maroon"
-      ]
+      "filterParams": {
+        "colors": ["black", "maroon"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "9",
@@ -113,10 +112,10 @@
       "image": "https://i.postimg.cc/bvqxyRT1/Women-s-Leather-Jacket.jpg",
       "rating": 4.8,
       "quantity": 1,
-      "colors": [
-        "black",
-        "red"
-      ]
+      "filterParams": {
+        "colors": ["black", "red"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "10",
@@ -126,11 +125,10 @@
       "image": "https://i.postimg.cc/VkQ9Tw0G/Men-s-Bomber-Jacket.jpg",
       "rating": 4.4,
       "quantity": 1,
-      "colors": [
-        "navy",
-        "cyan",
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["navy", "cyan", "black"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "11",
@@ -140,11 +138,10 @@
       "image": "https://i.postimg.cc/63x6CH8m/Women-s-Midi-Dress.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": [
-        "purple",
-        "pink",
-        "lilac"
-      ]
+      "filterParams": {
+        "colors": ["purple", "pink", "lilac"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "12",
@@ -154,11 +151,10 @@
       "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
       "rating": 3,
       "quantity": 1,
-      "colors": [
-        "brown",
-        "white",
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["brown", "white", "black"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "13",
@@ -168,10 +164,10 @@
       "image": "https://i.postimg.cc/bNmv4H5Z/Women-s-Blazer.jpg",
       "rating": 4.7,
       "quantity": 1,
-      "colors": [
-        "salmon",
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["salmon", "black"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "14",
@@ -181,11 +177,10 @@
       "image": "https://i.postimg.cc/J7c05Wcc/Men-s-Dress-Shirt.jpg",
       "rating": 4.1,
       "quantity": 1,
-      "colors": [
-        "navy",
-        "blue",
-        "cyan blue"
-      ]
+      "filterParams": {
+        "colors": ["navy", "blue", "cyan blue"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "15",
@@ -195,11 +190,10 @@
       "image": "https://i.postimg.cc/g0ZkX92h/Women-s-Wide-Leg-Pants.jpg",
       "rating": 4.6,
       "quantity": 1,
-      "colors": [
-        "blue",
-        "black",
-        "grey"
-      ]
+      "filterParams": {
+        "colors": ["blue", "black", "grey"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "16",
@@ -209,11 +203,10 @@
       "image": "https://i.postimg.cc/CLnqC25F/Men-s-Jogger-Pants.jpg",
       "rating": 4,
       "quantity": 1,
-      "colors": [
-        "salmon",
-        "navy",
-        "beige"
-      ]
+      "filterParams": {
+        "colors": ["salmon", "navy", "beige"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "17",
@@ -223,9 +216,10 @@
       "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
       "rating": 4.3,
       "quantity": 1,
-      "colors": [
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["black"],
+        "genre": ["female"]
+      }
     },
     {
       "id": "18",
@@ -235,10 +229,10 @@
       "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
       "rating": 2,
       "quantity": 1,
-      "colors": [
-        "brown",
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["brown", "black"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "19",
@@ -248,10 +242,10 @@
       "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
       "rating": 4.4,
       "quantity": 1,
-      "colors": [
-        "brown",
-        "black"
-      ]
+      "filterParams": {
+        "colors": ["brown", "black"],
+        "genre": ["male"]
+      }
     },
     {
       "id": "20",
@@ -261,9 +255,10 @@
       "image": "https://i.postimg.cc/0Q7Q3ggv/Women-s-Trench-Coat.jpg",
       "rating": 4.5,
       "quantity": 1,
-      "colors": [
-        "red"
-      ]
+      "filterParams": {
+        "colors": ["red"],
+        "genre": ["female"]
+      }
     }
   ],
   "cart": [],

@@ -1,4 +1,4 @@
-import React, { ReactNode, Dispatch, SetStateAction } from "react";
+import { ReactNode, Dispatch, SetStateAction } from "react";
 
 export interface IProduct {
   id: string;
@@ -8,26 +8,34 @@ export interface IProduct {
   image: string;
   quantity: number;
   rating: number;
-  colors: Array<string>;
+  filterParams: {
+    colors: Array<string>;
+    genre: Array<string>;
+  };
 }
 
 export interface IProductContext {
   data: IProduct[];
   loading: boolean;
   searchValue: string;
+  currentPage: number;
+  totalPages: number[];
+  initialPage: number;
+  finalPage: number;
   setSearchValue: Dispatch<SetStateAction<string>>;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
 export interface ICartContext {
   cartData: IProduct[];
-  setCartData: Dispatch<SetStateAction<IProduct[]>>;
   loading: boolean;
+  setCartData: Dispatch<SetStateAction<IProduct[]>>;
 }
 
 export interface IWishListContext {
   wishListData: IProduct[];
-  setWishListData: Dispatch<SetStateAction<IProduct[]>>;
   loading: boolean;
+  setWishListData: Dispatch<SetStateAction<IProduct[]>>;
 }
 
 export interface Props {
@@ -44,12 +52,20 @@ export const productDefault = {
       image: "",
       quantity: 0,
       rating: 0,
-      colors: [],
+      filterParams: {
+        colors: [],
+        genre: [],
+      },
     },
   ],
-  setSearchValue: () => "",
   searchValue: "",
   loading: true,
+  currentPage: 0,
+  totalPages: [],
+  initialPage: 0,
+  finalPage: 0,
+  setSearchValue: () => "",
+  setCurrentPage: () => 0,
 } as IProductContext;
 
 export const cartDefault = {
@@ -62,11 +78,14 @@ export const cartDefault = {
       image: "",
       quantity: 0,
       rating: 0,
-      colors: [],
+      filterParams: {
+        colors: [],
+        genre: [],
+      },
     },
   ],
-  setCartData: () => [],
   loading: true,
+  setCartData: () => [],
 } as ICartContext;
 
 export const wishListDefault = {
@@ -79,9 +98,12 @@ export const wishListDefault = {
       image: "",
       quantity: 0,
       rating: 0,
-      colors: [],
+      filterParams: {
+        colors: [],
+        genre: [],
+      },
     },
   ],
-  setWishListData: () => [],
   loading: true,
+  setWishListData: () => [],
 } as IWishListContext;

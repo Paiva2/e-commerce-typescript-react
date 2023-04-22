@@ -12,7 +12,7 @@ import { WishListContext } from "../../context/WishListContext";
 
 const ProductResume = () => {
   const param = useParams();
-  const [singleProduct, setSingleProduct] = useState<IProduct | any>();
+  const [singleProduct, setSingleProduct] = useState<IProduct>();
   const [isLoading, setIsLoading] = useState(true);
   const [selectedColor, setSelectedColor] = useState("");
 
@@ -22,8 +22,6 @@ const ProductResume = () => {
   useEffect(() => {
     callApi(`products/${param.id}`, setSingleProduct, setIsLoading);
   }, []);
-
-  console.log(selectedColor);
 
   return (
     <div
@@ -51,7 +49,7 @@ const ProductResume = () => {
         <div>
           Available Colors:
           <select>
-            {singleProduct?.colors.map((color: string) => (
+            {singleProduct?.filterParams.colors.map((color: string) => (
               <option onChange={() => setSelectedColor(color)} value={color}>
                 {color}
               </option>
