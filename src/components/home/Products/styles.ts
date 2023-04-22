@@ -23,15 +23,38 @@ export const PageButtonsContainer = styled("div", {
   w: "100%",
   alignItems: "center",
   justifyContent: "center",
+  gap: "8px",
 
   ".active": {
-    backgroundColor: "red",
+    backgroundColor: "#00875F",
+    color: "#fff",
   },
 
-  button: {
+  "> button": {
+    cursor: "pointer",
     display: "grid",
     placeItems: "center",
+    transition: "background 0.2s ease-in-out, color 0.2s ease-in-out",
   },
+});
+
+export const ArrowButtons = styled("button", {
+  background: "transparent",
+  color: "#fff",
+  border: "0",
+  fontSize: "2.1875rem",
+
+  "&:hover": {
+    color: "#00875F",
+  },
+});
+
+export const ProductsButtons = styled("button", {
+  fontSize: "1.25rem",
+  border: "0",
+  width: "1.875rem",
+  height: "1.875rem",
+  br: "50%",
 });
 
 export const ProductsStyle = styled("div", {
@@ -39,7 +62,6 @@ export const ProductsStyle = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  br: "8px",
   background: "#202024",
   overflow: "hidden",
   color: "#C4C4CC",

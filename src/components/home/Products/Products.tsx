@@ -11,6 +11,8 @@ import {
   ProductActionsContainer,
   PriceWrapper,
   IconsWrapper,
+  ProductsButtons,
+  ArrowButtons,
 } from "./styles";
 
 import {
@@ -114,21 +116,21 @@ const Products = () => {
               })}
           </ProductsWrapper>
           <PageButtonsContainer>
-            <button onClick={handlePreviousPage}>
+            <ArrowButtons onClick={handlePreviousPage}>
               <BsArrowLeftShort />
-            </button>
+            </ArrowButtons>
             {totalPages.map((_, index) => (
-              <button
+              <ProductsButtons
                 key={index}
                 className={index === currentPage ? "active" : ""}
                 onClick={() => setCurrentPage(index)}
               >
                 {index + 1}
-              </button>
+              </ProductsButtons>
             ))}
-            <button onClick={handleNextPage}>
+            <ArrowButtons onClick={handleNextPage}>
               <BsArrowRightShort />
-            </button>
+            </ArrowButtons>
           </PageButtonsContainer>
         </ProductsContainer>
       </MiddleContainer>
