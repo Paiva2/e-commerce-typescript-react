@@ -11,6 +11,8 @@ import {
   PriceWrapper,
   IconsWrapper,
   ColorsWrapper,
+  ProducsTitleWrapper,
+  MiddleWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
@@ -127,7 +129,9 @@ const Products = () => {
           </div>
         </AsideContainer>
         <ProductsContainer>
-          <h1>Products</h1>
+          <ProducsTitleWrapper>
+            <h1>Products</h1>
+          </ProducsTitleWrapper>
           <ProductsWrapper>
             {loading && <h1>Loading...</h1>}
             {data &&

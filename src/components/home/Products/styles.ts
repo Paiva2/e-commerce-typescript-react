@@ -62,13 +62,19 @@ export const ColorsWrapper = styled("div", {
 export const ProductsContainer = styled("div", {
   display: "flex",
   w: "100%",
+  h: "100%",
   flexDirection: "column",
   justifyContent: "center",
+  gap: "1.25rem",
+});
+
+export const ProducsTitleWrapper = styled("div", {
+  alignSelf: "flex-start",
 });
 
 export const ProductsWrapper = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(3, 0fr)",
+  gridTemplateColumns: "repeat(4, 0fr)",
   gridGap: "1.875rem",
 });
 
