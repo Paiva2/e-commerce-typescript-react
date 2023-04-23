@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { BsHeartFill, BsCart } from "react-icons/bs";
+import { BiSearch } from "react-icons/bi";
 
 import { Link } from "react-router-dom";
 import {
@@ -32,6 +33,9 @@ const Header = () => {
           <Link to="/">e-Commerce</Link>
         </LogoContainer>
         <SearchContainer>
+          <label>
+            <BiSearch />
+          </label>
           <input type="search" onChange={(e) => setSearchValue(e.target.value)} />
         </SearchContainer>
         <PurchaserContainer>

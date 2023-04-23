@@ -6,7 +6,6 @@ export const HeaderContainer = styled("div", {
   position: "sticky",
   top: "0",
   zIndex: 1000,
-  border: "1px solid red",
   pd: "1.25rem",
 });
 
@@ -84,4 +83,31 @@ export const PurchaserContainer = styled("div", {
 
 export const LogoContainer = styled("div", {});
 
-export const SearchContainer = styled("div", {});
+export const SearchContainer = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "350px",
+  paddingLeft: "10px",
+  borderRadius: "8px",
+  backgroundColor: "#323238",
+
+  svg: {
+    fontSize: "25px",
+    display: "grid",
+    placeItems: "center",
+  },
+
+  input: {
+    display: "flex",
+    alignItems: "center",
+    width: "360px",
+    border: "none",
+    fontSize: "18px",
+    paddingLeft: "8px",
+    borderRadius: "20px",
+    height: "40px",
+    backgroundColor: "#323238",
+    color: "#E1E1E6",
+  },
+});

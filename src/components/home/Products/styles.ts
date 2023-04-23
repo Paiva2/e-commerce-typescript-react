@@ -88,7 +88,7 @@ export const ProductsStyle = styled("div", {
   alignItems: "center",
   background: "#202024",
   overflow: "hidden",
-  color: "#C4C4CC",
+  color: "#E1E1E6",
   br: "5px",
 
   a: {

@@ -51,15 +51,21 @@ export const { styled, css, getCssText } = createStitches({
 });
 
 export const globalStyles = globalCss({
-  "@import": [
-    "url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')",
-  ],
+  "@import": ["url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')"],
 
   "*": {
     margin: 0,
     padding: 0,
     boxSizing: "border-box",
     fontFamily: "Roboto, sans-serif",
+
+    "&:focus": {
+      outline: "none",
+    },
+  },
+
+  "input:webkit-search-decoration": {
+    WebkitAppearance: "none",
   },
 
   body: {
