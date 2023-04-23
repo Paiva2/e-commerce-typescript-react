@@ -437,59 +437,6 @@
       }
     }
   ],
-  "cart": [
-    {
-      "id": "6",
-      "name": "Men's Polo Shirt",
-      "description": "Classic polo shirt with logo",
-      "price": 39.99,
-      "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
-      "rating": 4,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "white"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "17",
-      "name": "Women's Tank Top",
-      "description": "Sleeveless tank top with lace detail",
-      "price": 29.99,
-      "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
-      "rating": 4.3,
-      "quantity": 5,
-      "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "7",
-      "name": "Women's Denim Jacket",
-      "description": "A-line denim Jacket with button closure",
-      "price": 49.99,
-      "image": "https://i.postimg.cc/59XRWxjb/Women-s-Denim-Jacket.jpg",
-      "rating": 4.3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    }
-  ],
+  "cart": [],
   "wish-list": []
 }
