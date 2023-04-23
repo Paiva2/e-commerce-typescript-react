@@ -12,6 +12,7 @@ import {
   IconsWrapper,
   ColorsWrapper,
   ProducsTitleWrapper,
+  RatingWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
@@ -27,6 +28,7 @@ import { Link } from "react-router-dom";
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
 import ProductsPagination from "../../ProductsPagination";
+import { handleGoToTop } from "../../../context/GoToTop";
 
 const Products = () => {
   const { data, loading, searchValue, initialPage, finalPage } =
@@ -44,9 +46,7 @@ const Products = () => {
 
     const aSideColorFilters = data.map((info) => info.filterParams.colors);
 
-    aSideColorFilters.map((item) =>
-      item.map((color) => colorsAccumulator.push(color))
-    );
+    aSideColorFilters.map((item) => item.map((color) => colorsAccumulator.push(color)));
 
     return colorsAccumulator;
   };
@@ -135,25 +135,28 @@ const Products = () => {
               showProducts.map((product) => {
                 return (
                   <ProductsStyle key={product.id}>
-                    <Link to={`/${product.id}`}>
+                    <Link onClick={handleGoToTop} to={`/${product.id}`}>
                       <img src={product.image} alt={product.name} loading="lazy" />
                     </Link>
-                    <p>{product.name}</p>
-                    <span>
-                      <StarIcon rating={product.rating} />
-                    </span>
+                    <h3>{product.name}</h3>
+                    <RatingWrapper>
+                      <span>
+                        <StarIcon rating={product.rating} />({product.rating})
+                      </span>
+                      <button>+ About</button>
+                    </RatingWrapper>
                     <ProductActionsContainer>
                       <IconsWrapper>
-                        <BsCartPlus
-                          className="cart-icon"
-                          onClick={() => insertItem("cart", product, setCartData)}
-                        />
-                        <BsHeart
-                          className="wishlist-icon"
+                        <button onClick={() => insertItem("cart", product, setCartData)}>
+                          <BsCartPlus className="cart-icon" />
+                        </button>
+                        <button
                           onClick={() =>
                             insertItem("wish-list", product, setWishListData)
                           }
-                        />
+                        >
+                          <BsHeart className="wishlist-icon" />
+                        </button>
                       </IconsWrapper>
                       <PriceWrapper>
                         <p>$ {product.price}</p>
@@ -163,7 +166,7 @@ const Products = () => {
                 );
               })}
           </ProductsWrapper>
-          <ProductsPagination />
+          {!searchValue && !colorFilter && <ProductsPagination />}
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />

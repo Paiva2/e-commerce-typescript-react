@@ -1,6 +1,7 @@
 import { useEffect, useState, CSSProperties } from "react";
 import { GoTopButton } from "./styles";
 import { HiArrowSmUp } from "react-icons/hi";
+import { handleGoToTop } from "../../context/GoToTop";
 
 const GoToTopButton = () => {
   const [showGoTopButton, setShowGoTopButton] = useState(false);
@@ -14,13 +15,6 @@ const GoToTopButton = () => {
   const isButtonVisible: CSSProperties = {
     opacity: showGoTopButton ? "1" : "0",
     visibility: showGoTopButton ? "visible" : "hidden",
-  };
-
-  const handleGoToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
   };
 
   return (

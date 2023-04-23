@@ -46,7 +46,7 @@ export const PurchaserContainer = styled("div", {
     },
 
     ".cart-quantity": {
-      background: "#3D88E8",
+      background: "#00875F",
       opacity: "0",
       visibility: "0",
       transition: "opacity 0.2s ease-in-out, visibility 0.2s ease-in-out",
@@ -61,7 +61,7 @@ export const PurchaserContainer = styled("div", {
 
     ".cart-icon": {
       "&:hover": {
-        color: "#3D88E8",
+        color: "#00875F",
       },
     },
 

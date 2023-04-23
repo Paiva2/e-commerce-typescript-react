@@ -2,29 +2,23 @@ import { useContext } from "react";
 import { ArrowButtons, PageButtonsContainer, ProductsButtons } from "./styles";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ProductsContext } from "../../context/ProductsContext";
+import { handleGoToTop } from "../../context/GoToTop";
 
 const ProductsPagination = () => {
   const { setCurrentPage, currentPage, totalPages } = useContext(ProductsContext);
-
-  const goToTop = () => {
-    window.scrollTo({
-      top: 600,
-      behavior: "smooth",
-    });
-  };
 
   const handlePreviousPage = () => {
     if (currentPage <= 0) return;
 
     setCurrentPage((oldVal) => oldVal - 1);
-    goToTop();
+    handleGoToTop();
   };
 
   const handleNextPage = () => {
     if (currentPage + 1 >= totalPages.length) return;
 
     setCurrentPage((oldVal) => oldVal + 1);
-    goToTop();
+    handleGoToTop();
   };
 
   return (
@@ -37,7 +31,7 @@ const ProductsPagination = () => {
           key={index}
           className={index === currentPage ? "active" : ""}
           onClick={() => {
-            setCurrentPage(index), goToTop();
+            setCurrentPage(index), handleGoToTop();
           }}
         >
           {index + 1}

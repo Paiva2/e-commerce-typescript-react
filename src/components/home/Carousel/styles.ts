@@ -61,7 +61,7 @@ export const ActionsButtonsContainer = styled("div", {
     transition: "color 0.3s ease-in-out",
 
     "&:hover": {
-      color: "#000",
+      color: "#00875F",
     },
   },
 });
