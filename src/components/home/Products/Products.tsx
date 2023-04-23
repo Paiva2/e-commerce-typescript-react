@@ -136,11 +136,7 @@ const Products = () => {
                 return (
                   <ProductsStyle key={product.id}>
                     <Link to={`/${product.id}`}>
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        loading="lazy"
-                      />
+                      <img src={product.image} alt={product.name} loading="lazy" />
                     </Link>
                     <p>{product.name}</p>
                     <span>
@@ -150,9 +146,7 @@ const Products = () => {
                       <IconsWrapper>
                         <BsCartPlus
                           className="cart-icon"
-                          onClick={() =>
-                            insertItem("cart", product, setCartData)
-                          }
+                          onClick={() => insertItem("cart", product, setCartData)}
                         />
                         <BsHeart
                           className="wishlist-icon"

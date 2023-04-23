@@ -14,10 +14,29 @@ import {
 
 import { AiOutlineDelete } from "react-icons/ai";
 import { CartContext } from "../../context/CartContext";
-import { deleteItem } from "../../context/apiMethods";
+import { deleteItem, editItem } from "../../context/apiMethods";
+import { IProduct } from "../../../interfaces/interfaces";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
+
+  const handleSetQuantity = (
+    product: IProduct,
+    productId: string,
+    operator: string
+  ) => {
+    switch (operator) {
+      case "+":
+        editItem("cart", productId, { quantity: product.quantity + 1 }, setCartData);
+        break;
+      case "-":
+        if (product.quantity === 1) return;
+        editItem("cart", productId, { quantity: product.quantity - 1 }, setCartData);
+        break;
+      default:
+        console.warn("Invalid operator. Contact admin for support.");
+    }
+  };
 
   return (
     <>
@@ -51,9 +70,7 @@ const Cart = () => {
                       <p>{product.description}</p>
                       <div>
                         <AiOutlineDelete
-                          onClick={() =>
-                            deleteItem("cart", product.id, setCartData)
-                          }
+                          onClick={() => deleteItem("cart", product.id, setCartData)}
                           className="icon"
                         />
                       </div>
@@ -62,9 +79,19 @@ const Cart = () => {
                   <ActionsContainer>
                     <p>$ {product.price}</p>
                     <QuantityWrapper>
-                      +<p>{product.quantity}</p>-
+                      <button
+                        onClick={() => handleSetQuantity(product, product.id, "+")}
+                      >
+                        +
+                      </button>
+                      <p>{product.quantity}</p>
+                      <button
+                        onClick={() => handleSetQuantity(product, product.id, "-")}
+                      >
+                        -
+                      </button>
                     </QuantityWrapper>
-                    <p>$ {product.quantity * product.price}</p>
+                    <p>$ {(product.quantity * product.price).toFixed(2)}</p>
                   </ActionsContainer>
                 </ProductWrapper>
               );

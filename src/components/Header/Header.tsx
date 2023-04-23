@@ -21,10 +21,7 @@ const Header = () => {
           <Link to="/">e-Commerce</Link>
         </LogoContainer>
         <SearchContainer>
-          <input
-            type="search"
-            onChange={(e) => setSearchValue(e.target.value)}
-          />
+          <input type="search" onChange={(e) => setSearchValue(e.target.value)} />
         </SearchContainer>
         <PurchaserContainer>
           <div>

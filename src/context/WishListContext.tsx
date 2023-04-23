@@ -14,9 +14,7 @@ const WishListStorage: FC<Props> = ({ children }) => {
   }, []);
 
   return (
-    <WishListContext.Provider
-      value={{ wishListData, loading, setWishListData }}
-    >
+    <WishListContext.Provider value={{ wishListData, loading, setWishListData }}>
       {children}
     </WishListContext.Provider>
   );

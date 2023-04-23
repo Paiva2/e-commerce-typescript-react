@@ -69,9 +69,7 @@ const Carousel = () => {
       <ActionsButtonsContainer>
         <button
           onClick={() =>
-            updateSlideImage(
-              currentPosition < 0 ? totalImages : currentPosition - 1
-            )
+            updateSlideImage(currentPosition < 0 ? totalImages : currentPosition - 1)
           }
         >
           <MdKeyboardArrowLeft />

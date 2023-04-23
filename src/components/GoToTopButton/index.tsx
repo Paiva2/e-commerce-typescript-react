@@ -7,9 +7,7 @@ const GoToTopButton = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 100
-        ? setShowGoTopButton(true)
-        : setShowGoTopButton(false);
+      window.scrollY > 100 ? setShowGoTopButton(true) : setShowGoTopButton(false);
     });
   }, []);
 

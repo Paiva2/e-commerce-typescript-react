@@ -63,6 +63,18 @@ export const insertItem = (
     });
 };
 
+export const editItem = (
+  endpoint: string,
+  id: string,
+  infoToChange: {},
+  setData: Dispatch<SetStateAction<IProduct[]>>
+) => {
+  axios
+    .patch(`http://localhost:3000/${endpoint}/${id}`, infoToChange)
+    .then(() => callApi(endpoint, setData))
+    .catch((err) => console.log(err));
+};
+
 export const deleteItem = (
   endpoint: string,
   id: string,

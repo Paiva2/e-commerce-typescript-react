@@ -57,17 +57,13 @@ const ProductResume = () => {
           </select>
         </div>
         <div>
-          <button
-            onClick={() => insertItem("cart", singleProduct, setCartData)}
-          >
+          <button onClick={() => insertItem("cart", singleProduct, setCartData)}>
             Add to cart <BsCartPlus />
           </button>
         </div>
         <div>
           <button
-            onClick={() =>
-              insertItem("wish-list", singleProduct, setWishListData)
-            }
+            onClick={() => insertItem("wish-list", singleProduct, setWishListData)}
           >
             Add to wish list <BsHeart />
           </button>

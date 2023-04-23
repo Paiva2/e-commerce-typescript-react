@@ -4,8 +4,7 @@ import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ProductsContext } from "../../context/ProductsContext";
 
 const ProductsPagination = () => {
-  const { setCurrentPage, currentPage, totalPages } =
-    useContext(ProductsContext);
+  const { setCurrentPage, currentPage, totalPages } = useContext(ProductsContext);
 
   const goToTop = () => {
     window.scrollTo({
