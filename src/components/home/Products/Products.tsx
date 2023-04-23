@@ -12,7 +12,6 @@ import {
   IconsWrapper,
   ColorsWrapper,
   ProducsTitleWrapper,
-  MiddleWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
@@ -99,7 +98,7 @@ const Products = () => {
         <AsideContainer>
           <div>
             <h2>Genre</h2>
-            <ul style={{ display: "flex", flexDirection: "column" }}>
+            <ul>
               <div style={{ display: "flex" }}>
                 <li>Male</li>
                 <IoIosClose />
@@ -113,11 +112,9 @@ const Products = () => {
 
           <div>
             <h2>Color</h2>
-            <ul
-              style={{ display: "flex", flexDirection: "column", gap: "8px" }}
-            >
-              {uniqueColorsForAside.map((color) => (
-                <ColorsWrapper>
+            <ul>
+              {uniqueColorsForAside.map((color, index) => (
+                <ColorsWrapper key={index}>
                   <li onClick={() => handleGetSelectedColor(color)}>{color}</li>
                   <IoIosClose
                     className={colorFilter === color ? "closeVisible" : ""}

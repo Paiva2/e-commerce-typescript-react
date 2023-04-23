@@ -20,10 +20,13 @@ export const AsideContainer = styled("div", {
     background: "#202024",
     width: "11.25rem",
     padding: ".625rem",
-    borderRadius: "5px",
+    br: "5px",
   },
 
   ul: {
+    display: "flex",
+    flexDirection: "column",
+    gap: ".5rem",
     listStyle: "none",
     margin: ".3125rem",
   },

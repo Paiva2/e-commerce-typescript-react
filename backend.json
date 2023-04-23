@@ -259,6 +259,58 @@
         "colors": ["red"],
         "genre": ["female"]
       }
+    },
+    {
+      "id": "21",
+      "name": "Women's grey t-shirt",
+      "description": "Classic grey t-shirt",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/KcDJXDmH/grey-shirt.jpg",
+      "rating": 4.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["grey"],
+        "genre": ["female"]
+      }
+    },
+    {
+      "id": "22",
+      "name": "Nike Pants",
+      "description": "Nike classic black Pants with symbol",
+      "price": 249.99,
+      "image": "https://i.postimg.cc/8Py4ckJd/moletom.webp",
+      "rating": 5,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["black", "grey"],
+        "genre": ["male"]
+      }
+    },
+    {
+      "id": "23",
+      "name": "Social Shoes",
+      "description": "Social Shoes for men's",
+      "price": 149.99,
+      "image": "https://i.postimg.cc/3N1BgYLT/sapato-social-masculino.webp",
+      "rating": 4.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["black", "brown"],
+        "genre": ["male"]
+      }
+    },
+    {
+      "id": "24",
+      "name": "Women's Floral Social Shirt",
+      "description": "Women's floral social shirt with blue details",
+      "price": 79.99,
+      "image": "https://i.postimg.cc/TY2QT5wY/woman-social-shirt.jpg",
+      "rating": 4.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["white", "grey"],
+        "genre": ["female"]
+      }
     }
   ],
   "cart": [],

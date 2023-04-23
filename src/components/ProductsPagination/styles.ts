@@ -6,6 +6,7 @@ export const PageButtonsContainer = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   gap: "8px",
+  mt: "1.25rem",
 
   ".active": {
     backgroundColor: "#00875F",

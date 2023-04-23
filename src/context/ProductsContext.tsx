@@ -10,7 +10,7 @@ const ProductsStorage: FC<Props> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState("");
 
-  const [itensPerPage, setItensOnPage] = useState<number>(10);
+  const [itensPerPage, setItensOnPage] = useState<number>(12);
   const [currentPage, setCurrentPage] = useState(0);
   const initialPage = currentPage * itensPerPage;
   const finalPage = initialPage + itensPerPage;

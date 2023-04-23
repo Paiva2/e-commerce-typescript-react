@@ -7,16 +7,25 @@ const ProductsPagination = () => {
   const { setCurrentPage, currentPage, totalPages } =
     useContext(ProductsContext);
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 600,
+      behavior: "smooth",
+    });
+  };
+
   const handlePreviousPage = () => {
     if (currentPage <= 0) return;
 
     setCurrentPage((oldVal) => oldVal - 1);
+    goToTop();
   };
 
   const handleNextPage = () => {
     if (currentPage + 1 >= totalPages.length) return;
 
     setCurrentPage((oldVal) => oldVal + 1);
+    goToTop();
   };
 
   return (
@@ -28,7 +37,9 @@ const ProductsPagination = () => {
         <ProductsButtons
           key={index}
           className={index === currentPage ? "active" : ""}
-          onClick={() => setCurrentPage(index)}
+          onClick={() => {
+            setCurrentPage(index), goToTop();
+          }}
         >
           {index + 1}
         </ProductsButtons>
