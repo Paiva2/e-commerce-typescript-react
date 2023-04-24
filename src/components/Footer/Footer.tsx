@@ -80,7 +80,9 @@ const Footer = () => {
           </div>
         </NewsLetter>
       </NavContainer>
-      <CopyrightContainer>© Copyright {year} JVP Store</CopyrightContainer>
+      <CopyrightContainer>
+        © Copyright {year} <span>JVP Store</span>
+      </CopyrightContainer>
     </FooterContainer>
   );
 };

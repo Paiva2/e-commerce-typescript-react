@@ -11,7 +11,7 @@ export const NavContainer = styled("div", {
   justifyContent: "space-evenly",
 
   h3: {
-    color: "#00B37E",
+    color: "#00875F",
   },
 
   "> div": {
@@ -50,6 +50,12 @@ export const FooterIconsWrapper = styled("div", {
 export const CopyrightContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
+  gap: ".3125rem",
+
+  span: {
+    color: "#00875F",
+    fontWeight: "bold",
+  },
 });
 
 export const NewsLetter = styled("div", {
