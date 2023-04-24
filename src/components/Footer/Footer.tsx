@@ -1,5 +1,18 @@
-import React from "react";
-import { CopyrightContainer, FooterContainer, NavContainer } from "./styles";
+import {
+  CopyrightContainer,
+  FooterContainer,
+  FooterIconsWrapper,
+  NavContainer,
+  NewsLetter,
+} from "./styles";
+import FacebookIcon from "../icons/FacebookIcon";
+import InstagramIcon from "../icons/InstagramIcon";
+import TwitterIcon from "../icons/TwitterIcon";
+import YoutubeIcon from "../icons/YoutubeIcon";
+import AmexIcon from "../icons/AmexIcon";
+import BitcoinIcon from "../icons/BitcoinIcon";
+import MasterCardIcon from "../icons/MasterCardIcon";
+import VisaIcon from "../icons/VisaIcon";
 
 const year = new Date().getFullYear();
 
@@ -8,36 +21,66 @@ const Footer = () => {
     <FooterContainer>
       <NavContainer>
         <div>
-          About
+          <h3>ABOUT</h3>
           <ul>
-            <li>text 1</li>
-            <li>text 2</li>
-            <li>text 3</li>
-            <li>text 4</li>
-            <li>text 5</li>
+            <li>
+              <a href="#">Compliance</a>
+            </li>
+            <li>
+              <a href="#">Credits</a>
+            </li>
+            <li>
+              <a href="#">Terms</a>
+            </li>
+            <li>
+              <a href="#">Privacy</a>
+            </li>
           </ul>
         </div>
         <div>
-          Help
+          <h3>HELP</h3>
           <ul>
-            <li>text 1</li>
-            <li>text 2</li>
-            <li>text 3</li>
-            <li>text 4</li>
-            <li>text 5</li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Discount coupons</a>
+            </li>
+            <li>
+              <a href="#">Career</a>
+            </li>
+            <li>
+              <a href="#">F.A.Q</a>
+            </li>
           </ul>
         </div>
         <div>
-          Social Medias
-          <div>Medias</div>
+          <h3>Social Medias</h3>
+          <FooterIconsWrapper>
+            <FacebookIcon />
+            <InstagramIcon />
+            <TwitterIcon />
+            <YoutubeIcon />
+          </FooterIconsWrapper>
         </div>
         <div>
-          Payment
-          <div>Payments</div>
+          <h3>Payment</h3>
+          <FooterIconsWrapper>
+            <AmexIcon />
+            <BitcoinIcon />
+            <MasterCardIcon />
+            <VisaIcon />
+          </FooterIconsWrapper>
         </div>
-        <div>newsletter</div>
+        <NewsLetter>
+          <h3>News Letter</h3>
+          <div>
+            <input placeholder="Insert your e-mail here!" type="text" />
+            <button>Send</button>
+          </div>
+        </NewsLetter>
       </NavContainer>
-      <CopyrightContainer>Copyright {year}</CopyrightContainer>
+      <CopyrightContainer>© Copyright {year} JVP Store</CopyrightContainer>
     </FooterContainer>
   );
 };

@@ -1,22 +1,87 @@
 import { styled } from "../../../config/styles-config";
 
 export const FooterContainer = styled("div", {
-  border: "1px solid red",
+  borderTop: "2px solid grey",
   pd: "1.25rem",
+  w: "100%",
 });
 
 export const NavContainer = styled("div", {
   display: "flex",
-  alignItems: "center",
   justifyContent: "space-evenly",
 
-  ul: {
-    listStyle: "none",
-    pd: "0",
+  h3: {
+    color: "#00B37E",
   },
+
+  "> div": {
+    display: "flex",
+    flexDirection: "column",
+    gap: ".3125rem",
+
+    ul: {
+      listStyle: "none",
+      pd: "0",
+
+      a: {
+        "&:hover": {
+          textDecoration: "underline #00B37E",
+        },
+      },
+
+      li: {
+        display: "flex",
+        flexDirection: "column",
+        marginBottom: ".1875rem",
+      },
+    },
+  },
+});
+
+export const FooterIconsWrapper = styled("div", {
+  display: "flex",
+  gap: ".5rem",
+  fontSize: "1.4375rem",
+  alignItems: "center",
+  justifyContent: "center",
+  cursor: "pointer",
 });
 
 export const CopyrightContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
+});
+
+export const NewsLetter = styled("div", {
+  "> div": {
+    display: "flex",
+    gap: "5px",
+  },
+
+  input: {
+    w: "15.625rem",
+    h: "1.875rem",
+    paddingLeft: ".625rem",
+    borderRadius: "8px",
+    background: "#323238",
+    border: "0",
+    color: "#fff",
+    fontSize: ".875rem",
+
+    "&::placeholder": {
+      color: "#fff",
+    },
+  },
+
+  button: {
+    w: "3.125rem",
+    h: "1.875rem",
+    br: "8px",
+    border: "0",
+    color: "#E1E1E6",
+    background: "#00875F",
+    cursor: "pointer",
+    fontSize: ".875rem",
+    fontWeight: "bold",
+  },
 });
