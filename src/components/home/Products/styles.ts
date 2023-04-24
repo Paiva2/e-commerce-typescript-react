@@ -159,7 +159,7 @@ export const IconsWrapper = styled("div", {
   },
 });
 
-export const RatingWrapper = styled("span", {
+export const ProductCardDetails = styled("span", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -172,11 +172,22 @@ export const RatingWrapper = styled("span", {
     gap: ".3125rem",
   },
 
+  a: {
+    w: "5.625rem",
+    h: "2.1875rem",
+  },
+
   button: {
+    display: "grid",
+    placeItems: "center",
     w: "5.625rem",
     h: "2.1875rem",
     br: "1.25rem",
     border: "0",
+    cursor: "pointer",
+    fontSize: "1rem ",
+    background: "#121214",
+    color: "#E1E1E6",
   },
 });
 

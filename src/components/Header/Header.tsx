@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { BsHeartFill, BsCart } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
+import { BiSearch, BiStore } from "react-icons/bi";
 
 import { Link } from "react-router-dom";
 import {
@@ -12,7 +12,9 @@ import {
 } from "./styles";
 import { ProductsContext } from "../../context/ProductsContext";
 import { CartContext } from "../../context/CartContext";
+
 import { WishListContext } from "../../context/WishListContext";
+import { handleGoToTop } from "../../context/GoToTop";
 
 const Header = () => {
   const { setSearchValue } = useContext(ProductsContext);
@@ -30,7 +32,12 @@ const Header = () => {
     <HeaderContainer>
       <HeaderWrapper>
         <LogoContainer>
-          <Link to="/">e-Commerce</Link>
+          <Link to="/">
+            <p>
+              <span>JVP</span> Store
+            </p>
+            <BiStore />
+          </Link>
         </LogoContainer>
         <SearchContainer>
           <label>
@@ -40,7 +47,7 @@ const Header = () => {
         </SearchContainer>
         <PurchaserContainer>
           <div>
-            <Link to="/wish-list">
+            <Link onClick={handleGoToTop} to="/wish-list">
               <BsHeartFill className="wish-list-icon" />
               <span
                 style={isQuantityIconsVisible(wishListItemsQuantity)}
@@ -49,7 +56,7 @@ const Header = () => {
                 {wishListItemsQuantity}
               </span>
             </Link>
-            <Link to="/cart">
+            <Link onClick={handleGoToTop} to="/cart">
               <BsCart className="cart-icon" />
               <span
                 style={isQuantityIconsVisible(cartItemsQuantity)}

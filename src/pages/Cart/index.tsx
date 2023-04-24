@@ -77,7 +77,12 @@ const Cart = () => {
                     <QuantityWrapper>
                       <button onClick={() => handleSetQuantity(product, "+")}>+</button>
                       <p>{product.quantity}</p>
-                      <button onClick={() => handleSetQuantity(product, "-")}>-</button>
+                      <button
+                        disabled={product.quantity === 1 ? true : false}
+                        onClick={() => handleSetQuantity(product, "-")}
+                      >
+                        -
+                      </button>
                     </QuantityWrapper>
                     <p>$ {(product.quantity * product.price).toFixed(2)}</p>
                   </ActionsContainer>

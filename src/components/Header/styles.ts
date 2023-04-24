@@ -36,13 +36,13 @@ export const PurchaserContainer = styled("div", {
     span: {
       display: "flex",
       alignItems: "center",
-      fontSize: "14px",
+      fontSize: ".875rem",
       color: "#fff",
-      padding: "0 5px",
+      padding: "0 .3125rem",
       borderRadius: "50%",
       verticalAlign: "top",
-      width: "18px",
-      height: "18px",
+      width: "1.125rem",
+      height: "1.125rem",
     },
 
     ".cart-quantity": {
@@ -81,19 +81,40 @@ export const PurchaserContainer = styled("div", {
   },
 });
 
-export const LogoContainer = styled("div", {});
+export const LogoContainer = styled("div", {
+  a: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: ".625rem",
+  },
+
+  svg: {
+    fontSize: "1.5625rem",
+    display: "grid",
+    placeItems: "center",
+  },
+
+  span: {
+    color: "#00875F",
+  },
+
+  p: {
+    fontSize: "1.5625rem",
+  },
+});
 
 export const SearchContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  width: "350px",
-  paddingLeft: "10px",
+  width: "21.875rem",
+  paddingLeft: ".625rem",
   borderRadius: "8px",
-  backgroundColor: "#323238",
+  background: "#323238",
 
   svg: {
-    fontSize: "25px",
+    fontSize: "1.5625rem",
     display: "grid",
     placeItems: "center",
   },
@@ -101,13 +122,13 @@ export const SearchContainer = styled("div", {
   input: {
     display: "flex",
     alignItems: "center",
-    width: "360px",
+    width: "21.875rem",
     border: "none",
-    fontSize: "18px",
-    paddingLeft: "8px",
+    fontSize: "1.125rem",
+    paddingLeft: ".5rem",
     borderRadius: "20px",
-    height: "40px",
-    backgroundColor: "#323238",
+    height: "2.5rem",
+    background: "#323238",
     color: "#E1E1E6",
   },
 });

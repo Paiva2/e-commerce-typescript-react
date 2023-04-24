@@ -12,7 +12,7 @@ import {
   IconsWrapper,
   ColorsWrapper,
   ProducsTitleWrapper,
-  RatingWrapper,
+  ProductCardDetails,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
 
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
-import ProductsPagination from "../../ProductsPagination";
+import ProductsPagination from "../../home/ProductsPagination";
 import { handleGoToTop } from "../../../context/GoToTop";
 
 const Products = () => {
@@ -139,12 +139,14 @@ const Products = () => {
                       <img src={product.image} alt={product.name} loading="lazy" />
                     </Link>
                     <h3>{product.name}</h3>
-                    <RatingWrapper>
+                    <ProductCardDetails>
                       <span>
                         <StarIcon rating={product.rating} />({product.rating})
                       </span>
-                      <button>+ About</button>
-                    </RatingWrapper>
+                      <Link onClick={handleGoToTop} to={`/${product.id}`}>
+                        <button>Details</button>
+                      </Link>
+                    </ProductCardDetails>
                     <ProductActionsContainer>
                       <IconsWrapper>
                         <button onClick={() => insertItem("cart", product, setCartData)}>
