@@ -4,10 +4,10 @@ import { WishListContext } from "../../context/WishListContext";
 import { Helmet } from "react-helmet";
 import { BsCartPlus } from "react-icons/bs";
 
-import { AiOutlineDelete } from "react-icons/ai";
+import { RiCloseFill } from "react-icons/ri";
 import {
+  ActionsWrapper,
   Paragraph,
-  PriceWrapper,
   ProductContainer,
   ProductResume,
   ProductWrapper,
@@ -50,16 +50,16 @@ const WishList = () => {
           {loading && <h1>Loading...</h1>}
           <UpSideContainer>
             <div>
-              <p>product</p>
+              <p>PRODUCT</p>
             </div>
             <div>
-              <p>price</p>
+              <p>PRICE</p>
             </div>
           </UpSideContainer>
           <ProductContainer>
             {wishListData.map((product) => {
               return (
-                <ProductWrapper>
+                <ProductWrapper key={product.id}>
                   <ProductResume>
                     <div>
                       <img src={product.image} alt={product.name} />
@@ -69,19 +69,23 @@ const WishList = () => {
                       <Paragraph type="description">{product.description}</Paragraph>
                     </div>
                   </ProductResume>
-                  <PriceWrapper>
+                  <ActionsWrapper>
                     <div>
                       <p>$ {product.price}</p>
+                      <div>
+                        <button
+                          className="icon"
+                          onClick={() => handleSendWishItemToCart(product)}
+                        >
+                          <BsCartPlus />
+                        </button>
+                      </div>
                     </div>
-                    <BsCartPlus
-                      className="icon"
-                      onClick={() => handleSendWishItemToCart(product)}
-                    />
-                    <AiOutlineDelete
+                    <RiCloseFill
                       onClick={() => handleDeleteItemFromWishList(product)}
-                      className="icon"
+                      className="close-icon"
                     />
-                  </PriceWrapper>
+                  </ActionsWrapper>
                 </ProductWrapper>
               );
             })}

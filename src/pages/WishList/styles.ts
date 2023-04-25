@@ -2,11 +2,21 @@ import { styled } from "../../../config/styles-config";
 
 export const WishListContainer = styled("div", {
   display: "flex",
-  minHeight: "100vh",
+  minHeight: "70vh",
   justifyContent: "center",
 
-  ".icon": {
+  ".close-icon": {
+    alignSelf: "flex-start",
+    color: "#fff",
+    fontSize: "25px",
+    background: "#C02121",
+    borderBottomLeftRadius: "8px",
     cursor: "pointer",
+    transition: "background-color 0.2s",
+
+    "&:hover": {
+      background: "#F80A0A",
+    },
   },
 });
 
@@ -17,14 +27,23 @@ export const WishListWrapper = styled("div", {
   flexDirection: "column",
   alignItems: "center",
   gap: ".9375rem",
+  background: "#202024",
+  overflow: "auto",
+  h: "70vh",
+  w: "40%",
 });
 
 export const UpSideContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  borderBottom: "1px solid red",
+  borderBottom: "1px solid gray",
   w: "90%",
   pd: ".9375rem",
+
+  p: {
+    fontWeight: "bold",
+    color: "#00B37E",
+  },
 
   "> div:last-child": {
     display: "flex",
@@ -45,6 +64,10 @@ export const ProductWrapper = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   w: "100%",
+  background: "#121214",
+  br: "8px",
+  overflow: "hidden",
+  h: "7.5rem",
 });
 
 export const ProductResume = styled("div", {
@@ -56,8 +79,8 @@ export const ProductResume = styled("div", {
 
   "> div:first-child": {
     img: {
-      w: "7.5rem",
-      h: "7.5rem",
+      w: "8.125rem",
+      h: "7.75rem",
     },
   },
 
@@ -69,14 +92,49 @@ export const ProductResume = styled("div", {
   },
 });
 
-export const PriceWrapper = styled("div", {
+export const ActionsWrapper = styled("div", {
   display: "flex",
   alignItems: "center",
   w: "18.125rem",
   gap: ".625rem",
+  justifyContent: "space-between",
+
+  ".icon": {
+    cursor: "pointer",
+  },
 
   "> div:first-child": {
     w: "5rem",
+    display: "flex",
+    gap: "1.25rem",
+    width: "100%",
+    alignItems: "center",
+
+    button: {
+      display: "grid",
+      placeItems: "center",
+      w: "3.75rem",
+      h: "2.1875rem",
+      br: "1.25rem",
+      border: "0",
+      font: "0",
+      cursor: "pointer",
+      color: "#fff",
+      fontSize: "1.4375rem",
+      transition: "background-color 0.2s ease-in-out",
+
+      "&:first-child": {
+        background: "#00B37E",
+
+        "&:hover": {
+          background: "#00875F",
+        },
+      },
+    },
+
+    svg: {
+      fontSize: "1.375rem",
+    },
   },
 });
 
@@ -84,7 +142,7 @@ export const Paragraph = styled("p", {
   variants: {
     type: {
       titleProduct: {
-        fontSize: "1rem",
+        fontSize: "1.125rem",
         fontWeight: "bold",
       },
       description: {
