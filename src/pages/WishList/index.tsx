@@ -15,14 +15,15 @@ import {
   WishListContainer,
   WishListWrapper,
 } from "./styles";
-import { deleteItem, insertItem } from "../../context/apiMethods";
+import { deleteItem, insertItem } from "../../utils/apiMethods";
 
 import { CartContext } from "../../context/CartContext";
 import { IProduct } from "../../../interfaces/interfaces";
+import { FaHeart } from "react-icons/fa";
+import PlaceHolder from "../../components/PlaceHolder";
 
 const WishList = () => {
-  const { wishListData, loading, setWishListData } =
-    useContext(WishListContext);
+  const { wishListData, loading, setWishListData } = useContext(WishListContext);
 
   const { setCartData } = useContext(CartContext);
 
@@ -33,6 +34,10 @@ const WishList = () => {
   const handleDeleteItemFromWishList = (product: IProduct) => {
     deleteItem("wish-list", product.id, setWishListData);
   };
+
+  if (wishListData.length < 1) {
+    return <PlaceHolder text="Empty Wish List..." color="#C02121" Icon={FaHeart} />;
+  }
 
   return (
     <>
@@ -61,9 +66,7 @@ const WishList = () => {
                     </div>
                     <div>
                       <Paragraph type="titleProduct">{product.name}</Paragraph>
-                      <Paragraph type="description">
-                        {product.description}
-                      </Paragraph>
+                      <Paragraph type="description">{product.description}</Paragraph>
                     </div>
                   </ProductResume>
                   <PriceWrapper>

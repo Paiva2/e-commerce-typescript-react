@@ -86,7 +86,9 @@ export const deleteItem = (
 ) => {
   axios
     .delete(`http://localhost:3000/${endpoint}/${id}`)
-    .then(() => callApi(endpoint, setData))
+    .then(() => {
+      callApi(endpoint, setData), AlertMessage("success", "Product removed.");
+    })
     .catch((error) => {
       if (error.response) console.warn("Error. Try Again Later.");
       else if (error.request) console.log(error.request);

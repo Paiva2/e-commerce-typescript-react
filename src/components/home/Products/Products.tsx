@@ -18,7 +18,7 @@ import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
 
 import { ProductsContext } from "../../../context/ProductsContext";
-import { insertItem } from "../../../context/apiMethods";
+import { insertItem } from "../../../utils/apiMethods";
 import { CartContext } from "../../../context/CartContext";
 
 import { WishListContext } from "../../../context/WishListContext";
@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
 import ProductsPagination from "../../home/ProductsPagination";
-import { handleGoToTop } from "../../../context/GoToTop";
+import { handleGoToTop } from "../../../utils/GoToTop";
 
 const Products = () => {
   const { data, loading, searchValue, initialPage, finalPage } =

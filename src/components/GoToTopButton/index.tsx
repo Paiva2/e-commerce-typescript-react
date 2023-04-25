@@ -1,7 +1,7 @@
 import { useEffect, useState, CSSProperties } from "react";
 import { GoTopButton } from "./styles";
 import { HiArrowSmUp } from "react-icons/hi";
-import { handleGoToTop } from "../../context/GoToTop";
+import { handleGoToTop } from "../../utils/GoToTop";
 
 const GoToTopButton = () => {
   const [showGoTopButton, setShowGoTopButton] = useState(false);

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { IProduct } from "../../../interfaces/interfaces";
-import { callApi, insertItem } from "../../context/apiMethods";
+import { callApi, insertItem } from "../../utils/apiMethods";
 
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { RiArrowGoBackFill } from "react-icons/ri";
@@ -62,9 +62,7 @@ const ProductResume = () => {
           </button>
         </div>
         <div>
-          <button
-            onClick={() => insertItem("wish-list", singleProduct, setWishListData)}
-          >
+          <button onClick={() => insertItem("wish-list", singleProduct, setWishListData)}>
             Add to wish list <BsHeart />
           </button>
         </div>

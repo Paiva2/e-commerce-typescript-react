@@ -1,7 +1,7 @@
 import { styled } from "../../../config/styles-config";
 
 export const FooterContainer = styled("div", {
-  borderTop: "2px solid grey",
+  borderTop: "1px solid grey",
   pd: "1.25rem",
   w: "100%",
 });

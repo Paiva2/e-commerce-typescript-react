@@ -14,8 +14,10 @@ import {
 
 import { AiOutlineDelete } from "react-icons/ai";
 import { CartContext } from "../../context/CartContext";
-import { deleteItem, editItem } from "../../context/apiMethods";
+import { deleteItem, editItem } from "../../utils/apiMethods";
 import { IProduct } from "../../../interfaces/interfaces";
+import PlaceHolder from "../../components/PlaceHolder";
+import { BsCart } from "react-icons/bs";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
@@ -33,6 +35,10 @@ const Cart = () => {
         console.warn("Invalid operator. Contact admin for support.");
     }
   };
+
+  if (cartData.length < 1) {
+    return <PlaceHolder text="Empty Cart..." color="#00875F" Icon={BsCart} />;
+  }
 
   return (
     <>

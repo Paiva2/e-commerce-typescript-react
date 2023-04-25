@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect, FC } from "react";
 
 import { IProduct, Props, productDefault } from "../../interfaces/interfaces";
-import { callApi } from "./apiMethods";
+import { callApi } from "../utils/apiMethods";
 
 export const ProductsContext = createContext(productDefault);
 
@@ -14,7 +14,7 @@ const ProductsStorage: FC<Props> = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const initialPage = currentPage * itensPerPage;
   const finalPage = initialPage + itensPerPage;
-  const totalPages: number[] = [...Array(data.length / itensPerPage)];
+  const totalPages: number[] = [...Array(Math.ceil(data.length / itensPerPage))];
 
   useEffect(() => {
     callApi("products", setData, setLoading);
