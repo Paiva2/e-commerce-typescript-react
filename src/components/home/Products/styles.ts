@@ -201,3 +201,27 @@ export const PriceWrapper = styled("div", {
     },
   },
 });
+
+export const GenreWrapper = styled("div", {
+  div: {
+    display: "flex",
+
+    "&:hover": {
+      color: "#00875F",
+    },
+
+    svg: {
+      color: "#fff",
+      fontSize: "1.25rem",
+      cursor: "pointer",
+
+      "&:hover": {
+        color: "#F80A0A",
+      },
+    },
+
+    li: {
+      cursor: "pointer",
+    },
+  },
+});

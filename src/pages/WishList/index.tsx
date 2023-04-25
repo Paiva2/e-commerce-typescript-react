@@ -35,6 +35,10 @@ const WishList = () => {
     deleteItem("wish-list", product.id, setWishListData);
   };
 
+  if (loading) {
+    return <h2>loading...</h2>;
+  }
+
   if (wishListData.length < 1) {
     return <PlaceHolder text="Empty Wish List..." color="#C02121" Icon={FaHeart} />;
   }
@@ -47,7 +51,6 @@ const WishList = () => {
       </Helmet>
       <WishListContainer>
         <WishListWrapper>
-          {loading && <h1>Loading...</h1>}
           <UpSideContainer>
             <div>
               <p>PRODUCT</p>

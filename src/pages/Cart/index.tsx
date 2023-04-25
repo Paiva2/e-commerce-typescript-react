@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 // @ts-ignore
 import { Helmet } from "react-helmet";
 import {
@@ -15,6 +15,7 @@ import {
 import { AiOutlineDelete } from "react-icons/ai";
 import { CartContext } from "../../context/CartContext";
 import { deleteItem, editItem } from "../../utils/apiMethods";
+
 import { IProduct } from "../../../interfaces/interfaces";
 import PlaceHolder from "../../components/PlaceHolder";
 import { BsCart } from "react-icons/bs";
@@ -36,6 +37,15 @@ const Cart = () => {
     }
   };
 
+  const totalCartSum = cartData.reduce((acc, products) => {
+    const totalProducts = products.price * products.quantity;
+    return (acc += totalProducts);
+  }, 0);
+
+  if (loading) {
+    return <h2>loading...</h2>;
+  }
+
   if (cartData.length < 1) {
     return <PlaceHolder text="Empty Cart..." color="#00875F" Icon={BsCart} />;
   }
@@ -48,15 +58,14 @@ const Cart = () => {
       </Helmet>
       <CartContainer>
         <CartWrapper>
-          {loading && <h1>Loading...</h1>}
           <UpSideContainer>
             <div>
-              <p>product</p>
+              <p>PRODUCT</p>
             </div>
             <div>
-              <p>price</p>
-              <p>quantity</p>
-              <p>total</p>
+              <p>PRICE</p>
+              <p>QUANTITY</p>
+              <p>TOTAL</p>
             </div>
           </UpSideContainer>
           <CartProducts>
@@ -97,6 +106,10 @@ const Cart = () => {
             })}
           </CartProducts>
         </CartWrapper>
+        <div>
+          <h2>Total</h2>
+          <p>{totalCartSum.toFixed(2)}</p>
+        </div>
       </CartContainer>
     </>
   );

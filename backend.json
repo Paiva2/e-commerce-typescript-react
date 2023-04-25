@@ -9,14 +9,8 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "blue",
-          "red",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["blue", "red", "grey"],
+        "genre": ["female"]
       }
     },
     {
@@ -28,12 +22,8 @@
       "rating": 3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black"],
+        "genre": ["male"]
       }
     },
     {
@@ -45,14 +35,8 @@
       "rating": 4.7,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "blue",
-          "apricot",
-          "beige"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["blue", "apricot", "beige"],
+        "genre": ["female"]
       }
     },
     {
@@ -64,14 +48,8 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "rust",
-          "navy"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black", "rust", "navy"],
+        "genre": ["male"]
       }
     },
     {
@@ -83,13 +61,8 @@
       "rating": 4.6,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "red",
-          "violet"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["red", "violet"],
+        "genre": ["female"]
       }
     },
     {
@@ -101,12 +74,8 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "white"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["white"],
+        "genre": ["male"]
       }
     },
     {
@@ -118,13 +87,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["black", "maroon"],
+        "genre": ["female"]
       }
     },
     {
@@ -136,13 +100,8 @@
       "rating": 3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black", "maroon"],
+        "genre": ["male"]
       }
     },
     {
@@ -154,13 +113,8 @@
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "red"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["black", "red"],
+        "genre": ["female"]
       }
     },
     {
@@ -172,14 +126,8 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "navy",
-          "cyan",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["navy", "cyan", "black"],
+        "genre": ["male"]
       }
     },
     {
@@ -191,14 +139,8 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "purple",
-          "pink",
-          "lilac"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["purple", "pink", "lilac"],
+        "genre": ["female"]
       }
     },
     {
@@ -210,14 +152,8 @@
       "rating": 3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "brown",
-          "white",
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["brown", "white", "black"],
+        "genre": ["male"]
       }
     },
     {
@@ -229,13 +165,8 @@
       "rating": 4.7,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "salmon",
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["salmon", "black"],
+        "genre": ["female"]
       }
     },
     {
@@ -247,14 +178,8 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "navy",
-          "blue",
-          "cyan blue"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["navy", "blue", "cyan blue"],
+        "genre": ["male"]
       }
     },
     {
@@ -266,14 +191,8 @@
       "rating": 4.6,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "blue",
-          "black",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["blue", "black", "grey"],
+        "genre": ["female"]
       }
     },
     {
@@ -285,14 +204,8 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "salmon",
-          "navy",
-          "beige"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["salmon", "navy", "beige"],
+        "genre": ["male"]
       }
     },
     {
@@ -304,12 +217,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["black"],
+        "genre": ["female"]
       }
     },
     {
@@ -321,13 +230,8 @@
       "rating": 2,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "brown",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["brown", "black"],
+        "genre": ["male"]
       }
     },
     {
@@ -339,13 +243,8 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "brown",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["brown", "black"],
+        "genre": ["male"]
       }
     },
     {
@@ -357,12 +256,8 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "red"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["red"],
+        "genre": ["female"]
       }
     },
     {
@@ -374,12 +269,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["grey"],
+        "genre": ["female"]
       }
     },
     {
@@ -391,13 +282,8 @@
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "grey"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black", "grey"],
+        "genre": ["male"]
       }
     },
     {
@@ -409,13 +295,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "brown"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black", "brown"],
+        "genre": ["male"]
       }
     },
     {
@@ -427,53 +308,23 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "white",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["white", "grey"],
+        "genre": ["female"]
       }
     }
   ],
   "cart": [
     {
-      "id": "3",
-      "name": "Women's Jeans",
-      "description": "Skinny jeans",
-      "price": 69.99,
-      "image": "https://i.postimg.cc/mZ59H4bX/Women-s-Jeans.jpg",
-      "rating": 4.7,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "blue",
-          "apricot",
-          "beige"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "12",
-      "name": "Men's Sweater",
-      "description": "Cable knit sweater in beige",
-      "price": 69.99,
-      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
+      "id": "2",
+      "name": "Men's T-Shirt",
+      "description": "Classic black t-shirt with white logo",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
       "rating": 3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "brown",
-          "white",
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["black"],
+        "genre": ["male"]
       }
     },
     {
@@ -485,66 +336,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "21",
-      "name": "Women's grey t-shirt",
-      "description": "Classic grey t-shirt",
-      "price": 49.99,
-      "image": "https://i.postimg.cc/KcDJXDmH/grey-shirt.jpg",
-      "rating": 4.3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "16",
-      "name": "Men's Jogger Pants",
-      "description": "Comfortable jogger pants with drawstring waist",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/CLnqC25F/Men-s-Jogger-Pants.jpg",
-      "rating": 4,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "salmon",
-          "navy",
-          "beige"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "8",
-      "name": "Men's Chinos",
-      "description": "Slim-fit chinos in khaki",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
-      "rating": 3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black"],
+        "genre": ["female"]
       }
     }
   ],
@@ -558,12 +351,8 @@
       "rating": 4.3,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["black"],
+        "genre": ["female"]
       }
     },
     {
@@ -575,12 +364,21 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "white"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["white"],
+        "genre": ["male"]
+      }
+    },
+    {
+      "id": "12",
+      "name": "Men's Sweater",
+      "description": "Cable knit sweater in beige",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["brown", "white", "black"],
+        "genre": ["female"]
       }
     }
   ]

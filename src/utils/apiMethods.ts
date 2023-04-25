@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import axios from "axios";
 
 import { IProduct } from "../../interfaces/interfaces";
-import { AlertMessage } from "../components/AlertMessage";
+import { AlertMessage } from "./AlertMessage";
 
 const sortData = (response: IProduct[] | IProduct) => {
   if (Array.isArray(response)) {

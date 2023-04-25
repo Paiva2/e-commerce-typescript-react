@@ -4,11 +4,12 @@ export const WishListContainer = styled("div", {
   display: "flex",
   minHeight: "70vh",
   justifyContent: "center",
+  background: "#202024",
 
   ".close-icon": {
     alignSelf: "flex-start",
     color: "#fff",
-    fontSize: "25px",
+    fontSize: "1.5625rem",
     background: "#C02121",
     borderBottomLeftRadius: "8px",
     cursor: "pointer",
@@ -21,16 +22,14 @@ export const WishListContainer = styled("div", {
 });
 
 export const WishListWrapper = styled("div", {
-  width: "40%",
-  padding: "1.25rem",
+  w: "40%",
+  h: "70vh",
+  pd: "1.25rem",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   gap: ".9375rem",
-  background: "#202024",
   overflow: "auto",
-  h: "70vh",
-  w: "40%",
 });
 
 export const UpSideContainer = styled("div", {
@@ -104,10 +103,9 @@ export const ActionsWrapper = styled("div", {
   },
 
   "> div:first-child": {
-    w: "5rem",
+    w: "100%",
     display: "flex",
     gap: "1.25rem",
-    width: "100%",
     alignItems: "center",
 
     button: {

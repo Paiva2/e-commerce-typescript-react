@@ -13,6 +13,7 @@ import {
   ColorsWrapper,
   ProducsTitleWrapper,
   ProductCardDetails,
+  GenreWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
@@ -40,6 +41,7 @@ const Products = () => {
   const searchParams = searchValue.toLowerCase();
 
   const [colorFilter, setColorsFilter] = useState("");
+  const [genreFilter, setGenreFilter] = useState("");
 
   const getUniqueColors = () => {
     let colorsAccumulator: string[] = [];
@@ -61,6 +63,16 @@ const Products = () => {
     setColorsFilter(filtersAccumulator[0]);
   };
 
+  const handleGetSelectedGenre = (e: React.MouseEvent<HTMLLIElement>) => {
+    setGenreFilter(e.currentTarget.innerText);
+  };
+
+  const handleDisplaySelectedGenreProducts = (filterParam: string) => {
+    return data.filter((dataFilter) =>
+      dataFilter.filterParams.genre.includes(filterParam.toLowerCase())
+    );
+  };
+
   const handleDisplaySearchedProducts = (filterParam: string) => {
     return data.filter((dataFilter) =>
       dataFilter.name.toLowerCase().includes(filterParam)
@@ -80,11 +92,17 @@ const Products = () => {
     setColorsFilter("");
   };
 
+  const handleClearGenreFilter = () => {
+    setGenreFilter("");
+  };
+
   const showProducts =
     searchValue && searchedProductExists
       ? handleDisplaySearchedProducts(searchParams)
       : colorFilter
       ? handleDisplaySelectedColorProducts(colorFilter)
+      : genreFilter
+      ? handleDisplaySelectedGenreProducts(genreFilter)
       : showItens;
 
   return (
@@ -96,19 +114,29 @@ const Products = () => {
       <Carousel />
       <MiddleContainer>
         <AsideContainer>
-          <div>
+          <GenreWrapper>
             <h2>Genre</h2>
             <ul>
-              <div style={{ display: "flex" }}>
-                <li>Male</li>
-                <IoIosClose />
+              <div>
+                <li onClick={handleGetSelectedGenre}>Male</li>
+                {genreFilter === "Male" && (
+                  <IoIosClose
+                    className="close-visible"
+                    onClick={handleClearGenreFilter}
+                  />
+                )}
               </div>
-              <div style={{ display: "flex" }}>
-                <li>Female</li>
-                <IoIosClose />
+              <div>
+                <li onClick={handleGetSelectedGenre}>Female</li>
+                {genreFilter === "Female" && (
+                  <IoIosClose
+                    className="close-visible"
+                    onClick={handleClearGenreFilter}
+                  />
+                )}
               </div>
             </ul>
-          </div>
+          </GenreWrapper>
 
           <div>
             <h2>Color</h2>
@@ -168,7 +196,7 @@ const Products = () => {
                 );
               })}
           </ProductsWrapper>
-          {!searchValue && !colorFilter && <ProductsPagination />}
+          {!genreFilter && !searchValue && !colorFilter && <ProductsPagination />}
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />
