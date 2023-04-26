@@ -13,7 +13,6 @@ import {
   PriceWrapper,
 } from "./styles";
 import { BsCartPlus, BsHeart } from "react-icons/bs";
-import { IoIosClose } from "react-icons/io";
 
 import { ProductsContext } from "../../../context/ProductsContext";
 import { insertItem } from "../../../utils/apiMethods";
@@ -25,7 +24,7 @@ import { Link } from "react-router-dom";
 
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
-import ProductsPagination from "../../home/ProductsPagination";
+import ProductsPagination from "./ProductsPagination";
 import { handleGoToTop } from "../../../utils/goToTop";
 import AsideFilters from "./AsideFilters";
 import { filterProducts } from "../../../utils/filterProducts";
@@ -36,22 +35,64 @@ const Products = () => {
   const { setCartData } = useContext(CartContext);
   const { setWishListData } = useContext(WishListContext);
 
-  const displaySettedProductsPerPage = data.slice(initialPage, finalPage);
-
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
+  const [priceFilters, setPriceFilters] = useState([0, 0]);
 
-  const searchedProductExists = filterProducts("SEARCH_PARAMS", searchValue)!.length > 0;
+  const displaySettedProductsPerPage = data.slice(initialPage, finalPage);
+
+  const searchedProductExists =
+    filterProducts("SEARCH_PARAMS", searchValue)?.length > 0;
 
   const handleDisplayProducts = () => {
+    const [minPrice, maxPrice] = priceFilters;
+
     if (searchValue && searchedProductExists) {
-      return filterProducts("SEARCH_PARAMS", searchValue, displaySettedProductsPerPage);
+      return filterProducts(
+        "SEARCH_PARAMS",
+        searchValue,
+        displaySettedProductsPerPage
+      );
     }
+
     if (colorFilter) {
-      return filterProducts("COLOR_FILTER", colorFilter, displaySettedProductsPerPage);
+      return filterProducts(
+        "COLOR_FILTER",
+        colorFilter,
+        displaySettedProductsPerPage
+      );
     }
+
     if (genreFilter) {
-      return filterProducts("GENRE_FILTER", genreFilter, displaySettedProductsPerPage);
+      return filterProducts(
+        "GENRE_FILTER",
+        genreFilter,
+        displaySettedProductsPerPage
+      );
+    }
+
+    if (minPrice && maxPrice) {
+      return filterProducts(
+        "PRICE_FILTER_BOTH",
+        priceFilters,
+        displaySettedProductsPerPage
+      );
+    }
+
+    if (minPrice) {
+      return filterProducts(
+        "PRICE_FILTER_MIN",
+        priceFilters[0],
+        displaySettedProductsPerPage
+      );
+    }
+
+    if (maxPrice) {
+      return filterProducts(
+        "PRICE_FILTER_MAX",
+        priceFilters[1],
+        displaySettedProductsPerPage
+      );
     }
 
     return displaySettedProductsPerPage;
@@ -70,8 +111,10 @@ const Products = () => {
         <AsideFilters
           genreFilter={genreFilter}
           colorFilter={colorFilter}
+          priceFilters={priceFilters}
           setGenreFilter={setGenreFilter}
           setColorsFilter={setColorsFilter}
+          setPriceFilters={setPriceFilters}
         />
         <ProductsContainer>
           <ProducsTitleWrapper>
@@ -80,11 +123,15 @@ const Products = () => {
           <ProductsWrapper>
             {loading && <h1>Loading...</h1>}
             {data &&
-              showProducts?.map((product) => {
+              showProducts.map((product) => {
                 return (
                   <ProductsStyle key={product.id}>
                     <Link onClick={handleGoToTop} to={`/${product.id}`}>
-                      <img src={product.image} alt={product.name} loading="lazy" />
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                      />
                     </Link>
                     <h3>{product.name}</h3>
                     <ProductCardDetails>
@@ -97,7 +144,11 @@ const Products = () => {
                     </ProductCardDetails>
                     <ProductActionsContainer>
                       <IconsWrapper>
-                        <button onClick={() => insertItem("cart", product, setCartData)}>
+                        <button
+                          onClick={() =>
+                            insertItem("cart", product, setCartData)
+                          }
+                        >
                           <BsCartPlus className="cart-icon" />
                         </button>
                         <button
@@ -116,7 +167,9 @@ const Products = () => {
                 );
               })}
           </ProductsWrapper>
-          {!genreFilter && !searchValue && !colorFilter && <ProductsPagination />}
+          {!genreFilter && !searchValue && !colorFilter && (
+            <ProductsPagination />
+          )}
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />

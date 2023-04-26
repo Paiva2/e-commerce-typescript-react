@@ -81,10 +81,10 @@ export const IconsWrapper = styled("div", {
     transition: "background-color 0.2s ease-in-out",
 
     "&:first-child": {
-      background: "#00B37E",
+      background: "#00875F",
 
       "&:hover": {
-        background: "#00875F",
+        background: "#00B37E",
       },
     },
 

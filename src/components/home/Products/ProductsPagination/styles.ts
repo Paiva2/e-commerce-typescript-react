@@ -1,4 +1,4 @@
-import { styled } from "../../../../config/styles-config";
+import { styled } from "../../../../../config/styles-config";
 
 export const PageButtonsContainer = styled("div", {
   display: "flex",

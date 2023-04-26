@@ -77,3 +77,23 @@ export const GenreWrapper = styled("div", {
     },
   },
 });
+
+export const PriceWrapper = styled("div", {
+  label: {
+    fontSize: "1.125rem",
+    fontWeight: "bold",
+
+    input: {
+      fontSize: ".875rem",
+      h: "1.875rem",
+      w: "100%",
+      br: "5px",
+      border: "0",
+      pd: ".3125rem",
+
+      "&::placeholder": {
+        color: "#000",
+      },
+    },
+  },
+});
