@@ -43,7 +43,10 @@ const Header = () => {
           <label>
             <BiSearch />
           </label>
-          <input type="search" onChange={(e) => setSearchValue(e.target.value)} />
+          <input
+            type="search"
+            onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
+          />
         </SearchContainer>
         <PurchaserContainer>
           <div>

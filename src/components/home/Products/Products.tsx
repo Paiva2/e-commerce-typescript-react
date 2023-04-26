@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 // @ts-ignore
 import { Helmet } from "react-helmet";
 import {
@@ -37,14 +37,13 @@ const Products = () => {
   const { setCartData } = useContext(CartContext);
   const { setWishListData } = useContext(WishListContext);
 
-  const showItens = data.slice(initialPage, finalPage);
-  const searchParams = searchValue.toLowerCase();
+  const showSettedItensPerPage = data.slice(initialPage, finalPage);
 
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
 
-  const getUniqueColors = () => {
-    let colorsAccumulator: string[] = [];
+  const removeDuplicatedColors = () => {
+    let colorsAccumulator: Array<string> = [];
 
     const aSideColorFilters = data.map((info) => info.filterParams.colors);
 
@@ -53,57 +52,48 @@ const Products = () => {
     return colorsAccumulator;
   };
 
-  const uniqueColorsForAside = [...new Set(getUniqueColors())];
+  const uniqueColorsForAside = [...new Set(removeDuplicatedColors())];
 
-  const handleGetSelectedColor = (firstFilterParam: string) => {
-    let filtersAccumulator = [];
-
-    filtersAccumulator.push(firstFilterParam).toString;
-
-    setColorsFilter(filtersAccumulator[0]);
-  };
-
-  const handleGetSelectedGenre = (e: React.MouseEvent<HTMLLIElement>) => {
-    setGenreFilter(e.currentTarget.innerText);
-  };
-
-  const handleDisplaySelectedGenreProducts = (filterParam: string) => {
-    return data.filter((dataFilter) =>
-      dataFilter.filterParams.genre.includes(filterParam.toLowerCase())
-    );
-  };
-
-  const handleDisplaySearchedProducts = (filterParam: string) => {
-    return data.filter((dataFilter) =>
-      dataFilter.name.toLowerCase().includes(filterParam)
-    );
-  };
+  const filterProducts = useCallback(
+    (payload: string, filterParam: string) => {
+      switch (payload) {
+        case "SEARCH_PARAMS":
+          return data.filter((dataFilter) =>
+            dataFilter.name.toLowerCase().includes(filterParam)
+          );
+        case "COLOR_FILTER":
+          return data.filter((dataFilter) =>
+            dataFilter.filterParams.colors.includes(filterParam)
+          );
+        case "GENRE_FILTER":
+          return data.filter((dataFilter) =>
+            dataFilter.filterParams.genre.includes(filterParam.toLowerCase())
+          );
+        default:
+          return showSettedItensPerPage;
+      }
+    },
+    [searchValue, colorFilter, genreFilter]
+  );
 
   const searchedProductExists =
-    handleDisplaySearchedProducts(searchParams).length > 0 ? true : false;
+    filterProducts("SEARCH_PARAMS", searchValue).length > 0 && true;
 
-  const handleDisplaySelectedColorProducts = (colorFilterParam: string) => {
-    return data.filter((dataFilter) =>
-      dataFilter.filterParams.colors.includes(colorFilterParam)
-    );
+  const handleDisplayProducts = () => {
+    if (searchValue && searchedProductExists) {
+      return filterProducts("SEARCH_PARAMS", searchValue);
+    }
+    if (colorFilter) {
+      return filterProducts("COLOR_FILTER", colorFilter);
+    }
+    if (genreFilter) {
+      return filterProducts("GENRE_FILTER", genreFilter);
+    }
+
+    return showSettedItensPerPage;
   };
 
-  const handleClearColorFilter = () => {
-    setColorsFilter("");
-  };
-
-  const handleClearGenreFilter = () => {
-    setGenreFilter("");
-  };
-
-  const showProducts =
-    searchValue && searchedProductExists
-      ? handleDisplaySearchedProducts(searchParams)
-      : colorFilter
-      ? handleDisplaySelectedColorProducts(colorFilter)
-      : genreFilter
-      ? handleDisplaySelectedGenreProducts(genreFilter)
-      : showItens;
+  const showProducts = handleDisplayProducts();
 
   return (
     <>
@@ -118,21 +108,15 @@ const Products = () => {
             <h2>Genre</h2>
             <ul>
               <div>
-                <li onClick={handleGetSelectedGenre}>Male</li>
+                <li onClick={(e) => setGenreFilter(e.currentTarget.innerText)}>Male</li>
                 {genreFilter === "Male" && (
-                  <IoIosClose
-                    className="close-visible"
-                    onClick={handleClearGenreFilter}
-                  />
+                  <IoIosClose onClick={() => setGenreFilter("")} />
                 )}
               </div>
               <div>
-                <li onClick={handleGetSelectedGenre}>Female</li>
+                <li onClick={(e) => setGenreFilter(e.currentTarget.innerText)}>Female</li>
                 {genreFilter === "Female" && (
-                  <IoIosClose
-                    className="close-visible"
-                    onClick={handleClearGenreFilter}
-                  />
+                  <IoIosClose onClick={() => setGenreFilter("")} />
                 )}
               </div>
             </ul>
@@ -143,10 +127,10 @@ const Products = () => {
             <ul>
               {uniqueColorsForAside.map((color, index) => (
                 <ColorsWrapper key={index}>
-                  <li onClick={() => handleGetSelectedColor(color)}>{color}</li>
+                  <li onClick={() => setColorsFilter(color)}>{color}</li>
                   <IoIosClose
                     className={colorFilter === color ? "closeVisible" : ""}
-                    onClick={handleClearColorFilter}
+                    onClick={() => setColorsFilter("")}
                   />
                 </ColorsWrapper>
               ))}
