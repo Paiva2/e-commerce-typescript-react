@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import axios from "axios";
 
 import { IProduct } from "../../interfaces/interfaces";
-import { AlertMessage } from "./AlertMessage";
+import { alertMessage } from "./alertMessage";
 
 const sortData = (response: IProduct[] | IProduct) => {
   if (Array.isArray(response)) {
@@ -44,7 +44,7 @@ export const insertItem = (
     .then(() => {
       callApi(endpoint, setData);
 
-      AlertMessage("success", `Product added to ${endpoint}!`);
+      alertMessage("success", `Product added to ${endpoint}!`);
     })
     .catch((err) => {
       const isItemAlreadyOnEndpoint = err.response.data.match(
@@ -52,7 +52,7 @@ export const insertItem = (
       );
 
       err &&
-        AlertMessage(
+        alertMessage(
           "warning",
           `${
             isItemAlreadyOnEndpoint
@@ -87,7 +87,7 @@ export const deleteItem = (
   axios
     .delete(`http://localhost:3000/${endpoint}/${id}`)
     .then(() => {
-      callApi(endpoint, setData), AlertMessage("success", "Product removed.");
+      callApi(endpoint, setData), alertMessage("success", "Product removed.");
     })
     .catch((error) => {
       if (error.response) console.warn("Error. Try Again Later.");

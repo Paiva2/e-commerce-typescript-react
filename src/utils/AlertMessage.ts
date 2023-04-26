@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import { SweetAlertIcon } from "sweetalert2";
 
-export const AlertMessage = (icon: SweetAlertIcon, alertText: string) => {
+export const alertMessage = (icon: SweetAlertIcon, alertText: string) => {
   const Toast = Swal.mixin({
     toast: true,
     position: "bottom-end",

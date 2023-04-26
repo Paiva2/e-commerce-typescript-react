@@ -14,7 +14,7 @@ import { ProductsContext } from "../../context/ProductsContext";
 import { CartContext } from "../../context/CartContext";
 
 import { WishListContext } from "../../context/WishListContext";
-import { handleGoToTop } from "../../utils/GoToTop";
+import { handleGoToTop } from "../../utils/goToTop";
 
 const Header = () => {
   const { setSearchValue } = useContext(ProductsContext);

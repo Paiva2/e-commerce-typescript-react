@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ArrowButtons, PageButtonsContainer, ProductsButtons } from "./styles";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ProductsContext } from "../../../context/ProductsContext";
-import { handleGoToTop } from "../../../utils/GoToTop";
+import { handleGoToTop } from "../../../utils/goToTop";
 
 const ProductsPagination = () => {
   const { setCurrentPage, currentPage, totalPages } = useContext(ProductsContext);
