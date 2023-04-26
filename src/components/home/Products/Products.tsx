@@ -44,8 +44,52 @@ const Products = () => {
   const searchedProductExists =
     filterProducts("SEARCH_PARAMS", searchValue)?.length > 0;
 
+  const filterTwoParams = (
+    filterPayload: string,
+    firstParam: Array<string | number> | string | number,
+    secondParam?: Array<string | number> | string | number
+  ) => {
+    let params: unknown;
+
+    if (firstParam && secondParam) {
+      params = [firstParam, secondParam];
+    } else {
+      params = firstParam;
+    }
+
+    return filterProducts(filterPayload, params, displaySettedProductsPerPage);
+  };
+
   const handleDisplayProducts = () => {
     const [minPrice, maxPrice] = priceFilters;
+
+    if (colorFilter && genreFilter) {
+      return filterTwoParams(
+        "FILTER_COLOR_AND_GENRE",
+        colorFilter,
+        genreFilter
+      );
+    }
+
+    if (minPrice && maxPrice) {
+      return filterTwoParams("PRICE_FILTER_BOTH", priceFilters);
+    }
+
+    if (minPrice) {
+      return filterProducts(
+        "PRICE_FILTER_MIN",
+        priceFilters[0],
+        displaySettedProductsPerPage
+      );
+    }
+
+    if (maxPrice) {
+      return filterProducts(
+        "PRICE_FILTER_MAX",
+        priceFilters[1],
+        displaySettedProductsPerPage
+      );
+    }
 
     if (searchValue && searchedProductExists) {
       return filterProducts(
@@ -67,30 +111,6 @@ const Products = () => {
       return filterProducts(
         "GENRE_FILTER",
         genreFilter,
-        displaySettedProductsPerPage
-      );
-    }
-
-    if (minPrice && maxPrice) {
-      return filterProducts(
-        "PRICE_FILTER_BOTH",
-        priceFilters,
-        displaySettedProductsPerPage
-      );
-    }
-
-    if (minPrice) {
-      return filterProducts(
-        "PRICE_FILTER_MIN",
-        priceFilters[0],
-        displaySettedProductsPerPage
-      );
-    }
-
-    if (maxPrice) {
-      return filterProducts(
-        "PRICE_FILTER_MAX",
-        priceFilters[1],
         displaySettedProductsPerPage
       );
     }
