@@ -22,7 +22,7 @@ const Header = () => {
   const { cartData } = useContext(CartContext);
   const { wishListData } = useContext(WishListContext);
 
-  const [openCartResume, setOpenCartResume] = useState(true);
+  const [openCartResume, setOpenCartResume] = useState(false);
 
   const cartItemsQuantity = cartData.length ? cartData.length : null;
   const wishListItemsQuantity = wishListData.length
@@ -30,7 +30,7 @@ const Header = () => {
     : null;
 
   const isQuantityIconsVisible = (quantityIcon: number | null): {} => {
-    return quantityIcon ? { opacity: "1", visibility: "1" } : {};
+    return quantityIcon ? { opacity: "1", visibility: "visible" } : {};
   };
 
   return (
@@ -64,7 +64,7 @@ const Header = () => {
                 {wishListItemsQuantity}
               </span>
             </Link>
-            <Link /*  onClick={handleGoToTop} to="/cart" */>
+            <Link to="#">
               <BsCart
                 onClick={() => setOpenCartResume(!openCartResume)}
                 className="cart-icon"

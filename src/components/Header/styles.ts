@@ -50,14 +50,14 @@ export const PurchaserContainer = styled("div", {
     ".cart-quantity": {
       background: "#00875F",
       opacity: "0",
-      visibility: "0",
+      visibility: "hidden",
       transition: "opacity 0.2s ease-in-out, visibility 0.2s ease-in-out",
     },
 
     ".wish-quantity": {
       background: "#DB1D1D",
       opacity: "0",
-      visibility: "0",
+      visibility: "hidden",
       transition: "opacity 0.2s ease-in-out, visibility 0.2s ease-in-out",
     },
 
