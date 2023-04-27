@@ -51,7 +51,9 @@ export const { styled, css, getCssText } = createStitches({
 });
 
 export const globalStyles = globalCss({
-  "@import": ["url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')"],
+  "@import": [
+    "url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')",
+  ],
 
   "*": {
     margin: 0,

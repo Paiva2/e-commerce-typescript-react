@@ -51,8 +51,6 @@ export const CartTitle = styled("div", {
     br: "5px",
     color: "#FFF",
     transition: "background-color 0.2s ease-in-out",
-    w: "50px",
-    h: "43px",
     cursor: "pointer",
 
     "&:hover": {
@@ -62,7 +60,7 @@ export const CartTitle = styled("div", {
 
   h1: {
     textAlign: "center",
-    color: " #00B37E",
+    color: "#00B37E",
   },
 });
 
@@ -75,6 +73,19 @@ export const ProductsAndFooterContainer = styled("div", {
 
   "> div:first-child": {
     overflow: "auto",
+
+    "&::-webkit-scrollbar": {
+      w: ".4375rem",
+    },
+
+    "&::-webkit-scrollbar-thumb": {
+      background: "#00B37E",
+      borderRadius: "10px",
+
+      "&:hover": {
+        background: "#00875F",
+      },
+    },
   },
 });
 
@@ -82,8 +93,9 @@ export const ProductCard = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   h: "6.875rem",
-  background: "#121214",
   br: "5px",
+  mr: ".3125rem",
+  background: "#121214",
   marginBottom: ".625rem",
   overflow: "hidden",
 });
