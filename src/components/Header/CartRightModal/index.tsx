@@ -45,25 +45,34 @@ const CartRightModal = ({
     setOpenCartResume(false);
   };
 
+  const modalOpacity = openCartResume ? 1 : 0;
+  const modalVisibility = openCartResume ? "visible" : "hidden";
+  const modalTransform = openCartResume ? "translateX(0%)" : "translateX(110%)";
+
   return (
     <CartModalContainer
       onClick={() => setOpenCartResume(false)}
       style={{
-        opacity: openCartResume ? 1 : 0,
-        visibility: openCartResume ? "visible" : "hidden",
+        opacity: modalOpacity,
+        visibility: modalVisibility,
       }}
     >
       <CartModalWrapper
         onClick={(e) => e.stopPropagation()}
         style={{
-          opacity: openCartResume ? 1 : 0,
-          visibility: openCartResume ? "visible" : "hidden",
-          transform: openCartResume ? "translateX(0%)" : "translateX(110%)",
+          opacity: modalOpacity,
+          visibility: modalVisibility,
+          transform: modalTransform,
         }}
       >
         <ModalContent>
           <CartTitle>
-            <h1>Your Cart Resume</h1>
+            <div>
+              <h1>Your Cart Resume</h1>
+            </div>
+            <button>
+              <RiCloseFill onClick={() => setOpenCartResume(false)} size={35} />
+            </button>
           </CartTitle>
           <ProductsAndFooterContainer>
             <div>
@@ -77,7 +86,7 @@ const CartRightModal = ({
                 </PlaceHolderWrapper>
               )}
               {cartData.map((product, index) => (
-                <ProductCard>
+                <ProductCard key={product.id}>
                   <CardLeftSide>
                     <img src={product.image} alt={`Cart Image ${index}`} />
                     <div>

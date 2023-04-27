@@ -33,10 +33,35 @@ export const ModalContent = styled("div", {
 
 export const CartTitle = styled("div", {
   display: "flex",
-  justifyContent: "center",
   pd: ".5rem",
+  w: "100%",
+
+  "> div:first-child": {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
+
+  button: {
+    display: "grid",
+    placeItems: "center",
+    border: 0,
+    background: "transparent",
+    br: "5px",
+    color: "#FFF",
+    transition: "background-color 0.2s ease-in-out",
+    w: "50px",
+    h: "43px",
+    cursor: "pointer",
+
+    "&:hover": {
+      background: "#c90101",
+    },
+  },
 
   h1: {
+    textAlign: "center",
     color: " #00B37E",
   },
 });
@@ -140,6 +165,11 @@ export const FooterButtons = styled("button", {
         fontSize: "1.25rem",
         border: "0",
         br: "5px",
+        transition: "background-color 0.2s ease-in-out",
+
+        "&:hover": {
+          background: "#00B37E",
+        },
       },
 
       continueShoppingPatern: {
