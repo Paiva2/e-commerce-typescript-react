@@ -1,6 +1,6 @@
 import { keyframes } from "@stitches/react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { styled } from "../../../config/styles-config";
+import { styled } from "../../../../../config/styles-config";
 
 export const TriggerButton = styled(AccordionPrimitive.Trigger, {
   display: "flex",

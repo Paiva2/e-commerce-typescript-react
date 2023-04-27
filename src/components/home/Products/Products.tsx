@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from "react";
+import { useContext, useState } from "react";
 // @ts-ignore
 import { Helmet } from "react-helmet";
 import {
@@ -25,9 +25,11 @@ import { Link } from "react-router-dom";
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
 import ProductsPagination from "./ProductsPagination";
-import { handleGoToTop } from "../../../utils/goToTop";
+
 import AsideFilters from "./AsideFilters";
 import { filterProducts } from "../../../utils/filterProducts";
+import { IProduct } from "../../../../interfaces/interfaces";
+import ProductModal from "./ProductModal";
 
 const Products = () => {
   const { data, loading, searchValue, initialPage, finalPage } =
@@ -38,11 +40,14 @@ const Products = () => {
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
   const [priceFilters, setPriceFilters] = useState([0, 0]);
+  const [selectedProduct, setSelectedProduct] = useState<IProduct>();
+
+  const [openProductModal, setOpenProductModal] = useState(false);
 
   const displaySettedProductsPerPage = data.slice(initialPage, finalPage);
 
   const searchedProductExists =
-    filterProducts("SEARCH_PARAMS", searchValue)?.length > 0;
+    filterProducts("SEARCH_PARAMS", searchValue)!.length > 0;
 
   const filterTwoParams = (
     filterPayload: string,
@@ -118,6 +123,12 @@ const Products = () => {
     return displaySettedProductsPerPage;
   };
 
+  const handleGetSelectedProduct = (product: IProduct) => {
+    setOpenProductModal(true);
+
+    setSelectedProduct(product);
+  };
+
   const showProducts = handleDisplayProducts();
 
   return (
@@ -143,10 +154,10 @@ const Products = () => {
           <ProductsWrapper>
             {loading && <h1>Loading...</h1>}
             {data &&
-              showProducts.map((product) => {
+              showProducts?.map((product) => {
                 return (
                   <ProductsStyle key={product.id}>
-                    <Link onClick={handleGoToTop} to={`/${product.id}`}>
+                    <Link>
                       <img
                         src={product.image}
                         alt={product.name}
@@ -158,9 +169,9 @@ const Products = () => {
                       <span>
                         <StarIcon rating={product.rating} />({product.rating})
                       </span>
-                      <Link onClick={handleGoToTop} to={`/${product.id}`}>
-                        <button>Details</button>
-                      </Link>
+                      <button onClick={() => handleGetSelectedProduct(product)}>
+                        Details
+                      </button>
                     </ProductCardDetails>
                     <ProductActionsContainer>
                       <IconsWrapper>
@@ -193,6 +204,11 @@ const Products = () => {
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />
+      <ProductModal
+        setOpenProductModal={setOpenProductModal}
+        openProductModal={openProductModal}
+        selectedProduct={selectedProduct}
+      />
     </>
   );
 };

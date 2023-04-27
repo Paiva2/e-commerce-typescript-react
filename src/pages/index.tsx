@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
 import Products from "../components/home/Products/Products";
-import ProductResume from "./ProductResume";
+import ProductResume from "../components/home/Products/ProductResume";
 
 const MainRoutes = () => {
   return (
