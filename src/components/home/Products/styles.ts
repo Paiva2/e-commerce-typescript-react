@@ -10,8 +10,6 @@ export const MiddleContainer = styled("div", {
 
 export const ProductsContainer = styled("div", {
   display: "flex",
-  w: "100%",
-  h: "100%",
   flexDirection: "column",
   justifyContent: "center",
   gap: "1.25rem",
@@ -25,6 +23,8 @@ export const ProductsWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(4, 0fr)",
   gridGap: "1.875rem",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 export const ProductsStyle = styled("div", {
@@ -134,6 +134,11 @@ export const ProductCardDetails = styled("span", {
     fontSize: "1rem ",
     background: "#121214",
     color: "#E1E1E6",
+    transition: "background-color 0.2s ease",
+
+    "&:hover": {
+      background: "#000",
+    },
   },
 });
 

@@ -3,6 +3,7 @@ import { styled } from "../../../../config/styles-config";
 export const CarouselContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
+  position: "relative",
   w: "100%",
   gap: ".625rem",
 });
