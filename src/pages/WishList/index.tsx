@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { WishListContext } from "../../context/WishListContext";
 // @ts-ignore
 import { Helmet } from "react-helmet";
@@ -23,7 +23,8 @@ import { FaHeart } from "react-icons/fa";
 import PlaceHolder from "../../components/PlaceHolder";
 
 const WishList = () => {
-  const { wishListData, loading, setWishListData } = useContext(WishListContext);
+  const { wishListData, loading, setWishListData } =
+    useContext(WishListContext);
 
   const { setCartData } = useContext(CartContext);
 
@@ -40,7 +41,9 @@ const WishList = () => {
   }
 
   if (wishListData.length < 1) {
-    return <PlaceHolder text="Empty Wish List..." color="#C02121" Icon={FaHeart} />;
+    return (
+      <PlaceHolder text="Empty Wish List..." color="#C02121" Icon={FaHeart} />
+    );
   }
 
   return (
@@ -69,7 +72,9 @@ const WishList = () => {
                     </div>
                     <div>
                       <Paragraph type="titleProduct">{product.name}</Paragraph>
-                      <Paragraph type="description">{product.description}</Paragraph>
+                      <Paragraph type="description">
+                        {product.description}
+                      </Paragraph>
                     </div>
                   </ProductResume>
                   <ActionsWrapper>

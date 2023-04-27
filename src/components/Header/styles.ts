@@ -7,6 +7,7 @@ export const HeaderContainer = styled("div", {
   top: "0",
   zIndex: 1000,
   pd: "1.25rem",
+  overflow: "hidden",
 });
 
 export const HeaderWrapper = styled("div", {
@@ -36,13 +37,14 @@ export const PurchaserContainer = styled("div", {
     span: {
       display: "flex",
       alignItems: "center",
-      fontSize: ".875rem",
+      justifyContent: "center",
+      fontSize: ".75rem",
       color: "#fff",
       padding: "0 .3125rem",
       borderRadius: "50%",
       verticalAlign: "top",
-      width: "1.125rem",
-      height: "1.125rem",
+      width: "1.25rem",
+      height: "1.25rem",
     },
 
     ".cart-quantity": {

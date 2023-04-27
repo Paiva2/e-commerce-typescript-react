@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BsHeartFill, BsCart } from "react-icons/bs";
 import { BiSearch, BiStore } from "react-icons/bi";
 
@@ -15,14 +15,19 @@ import { CartContext } from "../../context/CartContext";
 
 import { WishListContext } from "../../context/WishListContext";
 import { handleGoToTop } from "../../utils/goToTop";
+import CartRightModal from "./CartRightModal";
 
 const Header = () => {
   const { setSearchValue } = useContext(ProductsContext);
   const { cartData } = useContext(CartContext);
   const { wishListData } = useContext(WishListContext);
 
+  const [openCartResume, setOpenCartResume] = useState(true);
+
   const cartItemsQuantity = cartData.length ? cartData.length : null;
-  const wishListItemsQuantity = wishListData.length ? wishListData.length : null;
+  const wishListItemsQuantity = wishListData.length
+    ? wishListData.length
+    : null;
 
   const isQuantityIconsVisible = (quantityIcon: number | null): {} => {
     return quantityIcon ? { opacity: "1", visibility: "1" } : {};
@@ -59,8 +64,11 @@ const Header = () => {
                 {wishListItemsQuantity}
               </span>
             </Link>
-            <Link onClick={handleGoToTop} to="/cart">
-              <BsCart className="cart-icon" />
+            <Link /*  onClick={handleGoToTop} to="/cart" */>
+              <BsCart
+                onClick={() => setOpenCartResume(!openCartResume)}
+                className="cart-icon"
+              />
               <span
                 style={isQuantityIconsVisible(cartItemsQuantity)}
                 className="cart-quantity"
@@ -71,6 +79,10 @@ const Header = () => {
           </div>
         </PurchaserContainer>
       </HeaderWrapper>
+      <CartRightModal
+        setOpenCartResume={setOpenCartResume}
+        openCartResume={openCartResume}
+      />
     </HeaderContainer>
   );
 };

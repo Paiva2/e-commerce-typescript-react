@@ -471,6 +471,115 @@
           "female"
         ]
       }
+    },
+    {
+      "id": "6",
+      "name": "Men's Polo Shirt",
+      "description": "Classic polo shirt with logo",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
+      "rating": 4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "white"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "name": "Men's Leather Belt",
+      "description": "Brown leather belt with silver buckle",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
+      "rating": 2,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "brown",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "name": "Women's Denim Jacket",
+      "description": "A-line denim Jacket with button closure",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/59XRWxjb/Women-s-Denim-Jacket.jpg",
+      "rating": 4.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "black",
+          "maroon"
+        ],
+        "genre": [
+          "female"
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "name": "Men's Jogger Pants",
+      "description": "Comfortable jogger pants with drawstring waist",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/CLnqC25F/Men-s-Jogger-Pants.jpg",
+      "rating": 4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "salmon",
+          "navy",
+          "beige"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "name": "Men's Chinos",
+      "description": "Slim-fit chinos in khaki",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "black",
+          "maroon"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "name": "Men's Sweater",
+      "description": "Cable knit sweater in beige",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "brown",
+          "white",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
     }
   ],
   "wish-list": []
