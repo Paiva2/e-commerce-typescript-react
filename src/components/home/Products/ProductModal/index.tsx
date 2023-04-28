@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
+
 import ProductResume from "../ProductResume";
 import { IProduct } from "../../../../../interfaces/interfaces";
 import { ModalBackground, ModalContent } from "./styles";
@@ -16,18 +16,25 @@ const ProductModal = ({
   selectedProduct,
 }: Props) => {
   return (
-    <Dialog.Root open={openProductModal}>
-      <ModalBackground />
-      <ModalContent>
-        <button
-          onClick={() => setOpenProductModal(!openProductModal)}
-          aria-label="Close"
-        >
-          X
-        </button>
-        <ProductResume singleProduct={selectedProduct} />
+    <ModalBackground
+      onClick={() => setOpenProductModal(false)}
+      style={
+        openProductModal
+          ? {
+              opacity: "1",
+              visibility: "visible",
+            }
+          : undefined
+      }
+    >
+      <ModalContent onClick={(e) => e.stopPropagation()}>
+        <ProductResume
+          setOpenProductModal={setOpenProductModal}
+          openProductModal={openProductModal}
+          singleProduct={selectedProduct}
+        />
       </ModalContent>
-    </Dialog.Root>
+    </ModalBackground>
   );
 };
 

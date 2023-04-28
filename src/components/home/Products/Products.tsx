@@ -138,6 +138,11 @@ const Products = () => {
         <meta name="home" content="Products component" />
       </Helmet>
       <Carousel />
+      <ProductModal
+        setOpenProductModal={setOpenProductModal}
+        openProductModal={openProductModal}
+        selectedProduct={selectedProduct}
+      />
       <MiddleContainer>
         <AsideFilters
           genreFilter={genreFilter}
@@ -204,11 +209,6 @@ const Products = () => {
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />
-      <ProductModal
-        setOpenProductModal={setOpenProductModal}
-        openProductModal={openProductModal}
-        selectedProduct={selectedProduct}
-      />
     </>
   );
 };
