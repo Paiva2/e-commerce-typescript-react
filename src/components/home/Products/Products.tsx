@@ -20,7 +20,6 @@ import { CartContext } from "../../../context/CartContext";
 
 import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
-import { Link } from "react-router-dom";
 
 import Carousel from "../Carousel";
 import GoToTopButton from "../../GoToTopButton";
@@ -28,7 +27,10 @@ import ProductsPagination from "./ProductsPagination";
 
 import AsideFilters from "./AsideFilters";
 import { filterProducts } from "../../../utils/filterProducts";
-import { IProduct } from "../../../../interfaces/interfaces";
+import {
+  IProduct,
+  productBodyDefault,
+} from "../../../../interfaces/interfaces";
 import ProductModal from "./ProductModal";
 
 const Products = () => {
@@ -40,7 +42,8 @@ const Products = () => {
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
   const [priceFilters, setPriceFilters] = useState([0, 0]);
-  const [selectedProduct, setSelectedProduct] = useState<IProduct>();
+  const [selectedProduct, setSelectedProduct] =
+    useState<IProduct>(productBodyDefault);
 
   const [openProductModal, setOpenProductModal] = useState(false);
 
@@ -64,6 +67,8 @@ const Products = () => {
 
     return filterProducts(filterPayload, params, displaySettedProductsPerPage);
   };
+
+  console.log(selectedProduct);
 
   const handleDisplayProducts = () => {
     const [minPrice, maxPrice] = priceFilters;

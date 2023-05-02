@@ -107,3 +107,17 @@ export const wishListDefault = {
   loading: true,
   setWishListData: () => [],
 } as IWishListContext;
+
+export const productBodyDefault = {
+  id: "",
+  name: "",
+  description: "",
+  price: 0,
+  image: "",
+  quantity: 0,
+  rating: 0,
+  filterParams: {
+    colors: [],
+    genre: [],
+  },
+};
