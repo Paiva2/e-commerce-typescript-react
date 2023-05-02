@@ -10,7 +10,20 @@ import { CartContext } from "../../../../context/CartContext";
 import { WishListContext } from "../../../../context/WishListContext";
 import { priceFormatter } from "../../../../utils/formatter";
 
-import { ModalContent, TriggerButton } from "./styles";
+import {
+  AccordionWrapper,
+  ActionButton,
+  ActionButtonsWrapper,
+  CloseButtonWrapper,
+  ModalContent,
+  ProductDetails,
+  ProductImageContainer,
+  ProductInformationsContainer,
+  ProductInformationsWrapper,
+  ProductModalContentContainer,
+  SelectProductVariations,
+  TriggerButton,
+} from "./styles";
 
 interface Props {
   singleProduct: IProduct;
@@ -31,64 +44,31 @@ const ProductResume = ({
 
   return (
     singleProduct && (
-      <div
-        style={{
-          display: "flex",
-          width: "auto",
-          height: "100%",
-          overflow: "hidden",
-        }}
-      >
-        <div style={{ width: "60%" }}>
-          <img
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-            src={singleProduct?.image}
-            alt={singleProduct?.name}
-          />
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
-            width: "40%",
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <ProductModalContentContainer>
+        <ProductImageContainer>
+          <img src={singleProduct?.image} alt={singleProduct?.name} />
+        </ProductImageContainer>
+        <ProductInformationsContainer>
+          <CloseButtonWrapper>
             <button
-              style={{ display: "grid", placeContent: "left" }}
               onClick={() => setOpenProductModal(!openProductModal)}
               aria-label="Close"
             >
-              <RiCloseFill size={30} />
+              <RiCloseFill size={40} />
             </button>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              padding: "15px",
-              gap: "20px",
-            }}
-          >
+          </CloseButtonWrapper>
+          <ProductInformationsWrapper>
             <div>
-              <div>
+              <ProductDetails>
                 <h1>{singleProduct.name}</h1>
-                <h1 style={{ color: "#00B37E" }}>
-                  {priceFormatter.format(singleProduct?.price)}
-                </h1>
-                <p style={{ textTransform: "capitalize" }}>
-                  Genre: {singleProduct.filterParams.genre}
+                <h1>{priceFormatter.format(singleProduct?.price)}</h1>
+                <p>
+                  <b>Genre:</b> {singleProduct.filterParams.genre}
                 </p>
-              </div>
-              <div>
-                Available Colors:{" "}
-                <select style={{ textTransform: "capitalize" }}>
+              </ProductDetails>
+              <SelectProductVariations>
+                <b>Available Colors:</b>{" "}
+                <select>
                   {singleProduct?.filterParams.colors.map((color: string) => (
                     <option
                       key={color}
@@ -99,65 +79,27 @@ const ProductResume = ({
                     </option>
                   ))}
                 </select>
-              </div>
+              </SelectProductVariations>
             </div>
-
-            <div
-              style={{
-                display: "flex",
-                gap: "10px",
-                alignItems: "center",
-              }}
-            >
-              <button
-                style={{
-                  width: "185px",
-                  height: "45px",
-                  padding: "5px",
-                  borderRadius: "8px",
-                  background: "#00875F",
-                  border: "0",
-                  cursor: "pointer",
-                  color: "#fff",
-                  fontSize: "1.4375rem",
-                }}
+            <ActionButtonsWrapper>
+              <ActionButton
+                type="cartPattern"
                 onClick={() => insertItem("cart", singleProduct, setCartData)}
               >
                 Add to Cart
-              </button>
-              <button
-                style={{
-                  display: "grid",
-                  placeContent: "center",
-                  width: "40px",
-                  height: "39px",
-                  padding: "5px",
-                  borderRadius: "50%",
-                  background: "#9b3535",
-                  border: "0",
-                  cursor: "pointer",
-                  color: "#fff",
-                  font: "0",
-                }}
+              </ActionButton>
+              <ActionButton
+                type="wishListPattern"
                 onClick={() =>
                   insertItem("wish-list", singleProduct, setWishListData)
                 }
               >
                 <BsHeart size={20} />
-              </button>
-            </div>
+              </ActionButton>
+            </ActionButtonsWrapper>
 
             <Accordion.Root type="single" collapsible>
-              <div
-                style={{
-                  width: "270px",
-                  background: "#F9F8F9",
-                  borderRadius: "5px",
-                  color: "#000",
-                  fontSize: "14px",
-                  overflow: "hidden",
-                }}
-              >
+              <AccordionWrapper>
                 <Accordion.Item value="item-1">
                   <Accordion.Trigger asChild>
                     <TriggerButton>
@@ -218,11 +160,11 @@ const ProductResume = ({
                     </div>
                   </ModalContent>
                 </Accordion.Item>
-              </div>
+              </AccordionWrapper>
             </Accordion.Root>
-          </div>
-        </div>
-      </div>
+          </ProductInformationsWrapper>
+        </ProductInformationsContainer>
+      </ProductModalContentContainer>
     )
   );
 };

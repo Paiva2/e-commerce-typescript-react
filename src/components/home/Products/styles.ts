@@ -38,13 +38,10 @@ export const ProductsStyle = styled("div", {
   br: "5px",
   gap: ".625rem",
 
-  a: {
-    width: "100%",
-
-    img: {
-      w: "100%",
-      h: "23.75rem",
-    },
+  img: {
+    w: "100%",
+    h: "23.75rem",
+    cursor: "pointer",
   },
 });
 

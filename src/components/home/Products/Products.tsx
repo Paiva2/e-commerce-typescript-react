@@ -162,13 +162,12 @@ const Products = () => {
               showProducts?.map((product) => {
                 return (
                   <ProductsStyle key={product.id}>
-                    <Link>
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        loading="lazy"
-                      />
-                    </Link>
+                    <img
+                      onClick={() => handleGetSelectedProduct(product)}
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                    />
                     <h3>{product.name}</h3>
                     <ProductCardDetails>
                       <span>
