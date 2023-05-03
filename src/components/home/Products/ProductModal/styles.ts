@@ -5,6 +5,7 @@ export const ModalBackground = styled("div", {
   w: "100%",
   h: "100%",
   inset: 0,
+  zIndex: 3000,
   background: "rgba(0, 0, 0, 0.65)",
   opacity: "0",
   visibility: "hidden",
@@ -19,7 +20,7 @@ export const ModalContent = styled("div", {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  background: "#202024",
+  background: "#121214",
   borderRadius: "5px",
   overflow: "hidden",
 });

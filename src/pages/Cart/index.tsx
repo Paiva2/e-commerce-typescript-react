@@ -6,6 +6,8 @@ import {
   CartContainer,
   CartProducts,
   CartWrapper,
+  DeleteButtonContainer,
+  ProductNameWrapper,
   ProductResume,
   ProductWrapper,
   QuantityWrapper,
@@ -19,6 +21,7 @@ import { deleteItem, editItem } from "../../utils/apiMethods";
 import { IProduct } from "../../../interfaces/interfaces";
 import PlaceHolder from "../../components/PlaceHolder";
 import { BsCart } from "react-icons/bs";
+import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
@@ -26,11 +29,21 @@ const Cart = () => {
   const handleSetQuantity = (product: IProduct, operator: string) => {
     switch (operator) {
       case "+":
-        editItem("cart", product.id, { quantity: product.quantity + 1 }, setCartData);
+        editItem(
+          "cart",
+          product.id,
+          { quantity: product.quantity + 1 },
+          setCartData
+        );
         break;
       case "-":
         if (product.quantity === 1) return;
-        editItem("cart", product.id, { quantity: product.quantity - 1 }, setCartData);
+        editItem(
+          "cart",
+          product.id,
+          { quantity: product.quantity - 1 },
+          setCartData
+        );
         break;
       default:
         console.warn("Invalid operator. Contact admin for support.");
@@ -60,12 +73,12 @@ const Cart = () => {
         <CartWrapper>
           <UpSideContainer>
             <div>
-              <p>PRODUCT</p>
+              <h4>PRODUCT</h4>
             </div>
             <div>
-              <p>PRICE</p>
-              <p>QUANTITY</p>
-              <p>TOTAL</p>
+              <h4>PRICE</h4>
+              <h4>QUANTITY</h4>
+              <h4>TOTAL</h4>
             </div>
           </UpSideContainer>
           <CartProducts>
@@ -76,27 +89,36 @@ const Cart = () => {
                     <div>
                       <img src={product.image} alt={product.name} />
                     </div>
-                    <div>
-                      <p>{product.name}</p>
+                    <ProductNameWrapper>
+                      <h4>{product.name}</h4>
                       <p>{product.description}</p>
-                      <div>
-                        <AiOutlineDelete
-                          onClick={() => deleteItem("cart", product.id, setCartData)}
-                          className="icon"
-                        />
-                      </div>
-                    </div>
+                      <p>Color: {product.filterParams.colors}</p>
+                      <DeleteButtonContainer>
+                        <button>
+                          <AiOutlineDelete
+                            onClick={() =>
+                              deleteItem("cart", product.id, setCartData)
+                            }
+                            className="icon"
+                          />
+                        </button>
+                      </DeleteButtonContainer>
+                    </ProductNameWrapper>
                   </ProductResume>
                   <ActionsContainer>
-                    <p>$ {product.price}</p>
+                    <p>
+                      <b>$ {product.price}</b>
+                    </p>
                     <QuantityWrapper>
-                      <button onClick={() => handleSetQuantity(product, "+")}>+</button>
+                      <button onClick={() => handleSetQuantity(product, "+")}>
+                        <HiPlusSm size={30} />
+                      </button>
                       <p>{product.quantity}</p>
                       <button
                         disabled={product.quantity === 1 ? true : false}
                         onClick={() => handleSetQuantity(product, "-")}
                       >
-                        -
+                        <HiMinusSm size={30} />
                       </button>
                     </QuantityWrapper>
                     <p>$ {(product.quantity * product.price).toFixed(2)}</p>
@@ -106,7 +128,13 @@ const Cart = () => {
             })}
           </CartProducts>
         </CartWrapper>
-        <div>
+        <div
+          style={{
+            border: "1px solid red",
+            width: "300px",
+            height: "600px",
+          }}
+        >
           <h2>Total</h2>
           <p>{totalCartSum.toFixed(2)}</p>
         </div>

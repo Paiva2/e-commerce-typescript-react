@@ -173,7 +173,7 @@ const Products = () => {
                       alt={product.name}
                       loading="lazy"
                     />
-                    <h3>{product.name}</h3>
+                    <h2>{product.name}</h2>
                     <ProductCardDetails>
                       <span>
                         <StarIcon rating={product.rating} />({product.rating})
@@ -200,7 +200,9 @@ const Products = () => {
                         </button>
                       </IconsWrapper>
                       <PriceWrapper>
-                        <p>$ {product.price}</p>
+                        <p>
+                          <b>$ {product.price}</b>
+                        </p>
                       </PriceWrapper>
                     </ProductActionsContainer>
                   </ProductsStyle>

@@ -37,6 +37,13 @@ export const ProductsStyle = styled("div", {
   color: "#E1E1E6",
   br: "5px",
   gap: ".625rem",
+  transition: "all 0.2s",
+
+  "&:hover": {
+    mozTransform: "scale(1.07)",
+    webKitTransform: "scale(1.07)",
+    transform: "scale(1.03)",
+  },
 
   img: {
     w: "100%",
@@ -49,7 +56,7 @@ export const ProductActionsContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  borderTop: "1px solid grey",
+  borderTop: "3px solid grey",
 
   w: "90%",
   pd: ".625rem",
@@ -68,9 +75,9 @@ export const IconsWrapper = styled("div", {
   button: {
     display: "grid",
     placeItems: "center",
-    w: "5.625rem",
-    h: "2.1875rem",
-    br: "1.25rem",
+    w: "3.125rem",
+    h: "2.5rem",
+    br: "5px",
     border: "0",
     cursor: "pointer",
     color: "#fff",
@@ -86,8 +93,8 @@ export const IconsWrapper = styled("div", {
     },
 
     "&:last-child": {
-      w: "2.5rem",
-      h: "2.3125rem",
+      w: "2.625rem",
+      h: "2.625rem",
       br: "50%",
       background: "#C02121",
 
@@ -142,7 +149,7 @@ export const ProductCardDetails = styled("span", {
 export const PriceWrapper = styled("div", {
   p: {
     color: "#00B37E",
-    fontSize: "1.125rem",
+    fontSize: "20px",
 
     "&:hover": {
       color: "#00875F",

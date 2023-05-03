@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import axios from "axios";
 
 import { IProduct } from "../../interfaces/interfaces";
-import { alertMessage } from "./alertMessage";
+import { alertMessage } from "./AlertMessage";
 
 const sortData = (response: IProduct[] | IProduct) => {
   if (Array.isArray(response)) {
@@ -34,9 +34,23 @@ export function callApi(
     });
 }
 
+type insertProduct = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  quantity: number;
+  rating: number;
+  filterParams: {
+    colors: string | undefined;
+    genre: string[];
+  };
+};
+
 export const insertItem = (
   endpoint: string,
-  body: IProduct,
+  body: insertProduct,
   setData: Dispatch<SetStateAction<IProduct[]>>
 ) => {
   axios

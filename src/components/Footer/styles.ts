@@ -1,9 +1,9 @@
 import { styled } from "../../../config/styles-config";
 
 export const FooterContainer = styled("div", {
-  borderTop: "1px solid grey",
-  pd: "1.25rem",
   w: "100%",
+  background: "#000",
+  pd: "1.25rem",
 });
 
 export const NavContainer = styled("div", {

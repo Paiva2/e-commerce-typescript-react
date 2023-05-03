@@ -2,7 +2,7 @@ import { styled } from "../../../config/styles-config";
 
 export const WishListContainer = styled("div", {
   display: "flex",
-  minHeight: "70vh",
+  minHeight: "100vh",
   justifyContent: "center",
   background: "#202024",
 
@@ -11,7 +11,8 @@ export const WishListContainer = styled("div", {
     color: "#fff",
     fontSize: "1.5625rem",
     background: "#C02121",
-    borderBottomLeftRadius: "8px",
+    borderBottomLeftRadius: "5px",
+    w: "1.875rem",
     cursor: "pointer",
     transition: "background-color 0.2s",
 
@@ -22,8 +23,7 @@ export const WishListContainer = styled("div", {
 });
 
 export const WishListWrapper = styled("div", {
-  w: "40%",
-  h: "70vh",
+  w: "100%",
   pd: "1.25rem",
   display: "flex",
   flexDirection: "column",
@@ -36,7 +36,7 @@ export const UpSideContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   borderBottom: "1px solid gray",
-  w: "90%",
+  w: "63%",
   pd: ".9375rem",
 
   p: {
@@ -62,7 +62,7 @@ export const ProductContainer = styled("div", {
 export const ProductWrapper = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  w: "100%",
+  w: "70%",
   background: "#121214",
   br: "8px",
   overflow: "hidden",

@@ -22,7 +22,7 @@ export const CarouselItems = styled("div", {
   img: {
     minWidth: "100vw",
     w: "100%",
-    h: "37.5rem",
+    h: "34.375rem",
     objectFit: "fill",
   },
 });
@@ -36,6 +36,8 @@ export const DotsContainer = styled("div", {
   ".activeDot": {
     background: "#33b48d",
     transition: "background-color 0.2s ease",
+    br: "10px",
+    width: "20px",
   },
 });
 

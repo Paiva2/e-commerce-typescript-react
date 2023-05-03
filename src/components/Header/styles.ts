@@ -2,7 +2,7 @@ import { styled } from "../../../config/styles-config";
 
 export const HeaderContainer = styled("div", {
   display: "flex",
-  background: "#121214",
+  background: "#000",
   position: "sticky",
   top: "0",
   zIndex: 1000,

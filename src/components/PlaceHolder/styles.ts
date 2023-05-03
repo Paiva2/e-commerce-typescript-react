@@ -4,7 +4,7 @@ export const PlaceHolderContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  minHeight: "70vh",
+  minHeight: "100vh",
   width: "100%",
   color: "#E1E1E6",
 

@@ -9,6 +9,7 @@ import Header from "../components/Header/Header";
 
 import Products from "../components/home/Products/Products";
 import ProductResume from "../components/home/Products/ProductResume";
+import Success from "./Success";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
         <Route path={"/:id"} element={<ProductResume />} />
         <Route path={"/wish-list"} element={<WishList />} />
         <Route path={"/cart"} element={<Cart />} />
+        <Route path={"/success"} element={<Success />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -437,6 +437,89 @@
       }
     }
   ],
-  "cart": [],
-  "wish-list": []
+  "cart": [
+    {
+      "id": "12",
+      "name": "Men's Sweater",
+      "description": "Cable knit sweater in beige",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": "white",
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "name": "Men's Chinos",
+      "description": "Slim-fit chinos in khaki",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": "maroon",
+        "genre": [
+          "male"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "name": "Women's Jeans",
+      "description": "Skinny jeans",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/mZ59H4bX/Women-s-Jeans.jpg",
+      "rating": 4.7,
+      "quantity": 1,
+      "filterParams": {
+        "colors": "apricot",
+        "genre": [
+          "female"
+        ]
+      }
+    }
+  ],
+  "wish-list": [
+    {
+      "id": "17",
+      "name": "Women's Tank Top",
+      "description": "Sleeveless tank top with lace detail",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
+      "rating": 4.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "black"
+        ],
+        "genre": [
+          "female"
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "name": "Men's Sweater",
+      "description": "Cable knit sweater in beige",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": [
+          "brown",
+          "white",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
+      }
+    }
+  ]
 }

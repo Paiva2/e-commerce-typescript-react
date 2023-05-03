@@ -53,7 +53,11 @@ export const ProductInformationsWrapper = styled("div", {
 });
 
 export const ProductDetails = styled("div", {
-  "> h1:nth-child(2)": {
+  display: "flex",
+  flexDirection: "column",
+  gap: "15px",
+
+  h2: {
     color: "#00B37E",
   },
 
@@ -78,29 +82,41 @@ export const ActionButton = styled("button", {
   variants: {
     type: {
       cartPattern: {
+        display: "grid",
+        placeContent: "center",
         w: "11.5625rem",
         h: "2.8125rem",
-        pd: ".3125rem",
-        borderRadius: "8px",
+        borderRadius: "5px",
         background: "#00875F",
         border: "0",
         cursor: "pointer",
         color: "#fff",
         fontSize: "1.4375rem",
+        transition: "background-color 0.2s ease-in-out",
+
+        "&:hover": {
+          background: "#00B37E",
+        },
       },
 
       wishListPattern: {
         display: "grid",
         placeContent: "center",
-        w: "2.5rem",
-        h: "2.4375rem",
-        pd: ".3125rem",
+        w: "2.625rem",
+        h: "2.625rem",
+        br: "50%",
+        background: "#C02121",
         borderRadius: "50%",
-        background: "#9b3535",
         border: "0",
         cursor: "pointer",
+        fontSize: "1.375rem",
         color: "#fff",
         font: "0",
+        transition: "background-color 0.2s ease-in-out",
+
+        "&:hover": {
+          background: "#DB1D1D",
+        },
       },
     },
   },
@@ -108,7 +124,6 @@ export const ActionButton = styled("button", {
 
 export const AccordionWrapper = styled("div", {
   w: "16.875rem",
-  background: "#F9F8F9",
   borderRadius: "5px",
   color: "#000",
   fontSize: ".875rem",
@@ -122,9 +137,9 @@ export const TriggerButton = styled(AccordionPrimitive.Trigger, {
   pd: ".625rem",
   w: "100%",
   fontSize: "1.125rem",
-  background: "#FFF",
-  borderBottom: "1px solid #E1E1E1",
-  color: "#00875F",
+  background: "#202024",
+  borderBottom: "1px solid #000",
+  color: "#E1E1E6",
 
   '&[data-state="open"]': {
     svg: {
@@ -151,8 +166,10 @@ const slideUp = keyframes({
 
 export const ModalContent = styled(AccordionPrimitive.Content, {
   fontSize: "1rem",
-  borderBottom: "1px solid #E1E1E1",
+  borderBottom: "1px solid #000",
   overflow: "hidden",
+  background: "#333334",
+  color: "#E1E1E6",
 
   "> div:first-child": {
     pd: ".9375rem .625rem",

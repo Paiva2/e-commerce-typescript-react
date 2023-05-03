@@ -1,4 +1,4 @@
-import { useState, useContext, Dispatch, SetStateAction } from "react";
+import { useState, useContext, Dispatch, SetStateAction, useRef } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { IProduct } from "../../../../../interfaces/interfaces";
 
@@ -42,6 +42,22 @@ const ProductResume = ({
   const { setCartData } = useContext(CartContext);
   const { setWishListData } = useContext(WishListContext);
 
+  const sendItemToEndPoint = (
+    endpoint: string,
+    endPointData: Dispatch<SetStateAction<IProduct[]>>,
+    product: IProduct,
+    selectedColor?: string
+  ) => {
+    const objectWithColorChange = {
+      ...product,
+      filterParams: { ...product.filterParams, colors: selectedColor },
+    };
+
+    insertItem(endpoint, objectWithColorChange, endPointData);
+
+    setSelectedColor("");
+  };
+
   return (
     singleProduct && (
       <ProductModalContentContainer>
@@ -61,20 +77,16 @@ const ProductResume = ({
             <div>
               <ProductDetails>
                 <h1>{singleProduct.name}</h1>
-                <h1>{priceFormatter.format(singleProduct?.price)}</h1>
+                <h2>{priceFormatter.format(singleProduct?.price)}</h2>
                 <p>
                   <b>Genre:</b> {singleProduct.filterParams.genre}
                 </p>
               </ProductDetails>
               <SelectProductVariations>
                 <b>Available Colors:</b>{" "}
-                <select>
+                <select onChange={(e) => setSelectedColor(e.target.value)}>
                   {singleProduct?.filterParams.colors.map((color: string) => (
-                    <option
-                      key={color}
-                      onChange={() => setSelectedColor(color)}
-                      value={color}
-                    >
+                    <option key={color} value={color}>
                       {color}
                     </option>
                   ))}
@@ -84,17 +96,29 @@ const ProductResume = ({
             <ActionButtonsWrapper>
               <ActionButton
                 type="cartPattern"
-                onClick={() => insertItem("cart", singleProduct, setCartData)}
+                onClick={() =>
+                  sendItemToEndPoint(
+                    "cart",
+                    setCartData,
+                    singleProduct,
+                    selectedColor
+                  )
+                }
               >
                 Add to Cart
               </ActionButton>
               <ActionButton
                 type="wishListPattern"
                 onClick={() =>
-                  insertItem("wish-list", singleProduct, setWishListData)
+                  sendItemToEndPoint(
+                    "wish-list",
+                    setWishListData,
+                    singleProduct,
+                    selectedColor
+                  )
                 }
               >
-                <BsHeart size={20} />
+                <BsHeart />
               </ActionButton>
             </ActionButtonsWrapper>
 
@@ -130,7 +154,7 @@ const ProductResume = ({
                 <Accordion.Item value="item-3">
                   <Accordion.Trigger asChild>
                     <TriggerButton>
-                      Fabricação <RiArrowDownSLine />
+                      Manufacturing <RiArrowDownSLine />
                     </TriggerButton>
                   </Accordion.Trigger>
                   <ModalContent>
