@@ -90,9 +90,11 @@ const Cart = () => {
                       <img src={product.image} alt={product.name} />
                     </div>
                     <ProductNameWrapper>
-                      <h4>{product.name}</h4>
-                      <p>{product.description}</p>
-                      <p>Color: {product.filterParams.colors}</p>
+                      <h3>{product.name}</h3>
+                      <p>
+                        <b>Color: </b>
+                        {product.filterParams.colors}
+                      </p>
                       <DeleteButtonContainer>
                         <button>
                           <AiOutlineDelete
@@ -130,9 +132,10 @@ const Cart = () => {
         </CartWrapper>
         <div
           style={{
-            border: "1px solid red",
             width: "300px",
-            height: "600px",
+            height: "300px",
+            background: "#121214",
+            padding: "1.25rem",
           }}
         >
           <h2>Total</h2>

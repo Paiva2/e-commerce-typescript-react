@@ -2,7 +2,7 @@ import { styled } from "../../../config/styles-config";
 
 export const CartContainer = styled("div", {
   display: "flex",
-  minHeight: "100%",
+  minHeight: "100vh",
   justifyContent: "center",
   background: "#202024",
   gap: "20px",
@@ -13,7 +13,7 @@ export const CartContainer = styled("div", {
 });
 
 export const CartWrapper = styled("div", {
-  border: "1px solid red",
+  w: "50%",
   pd: "1.25rem",
   display: "flex",
   flexDirection: "column",
@@ -24,14 +24,8 @@ export const CartWrapper = styled("div", {
 export const UpSideContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  w: "36.25rem",
+  w: "100%",
   textAlign: "center",
-
-  "> div:first-child": {
-    display: "flex",
-    alignItems: "center",
-    w: "18.75rem",
-  },
 
   "> div:last-child": {
     w: "18.125rem",
@@ -55,7 +49,8 @@ export const CartProducts = styled("div", {
 export const ProductWrapper = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  width: "100%",
+  w: "100%",
+  h: "8.75rem",
   background: "#121214",
   br: "8px",
   overflow: "hidden",
@@ -67,8 +62,8 @@ export const ProductResume = styled("div", {
   w: "18.75rem",
 
   "> div:first-child": {
-    w: "7.5rem",
-    height: "7.5rem",
+    w: "50%",
+    height: "100%",
 
     img: {
       w: "100%",
@@ -77,8 +72,9 @@ export const ProductResume = styled("div", {
   },
 
   "> div:nth-child(2)": {
-    w: "9.375rem",
+    w: "60%",
     h: "100%",
+    wordBreak: "break-word",
 
     p: {
       fontSize: ".875rem",
@@ -93,7 +89,7 @@ export const ActionsContainer = styled("div", {
   w: "18.125rem",
 
   "> p:last-child": {
-    minWidth: "4.375rem",
+    w: "5.75rem",
     color: "#00B37E",
     fontWeight: "700",
     pd: ".625rem",
@@ -150,7 +146,7 @@ export const ProductNameWrapper = styled("div", {
   justifyContent: "space-between",
   pd: ".5rem",
 
-  "> p:nth-child(3)": {
+  "> p:nth-child(2)": {
     textTransform: "capitalize",
   },
 });
