@@ -1,27 +1,20 @@
-import { useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 // @ts-ignore
 import { Helmet } from "react-helmet";
 import {
   MiddleContainer,
   ProductsContainer,
   ProductsWrapper,
-  ProductsStyle,
-  ProductActionsContainer,
-  IconsWrapper,
   ProducsTitleWrapper,
-  ProductCardDetails,
   PriceWrapper,
+  ProductRating,
+  ProductsCardStyle,
 } from "./styles";
-import { BsCartPlus, BsHeart } from "react-icons/bs";
 
 import { ProductsContext } from "../../../context/ProductsContext";
-import { insertItem } from "../../../utils/apiMethods";
-import { CartContext } from "../../../context/CartContext";
-
-import { WishListContext } from "../../../context/WishListContext";
 import StarIcon from "../../../icons/StarIcon";
-
 import Carousel from "../Carousel";
+
 import GoToTopButton from "../../GoToTopButton";
 import ProductsPagination from "./ProductsPagination";
 
@@ -36,9 +29,6 @@ import ProductModal from "./ProductModal";
 const Products = () => {
   const { data, loading, searchValue, initialPage, finalPage } =
     useContext(ProductsContext);
-  const { setCartData } = useContext(CartContext);
-  const { setWishListData } = useContext(WishListContext);
-
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
   const [priceFilters, setPriceFilters] = useState([0, 0]);
@@ -67,8 +57,6 @@ const Products = () => {
 
     return filterProducts(filterPayload, params, displaySettedProductsPerPage);
   };
-
-  console.log(selectedProduct);
 
   const handleDisplayProducts = () => {
     const [minPrice, maxPrice] = priceFilters;
@@ -166,46 +154,27 @@ const Products = () => {
             {data &&
               showProducts?.map((product) => {
                 return (
-                  <ProductsStyle key={product.id}>
+                  <ProductsCardStyle key={product.id}>
                     <img
-                      onClick={() => handleGetSelectedProduct(product)}
                       src={product.image}
                       alt={product.name}
                       loading="lazy"
                     />
-                    <h2>{product.name}</h2>
-                    <ProductCardDetails>
-                      <span>
-                        <StarIcon rating={product.rating} />({product.rating})
-                      </span>
+                    <footer>
                       <button onClick={() => handleGetSelectedProduct(product)}>
                         Details
                       </button>
-                    </ProductCardDetails>
-                    <ProductActionsContainer>
-                      <IconsWrapper>
-                        <button
-                          onClick={() =>
-                            insertItem("cart", product, setCartData)
-                          }
-                        >
-                          <BsCartPlus className="cart-icon" />
-                        </button>
-                        <button
-                          onClick={() =>
-                            insertItem("wish-list", product, setWishListData)
-                          }
-                        >
-                          <BsHeart className="wishlist-icon" />
-                        </button>
-                      </IconsWrapper>
-                      <PriceWrapper>
-                        <p>
-                          <b>$ {product.price}</b>
-                        </p>
-                      </PriceWrapper>
-                    </ProductActionsContainer>
-                  </ProductsStyle>
+                    </footer>
+                    <h2>{product.name}</h2>
+                    <ProductRating>
+                      <StarIcon rating={product.rating} />({product.rating})
+                    </ProductRating>
+                    <PriceWrapper>
+                      <h2>
+                        <b>$ {product.price}</b>
+                      </h2>
+                    </PriceWrapper>
+                  </ProductsCardStyle>
                 );
               })}
           </ProductsWrapper>

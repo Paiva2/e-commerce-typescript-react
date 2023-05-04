@@ -22,6 +22,8 @@ export interface IProductContext {
   totalPages: number[];
   initialPage: number;
   finalPage: number;
+  selectedProductColor: string;
+  setSelectedProductColor: Dispatch<SetStateAction<string>>;
   setSearchValue: Dispatch<SetStateAction<string>>;
   setCurrentPage: Dispatch<SetStateAction<number>>;
 }
@@ -64,6 +66,8 @@ export const productDefault = {
   totalPages: [],
   initialPage: 0,
   finalPage: 0,
+  selectedProductColor: "",
+  setSelectedProductColor: () => "",
   setSearchValue: () => "",
   setCurrentPage: () => 0,
 } as IProductContext;

@@ -27,7 +27,7 @@ export const ProductsWrapper = styled("div", {
   alignItems: "center",
 });
 
-export const ProductsStyle = styled("div", {
+export const ProductsCardStyle = styled("div", {
   w: "23.125rem",
   display: "flex",
   flexDirection: "column",
@@ -36,123 +36,72 @@ export const ProductsStyle = styled("div", {
   overflow: "hidden",
   color: "#E1E1E6",
   br: "5px",
-  gap: ".625rem",
+  gap: ".3125rem",
+  position: "relative",
   transition: "all 0.2s",
 
-  "&:hover": {
-    mozTransform: "scale(1.07)",
-    webKitTransform: "scale(1.07)",
-    transform: "scale(1.03)",
+  footer: {
+    position: "absolute",
+    bottom: "90px",
+    left: "0.25rem",
+    right: "0.25rem",
+    padding: "2rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    transform: "translateY(30%)",
+    opacity: "0",
+    visibility: "hidden",
+    transition: "all 0.2s ease-in-out",
+
+    button: {
+      display: "grid",
+      placeItems: "center",
+      w: "6.25rem",
+      h: "2.5rem",
+      br: "1.25rem",
+      border: "0",
+      cursor: "pointer",
+      fontSize: "1.125rem",
+      background: "rgba(0, 0, 0, 0.8)",
+      color: "#E1E1E6",
+      transition: "background-color 0.2s ease-in-out",
+
+      "&:hover": {
+        background: "#000",
+      },
+    },
   },
 
   img: {
     w: "100%",
     h: "23.75rem",
-    cursor: "pointer",
+  },
+
+  "&:hover": {
+    transform: "scale(1.03)",
+
+    footer: {
+      transform: "translateY(0%)",
+      opacity: "1",
+      visibility: "visible",
+      mozTransform: "scale(1.07)",
+      webKitTransform: "scale(1.07)",
+    },
   },
 });
 
-export const ProductActionsContainer = styled("div", {
+export const ProductRating = styled("span", {
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
-  borderTop: "3px solid grey",
-
-  w: "90%",
-  pd: ".625rem",
-});
-
-export const IconsWrapper = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  gap: ".625rem",
-  justifyContent: "center",
-
-  svg: {
-    cursor: "pointer",
-  },
-
-  button: {
-    display: "grid",
-    placeItems: "center",
-    w: "3.125rem",
-    h: "2.5rem",
-    br: "5px",
-    border: "0",
-    cursor: "pointer",
-    color: "#fff",
-    fontSize: "1.4375rem",
-    transition: "background-color 0.2s ease-in-out",
-
-    "&:first-child": {
-      background: "#00875F",
-
-      "&:hover": {
-        background: "#00B37E",
-      },
-    },
-
-    "&:last-child": {
-      w: "2.625rem",
-      h: "2.625rem",
-      br: "50%",
-      background: "#C02121",
-
-      "&:hover": {
-        background: "#DB1D1D",
-      },
-    },
-  },
-
-  ".wishlist-icon": {
-    fontSize: "1.375rem",
-  },
-});
-
-export const ProductCardDetails = styled("span", {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-
-  span: {
-    display: "flex",
-    alignItems: "center",
-    fontSize: "14px",
-    gap: ".3125rem",
-  },
-
-  a: {
-    w: "5.625rem",
-    h: "2.1875rem",
-  },
-
-  button: {
-    display: "grid",
-    placeItems: "center",
-    w: "5.625rem",
-    h: "2.1875rem",
-    br: "1.25rem",
-    border: "0",
-    cursor: "pointer",
-    fontSize: "1rem ",
-    background: "#121214",
-    color: "#E1E1E6",
-    transition: "background-color 0.2s ease",
-
-    "&:hover": {
-      background: "#000",
-    },
-  },
+  fontSize: ".875rem",
+  gap: ".3125rem",
 });
 
 export const PriceWrapper = styled("div", {
-  p: {
-    color: "#00B37E",
-    fontSize: "20px",
+  pd: ".3125rem",
 
-    "&:hover": {
-      color: "#00875F",
-    },
+  h2: {
+    color: "#00B37E",
   },
 });

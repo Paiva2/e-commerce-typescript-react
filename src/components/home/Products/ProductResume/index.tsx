@@ -24,6 +24,7 @@ import {
   SelectProductVariations,
   TriggerButton,
 } from "./styles";
+import { sendItemToEndPoint } from "../../../../utils/sendItemToEndpoint";
 
 interface Props {
   singleProduct: IProduct;
@@ -37,26 +38,30 @@ const ProductResume = ({
   setOpenProductModal,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState(
+    singleProduct.filterParams.colors[0]
+  );
 
   const { setCartData } = useContext(CartContext);
   const { setWishListData } = useContext(WishListContext);
 
-  const sendItemToEndPoint = (
+  const handleSendProduct = (
     endpoint: string,
-    endPointData: Dispatch<SetStateAction<IProduct[]>>,
-    product: IProduct,
-    selectedColor?: string
+    setData: Dispatch<SetStateAction<IProduct[]>>
   ) => {
-    const objectWithColorChange = {
-      ...product,
-      filterParams: { ...product.filterParams, colors: selectedColor },
-    };
+    if (singleProduct.filterParams.colors.length > 0) {
+      if (selectedColor === "") {
+        alert("Selecione uma cor")!;
+        return;
+      }
+    }
 
-    insertItem(endpoint, objectWithColorChange, endPointData);
+    sendItemToEndPoint(endpoint, singleProduct, selectedColor, setData);
 
     setSelectedColor("");
   };
+
+  console.log(selectedColor);
 
   return (
     singleProduct && (
@@ -67,7 +72,9 @@ const ProductResume = ({
         <ProductInformationsContainer>
           <CloseButtonWrapper>
             <button
-              onClick={() => setOpenProductModal(!openProductModal)}
+              onClick={() => {
+                setOpenProductModal(!openProductModal), setSelectedColor("");
+              }}
               aria-label="Close"
             >
               <RiCloseFill size={40} />
@@ -96,27 +103,13 @@ const ProductResume = ({
             <ActionButtonsWrapper>
               <ActionButton
                 type="cartPattern"
-                onClick={() =>
-                  sendItemToEndPoint(
-                    "cart",
-                    setCartData,
-                    singleProduct,
-                    selectedColor
-                  )
-                }
+                onClick={() => handleSendProduct("cart", setCartData)}
               >
                 Add to Cart
               </ActionButton>
               <ActionButton
                 type="wishListPattern"
-                onClick={() =>
-                  sendItemToEndPoint(
-                    "wish-list",
-                    setWishListData,
-                    singleProduct,
-                    selectedColor
-                  )
-                }
+                onClick={() => handleSendProduct("wish-list", setWishListData)}
               >
                 <BsHeart />
               </ActionButton>
