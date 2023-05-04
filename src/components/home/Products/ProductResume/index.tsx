@@ -1,8 +1,13 @@
-import { useState, useContext, Dispatch, SetStateAction, useRef } from "react";
+import {
+  useState,
+  useContext,
+  Dispatch,
+  SetStateAction,
+  RefObject,
+} from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { IProduct } from "../../../../../interfaces/interfaces";
 
-import { insertItem } from "../../../../utils/apiMethods";
 import { BsHeart } from "react-icons/bs";
 import { RiArrowDownSLine, RiCloseFill } from "react-icons/ri";
 
@@ -25,43 +30,38 @@ import {
   TriggerButton,
 } from "./styles";
 import { sendItemToEndPoint } from "../../../../utils/sendItemToEndpoint";
+import { ProductsContext } from "../../../../context/ProductsContext";
 
 interface Props {
   singleProduct: IProduct;
   openProductModal: boolean;
   setOpenProductModal: Dispatch<SetStateAction<boolean>>;
+  selectRef: RefObject<HTMLSelectElement>;
+  resetColorsToDefault: () => void;
 }
 
 const ProductResume = ({
   singleProduct,
   openProductModal,
   setOpenProductModal,
+  selectRef,
+  resetColorsToDefault,
 }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedColor, setSelectedColor] = useState(
-    singleProduct.filterParams.colors[0]
-  );
 
   const { setCartData } = useContext(CartContext);
+  const { selectedProductColor, setSelectedProductColor } =
+    useContext(ProductsContext);
   const { setWishListData } = useContext(WishListContext);
 
   const handleSendProduct = (
     endpoint: string,
     setData: Dispatch<SetStateAction<IProduct[]>>
   ) => {
-    if (singleProduct.filterParams.colors.length > 0) {
-      if (selectedColor === "") {
-        alert("Selecione uma cor")!;
-        return;
-      }
-    }
+    sendItemToEndPoint(endpoint, singleProduct, selectedProductColor, setData);
 
-    sendItemToEndPoint(endpoint, singleProduct, selectedColor, setData);
-
-    setSelectedColor("");
+    setSelectedProductColor("");
   };
-
-  console.log(selectedColor);
 
   return (
     singleProduct && (
@@ -73,7 +73,7 @@ const ProductResume = ({
           <CloseButtonWrapper>
             <button
               onClick={() => {
-                setOpenProductModal(!openProductModal), setSelectedColor("");
+                setOpenProductModal(!openProductModal), resetColorsToDefault();
               }}
               aria-label="Close"
             >
@@ -91,7 +91,10 @@ const ProductResume = ({
               </ProductDetails>
               <SelectProductVariations>
                 <b>Available Colors:</b>{" "}
-                <select onChange={(e) => setSelectedColor(e.target.value)}>
+                <select
+                  ref={selectRef}
+                  onChange={(e) => setSelectedProductColor(e.target.value)}
+                >
                   {singleProduct?.filterParams.colors.map((color: string) => (
                     <option key={color} value={color}>
                       {color}

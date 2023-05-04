@@ -1,8 +1,9 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useContext, useRef } from "react";
 
 import ProductResume from "../ProductResume";
 import { IProduct } from "../../../../../interfaces/interfaces";
 import { ModalBackground, ModalContent } from "./styles";
+import { ProductsContext } from "../../../../context/ProductsContext";
 
 interface Props {
   openProductModal: boolean;
@@ -15,9 +16,22 @@ const ProductModal = ({
   setOpenProductModal,
   selectedProduct,
 }: Props) => {
+  const { setSelectedProductColor } = useContext(ProductsContext);
+  const selectRef = useRef<HTMLSelectElement>(null);
+
+  const resetColorsToDefault = () => {
+    setSelectedProductColor("");
+
+    if (selectRef.current) {
+      selectRef.current.selectedIndex = 0;
+    }
+  };
+
   return (
     <ModalBackground
-      onClick={() => setOpenProductModal(false)}
+      onClick={() => {
+        setOpenProductModal(false), resetColorsToDefault();
+      }}
       style={
         openProductModal
           ? {
@@ -32,6 +46,8 @@ const ProductModal = ({
           setOpenProductModal={setOpenProductModal}
           openProductModal={openProductModal}
           singleProduct={selectedProduct}
+          selectRef={selectRef}
+          resetColorsToDefault={resetColorsToDefault}
         />
       </ModalContent>
     </ModalBackground>

@@ -42,7 +42,7 @@ export const ProductsCardStyle = styled("div", {
 
   footer: {
     position: "absolute",
-    bottom: "90px",
+    bottom: "5.625rem",
     left: "0.25rem",
     right: "0.25rem",
     padding: "2rem",
@@ -80,13 +80,13 @@ export const ProductsCardStyle = styled("div", {
 
   "&:hover": {
     transform: "scale(1.03)",
+    mozTransform: "scale(1.03)",
+    webKitTransform: "scale(1.03)",
 
     footer: {
       transform: "translateY(0%)",
       opacity: "1",
       visibility: "visible",
-      mozTransform: "scale(1.07)",
-      webKitTransform: "scale(1.07)",
     },
   },
 });

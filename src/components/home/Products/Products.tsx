@@ -27,8 +27,14 @@ import {
 import ProductModal from "./ProductModal";
 
 const Products = () => {
-  const { data, loading, searchValue, initialPage, finalPage } =
-    useContext(ProductsContext);
+  const {
+    data,
+    loading,
+    searchValue,
+    initialPage,
+    finalPage,
+    setSelectedProductColor,
+  } = useContext(ProductsContext);
   const [colorFilter, setColorsFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("");
   const [priceFilters, setPriceFilters] = useState([0, 0]);
@@ -120,6 +126,7 @@ const Products = () => {
     setOpenProductModal(true);
 
     setSelectedProduct(product);
+    setSelectedProductColor(product.filterParams.colors[0]);
   };
 
   const showProducts = handleDisplayProducts();
