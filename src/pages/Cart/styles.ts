@@ -30,7 +30,7 @@ export const UpSideContainer = styled("div", {
   "> div:last-child": {
     w: "18.125rem",
     display: "flex",
-    justifyContent: "space-between",
+    gap: "3.125rem",
 
     "> p:last-child": {
       w: "4.0625rem",
@@ -52,7 +52,7 @@ export const ProductWrapper = styled("div", {
   w: "100%",
   h: "8.75rem",
   background: "#121214",
-  br: "8px",
+  br: "5px",
   overflow: "hidden",
 });
 
@@ -148,5 +148,108 @@ export const ProductNameWrapper = styled("div", {
 
   "> p:nth-child(2)": {
     textTransform: "capitalize",
+  },
+});
+
+export const ResumeContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  width: "21.875rem",
+  padding: ".625rem",
+  gap: ".625rem",
+});
+
+export const ResumeWrapper = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  background: "#121214",
+  height: "auto",
+  borderRadius: "5px",
+  justifyContent: "space-between",
+  padding: ".5rem",
+  gap: ".9375rem",
+});
+
+export const ResumeTitle = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  padding: ".5rem",
+});
+
+export const InputsContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: "1.25rem",
+  height: "auto",
+
+  label: {
+    display: "flex",
+    flexDirection: "column",
+    fontSize: "1.125rem",
+    gap: "8px",
+  },
+
+  input: {
+    height: "2.5rem",
+    border: "0",
+    borderBottom: "1px solid grey",
+    background: "#202024",
+    pd: ".625rem",
+    color: "#fff",
+    fontSize: "18px",
+    br: "5px",
+  },
+
+  button: {
+    width: "100%",
+    height: "40px",
+    fontSize: "1.25rem",
+    cursor: "pointer",
+    background: "#00B37E",
+    border: "0",
+    color: "#fff",
+    br: "5px",
+    transition: "background 0.4s",
+
+    "&:hover": {
+      background: "#20DCA4",
+    },
+  },
+});
+
+export const TotalWrapper = styled("div", {
+  "> div:first-child": {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    w: "100%",
+
+    "> h2:last-child": {
+      color: "#00B37E",
+    },
+  },
+});
+
+export const CheckoutContainer = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+
+  button: {
+    width: "15.625rem",
+    height: "3.125rem",
+    fontSize: "1.25rem",
+    background: "transparent",
+    cursor: "pointer",
+    border: "1px solid #00B37E",
+    color: "#fff",
+    br: "5px",
+    transition: "box-shadow 0.4s",
+
+    "&:hover, &:focus": {
+      boxShadow: "inset 17rem 0 0 0 #00B37E",
+      border: "0",
+    },
   },
 });
