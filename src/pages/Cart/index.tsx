@@ -27,14 +27,18 @@ import { deleteItem, editItem } from "../../utils/apiMethods";
 import { IProduct } from "../../../interfaces/interfaces";
 import PlaceHolder from "../../components/PlaceHolder";
 import { BsCart } from "react-icons/bs";
+
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import { priceFormatter } from "../../utils/formatter";
 import { promoCodes } from "./promoCodes";
+import { alertMessage } from "../../utils/AlertMessage";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
   const [promoCode, setPromoCode] = useState("");
   const [totalCartValue, setTotalCartValue] = useState(0);
+  const [getDiscount, setGetDiscount] = useState(0);
 
   const handleSetQuantity = (product: IProduct, operator: string) => {
     switch (operator) {
@@ -56,17 +60,17 @@ const Cart = () => {
         );
         break;
       default:
-        console.warn("Invalid operator. Contact admin for support.");
+        console.warn("Invalid action. Contact admin for support.");
     }
   };
 
   useEffect(() => {
-    setTotalCartValue(
-      cartData.reduce((acc, products) => {
-        const totalProducts = products.price * products.quantity;
-        return (acc += totalProducts);
-      }, 0)
-    );
+    const totalValueItemsOnCart = cartData.reduce((acc, products) => {
+      const totalProducts = products.price * products.quantity;
+      return (acc += totalProducts);
+    }, 0);
+
+    setTotalCartValue(totalValueItemsOnCart - getDiscount);
   }, [cartData]);
 
   if (loading) {
@@ -80,9 +84,16 @@ const Cart = () => {
   const handleInsertPromoCode = () => {
     const getPromoCode = promoCodes.find((code) => code.code === promoCode);
 
+    if (getDiscount > 0) {
+      return alertMessage("warning", "A promo code is already beeing used!");
+    }
+
     if (getPromoCode) {
       setTotalCartValue((prevTotal) => {
         const discount = (prevTotal * getPromoCode.discountValue) / 100;
+        setGetDiscount(discount);
+
+        setPromoCode("");
 
         return prevTotal - discount;
       });
@@ -166,6 +177,7 @@ const Cart = () => {
                 Promo Code
                 <input
                   type="text"
+                  value={promoCode}
                   placeholder="Have a promo code?"
                   onChange={(e) => setPromoCode(e.target.value)}
                 />
@@ -214,7 +226,9 @@ const Cart = () => {
             </TotalWrapper>
           </ResumeWrapper>
           <CheckoutContainer>
-            <button>Checkout</button>
+            <Link to="/success">
+              <button>Checkout</button>
+            </Link>
           </CheckoutContainer>
         </ResumeContainer>
       </CartContainer>

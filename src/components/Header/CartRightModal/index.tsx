@@ -22,6 +22,7 @@ import { BsCart } from "react-icons/bs";
 import PlaceHolder from "../../../components/PlaceHolder";
 import { deleteItem } from "../../../utils/apiMethods";
 import { useNavigate } from "react-router-dom";
+import { handleGoToTop } from "../../../utils/goToTop";
 
 interface CartModalProps {
   openCartResume: boolean;
@@ -43,6 +44,8 @@ const CartRightModal = ({
   const handleGoToCheckout = () => {
     navigate("/cart");
     setOpenCartResume(false);
+
+    handleGoToTop();
   };
 
   const modalOpacity = openCartResume ? 1 : 0;
