@@ -23,6 +23,7 @@ import PlaceHolder from "../../../components/PlaceHolder";
 import { deleteItem } from "../../../utils/apiMethods";
 import { useNavigate } from "react-router-dom";
 import { handleGoToTop } from "../../../utils/goToTop";
+import { alertMessage } from "../../../utils/AlertMessage";
 
 interface CartModalProps {
   openCartResume: boolean;
@@ -46,6 +47,12 @@ const CartRightModal = ({
     setOpenCartResume(false);
 
     handleGoToTop();
+  };
+
+  const handleRemoveProduct = (id: string) => {
+    deleteItem("cart", id, setCartData);
+
+    alertMessage("success", "Product removed.");
   };
 
   const modalOpacity = openCartResume ? 1 : 0;
@@ -100,9 +107,7 @@ const CartRightModal = ({
                   <CardRightSide>
                     <button>
                       <RiCloseFill
-                        onClick={() =>
-                          deleteItem("cart", product.id, setCartData)
-                        }
+                        onClick={() => handleRemoveProduct(product.id)}
                         size={25}
                       />
                     </button>

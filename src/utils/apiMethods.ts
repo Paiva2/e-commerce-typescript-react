@@ -4,7 +4,7 @@ import axios from "axios";
 import { IProduct } from "../../interfaces/interfaces";
 import { alertMessage } from "./AlertMessage";
 
-const sortData = (response: IProduct[] | IProduct) => {
+const sortData = (response: IProduct[]) => {
   if (Array.isArray(response)) {
     return response.sort((a, b) => Number(a.price) - Number(b.price)); // don't sort if its an unique product
   }
@@ -43,7 +43,7 @@ type insertProduct = {
   quantity: number;
   rating: number;
   filterParams: {
-    colors: string | undefined;
+    colors: string[] | string;
     genre: string[];
   };
 };
@@ -101,7 +101,7 @@ export const deleteItem = (
   axios
     .delete(`http://localhost:3000/${endpoint}/${id}`)
     .then(() => {
-      callApi(endpoint, setData), alertMessage("success", "Product removed.");
+      callApi(endpoint, setData);
     })
     .catch((error) => {
       if (error.response) console.warn("Error. Try Again Later.");

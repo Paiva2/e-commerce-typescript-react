@@ -21,6 +21,7 @@ import { CartContext } from "../../context/CartContext";
 import { IProduct } from "../../../interfaces/interfaces";
 import { FaHeart } from "react-icons/fa";
 import PlaceHolder from "../../components/PlaceHolder";
+import { alertMessage } from "../../utils/AlertMessage";
 
 const WishList = () => {
   const { wishListData, loading, setWishListData } =
@@ -34,6 +35,8 @@ const WishList = () => {
 
   const handleDeleteItemFromWishList = (product: IProduct) => {
     deleteItem("wish-list", product.id, setWishListData);
+
+    alertMessage("success", "Product removed.");
   };
 
   if (loading) {

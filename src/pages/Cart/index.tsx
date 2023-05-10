@@ -33,6 +33,7 @@ import { priceFormatter } from "../../utils/formatter";
 import { promoCodes } from "./promoCodes";
 import { alertMessage } from "../../utils/AlertMessage";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
@@ -100,6 +101,16 @@ const Cart = () => {
     }
   };
 
+  const finishCheckout = () => {
+    cartData.forEach((product) => deleteItem("cart", product.id, setCartData));
+  };
+
+  const handleRemoveItemFromCart = (id: string) => {
+    deleteItem("cart", id, setCartData);
+
+    alertMessage("success", "Product removed.");
+  };
+
   return (
     <>
       <Helmet>
@@ -135,9 +146,7 @@ const Cart = () => {
                       <DeleteButtonContainer>
                         <button>
                           <AiOutlineDelete
-                            onClick={() =>
-                              deleteItem("cart", product.id, setCartData)
-                            }
+                            onClick={() => handleRemoveItemFromCart(product.id)}
                             className="icon"
                           />
                         </button>
@@ -227,7 +236,7 @@ const Cart = () => {
           </ResumeWrapper>
           <CheckoutContainer>
             <Link to="/success">
-              <button>Checkout</button>
+              <button onClick={finishCheckout}>Checkout</button>
             </Link>
           </CheckoutContainer>
         </ResumeContainer>

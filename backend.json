@@ -437,22 +437,6 @@
       }
     }
   ],
-  "cart": [
-    {
-      "id": "17",
-      "name": "Women's Tank Top",
-      "description": "Sleeveless tank top with lace detail",
-      "price": 29.99,
-      "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
-      "rating": 4.3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": "black",
-        "genre": [
-          "female"
-        ]
-      }
-    }
-  ],
+  "cart": [],
   "wish-list": []
 }
