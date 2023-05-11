@@ -6,10 +6,13 @@ export const MiddleContainer = styled("div", {
   pd: "1.25rem",
   gap: "1.25rem",
   w: "100%",
+  minHeight: "100vh",
 });
 
 export const ProductsContainer = styled("div", {
   display: "flex",
+  w: "100%",
+  height: "100%",
   flexDirection: "column",
   justifyContent: "center",
   gap: "1.25rem",
@@ -23,7 +26,6 @@ export const ProductsWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(4, 0fr)",
   gridGap: "1.875rem",
-  justifyContent: "center",
   alignItems: "center",
 });
 

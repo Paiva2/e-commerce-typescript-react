@@ -2,438 +2,337 @@
   "products": [
     {
       "id": "1",
-      "name": "Floral Women's Blouse",
-      "description": "Cotton blouse with floral print",
-      "price": 49.99,
-      "image": "https://i.postimg.cc/yWqRwhxg/Floral-Women-s-Blouse.jpg",
-      "rating": 4.5,
+      "name": "Plaid Men's Shirt",
+      "description": "Cotton shirt with plaid pattern",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/4xLzdzcs/Plaid-Men-s-Shirt.png",
+      "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "blue",
-          "red",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["blue", "red", "green"],
+        "genre": ["male"]
       }
     },
+
     {
       "id": "2",
-      "name": "Men's T-Shirt",
-      "description": "Classic black t-shirt with white logo",
-      "price": 29.99,
-      "image": "https://i.postimg.cc/G22vYh62/Men-s-T-Shirt.jpg",
-      "rating": 3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "3",
-      "name": "Women's Jeans",
-      "description": "Skinny jeans",
-      "price": 69.99,
-      "image": "https://i.postimg.cc/mZ59H4bX/Women-s-Jeans.jpg",
-      "rating": 4.7,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "blue",
-          "apricot",
-          "beige"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "4",
-      "name": "Men's Hoodie",
-      "description": "Soft and comfortable hoodie with drawstring",
-      "price": 79.99,
-      "image": "https://i.postimg.cc/SsvCGbpG/Men-s-Hoodie.jpg",
+      "name": "Floral Women's Dress",
+      "description": "Cotton dress with floral print",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/BbTTQkTV/Floral-Women-s-Dress.jpg",
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "rust",
-          "navy"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["pink", "blue", "yellow"],
+        "genre": ["female"]
       }
     },
+
+    {
+      "id": "3",
+      "name": "Hooded Men's Sweatshirt",
+      "description": "Cotton sweatshirt with hood",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/ncxKwVZb/Hooded-Men-s-Sweatshirt.jpg",
+      "rating": 4.1,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["black", "grey", "navy"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "4",
+      "name": "Sleeveless Women's Blouse",
+      "description": "Polyester blouse with sleeveless design",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/dQrmBkbj/Sleeveless-Women-s-Blouse.jpg",
+      "rating": 4.4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["white", "black", "pink"],
+        "genre": ["female"]
+      }
+    },
+
     {
       "id": "5",
-      "name": "Women's Cardigan",
-      "description": "Knit cardigan with button closure",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/mgY3WnQb/Women-s-Cardigan.jpg",
-      "rating": 4.6,
+      "name": "V-Neck Men's T-Shirt",
+      "description": "Cotton T-shirt with v-neckline",
+      "price": 19.99,
+      "image": "https://i.postimg.cc/Rh51m4Ht/V-Neck-Men-s-T-Shirt.jpg",
+      "rating": 4.0,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "red",
-          "violet"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["white", "black", "grey"],
+        "genre": ["male"]
       }
     },
+
     {
       "id": "6",
-      "name": "Men's Polo Shirt",
-      "description": "Classic polo shirt with logo",
-      "price": 39.99,
-      "image": "https://i.postimg.cc/VkhJTBhY/Men-s-Polo-Shirt.jpg",
-      "rating": 4,
+      "name": "Lace Women's Blouse",
+      "description": "Lace blouse with long sleeves",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/vBQgtTf3/Lace-Women-s-Blouse.jpg",
+      "rating": 3.8,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "white"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["white", "black"],
+        "genre": ["female"]
       }
     },
+
     {
       "id": "7",
-      "name": "Women's Denim Jacket",
-      "description": "A-line denim Jacket with button closure",
-      "price": 49.99,
-      "image": "https://i.postimg.cc/59XRWxjb/Women-s-Denim-Jacket.jpg",
-      "rating": 4.3,
+      "name": "Graphic Men's Hoodie",
+      "description": "Cotton hoodie with graphic print",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/3wqCLgrn/Graphic-Men-s-Hoodie.jpg",
+      "rating": 3.6,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["white", "grey", "green"],
+        "genre": ["male"]
       }
     },
+
     {
       "id": "8",
-      "name": "Men's Chinos",
-      "description": "Slim-fit chinos in khaki",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/3N0pSf8Q/Men-s-Chinos.jpg",
-      "rating": 3,
+      "name": "Denim Women's Skirt",
+      "description": "Denim skirt with frayed hem",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/rF9G66Fd/Denim-Women-s-Skirt.jpg",
+      "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "maroon"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["blue", "grey", "white"],
+        "genre": ["female"]
       }
     },
+
     {
       "id": "9",
-      "name": "Women's Leather Jacket",
-      "description": "Fitted leather jacket with zipper",
-      "price": 129.99,
-      "image": "https://i.postimg.cc/bvqxyRT1/Women-s-Leather-Jacket.jpg",
+      "name": "Henley Men's T-Shirt",
+      "description": "Cotton T-shirt with henley neckline",
+      "price": 24.99,
+      "image": "https://i.postimg.cc/PqJQz6HC/Henley-Men-s-T-Shirt.jpg",
+      "rating": 4.5,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["blue", "ocean blue", "navy"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "10",
+      "name": "Chiffon Women's Dress",
+      "description": "Chiffon dress with ruffled sleeves",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/85rdxjjD/Chiffon-Women-s-Dress.jpg",
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "red"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["pink", "blue", "green"],
+        "genre": ["female"]
       }
     },
-    {
-      "id": "10",
-      "name": "Men's Bomber Jacket",
-      "description": "Lightweight bomber jacket in navy blue",
-      "price": 89.99,
-      "image": "https://i.postimg.cc/VkQ9Tw0G/Men-s-Bomber-Jacket.jpg",
-      "rating": 4.4,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "navy",
-          "cyan",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
+
     {
       "id": "11",
-      "name": "Women's Midi Dress",
-      "description": "Sleeveless midi dress with floral print",
-      "price": 79.99,
-      "image": "https://i.postimg.cc/63x6CH8m/Women-s-Midi-Dress.jpg",
-      "rating": 4.5,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "purple",
-          "pink",
-          "lilac"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "12",
-      "name": "Men's Sweater",
-      "description": "Cable knit sweater in beige",
-      "price": 69.99,
-      "image": "https://i.postimg.cc/nh5hhVpZ/Men-s-Sweater.jpg",
-      "rating": 3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "brown",
-          "white",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "13",
-      "name": "Women's Blazer",
-      "description": "Tailored blazer in black",
-      "price": 99.99,
-      "image": "https://i.postimg.cc/bNmv4H5Z/Women-s-Blazer.jpg",
-      "rating": 4.7,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "salmon",
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "14",
-      "name": "Men's Dress Shirt",
-      "description": "Crisp white dress shirt with French cuffs",
-      "price": 79.99,
-      "image": "https://i.postimg.cc/J7c05Wcc/Men-s-Dress-Shirt.jpg",
-      "rating": 4.1,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "navy",
-          "blue",
-          "cyan blue"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "15",
-      "name": "Women's Wide-Leg Pants",
-      "description": "Flowy pants with high waist and wide legs",
-      "price": 89.99,
-      "image": "https://i.postimg.cc/g0ZkX92h/Women-s-Wide-Leg-Pants.jpg",
-      "rating": 4.6,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "blue",
-          "black",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "16",
-      "name": "Men's Jogger Pants",
-      "description": "Comfortable jogger pants with drawstring waist",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/CLnqC25F/Men-s-Jogger-Pants.jpg",
-      "rating": 4,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "salmon",
-          "navy",
-          "beige"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "17",
-      "name": "Women's Tank Top",
-      "description": "Sleeveless tank top with lace detail",
-      "price": 29.99,
-      "image": "https://i.postimg.cc/br8Jf68t/Women-s-Tank-Top.jpg",
-      "rating": 4.3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "black"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "18",
-      "name": "Men's Leather Belt",
-      "description": "Brown leather belt with silver buckle",
-      "price": 39.99,
-      "image": "https://i.postimg.cc/kXJ4jhTr/Men-s-Leather-Belt.jpg",
-      "rating": 2,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "brown",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
-      }
-    },
-    {
-      "id": "19",
-      "name": "Men's Denim Jacket",
-      "description": "Classic denim jacket with button closure",
-      "price": 89.99,
-      "image": "https://i.postimg.cc/3xWwh0Mn/Men-s-Denim-Jacket.jpg",
+      "name": "Herringbone Men's Blazer",
+      "description": "Wool blazer with herringbone pattern",
+      "price": 129.99,
+      "image": "https://i.postimg.cc/VkDFCxxy/Herringbone-Men-s-Blazer.jpg",
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "brown",
-          "black"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["grey", "brown", "navy"],
+        "genre": ["male"]
       }
     },
+
     {
-      "id": "20",
-      "name": "Women's Trench Coat",
-      "description": "Classic beige trench coat with belt",
-      "price": 149.99,
-      "image": "https://i.postimg.cc/0Q7Q3ggv/Women-s-Trench-Coat.jpg",
-      "rating": 4.5,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "red"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "21",
-      "name": "Women's grey t-shirt",
-      "description": "Classic grey t-shirt",
-      "price": 49.99,
-      "image": "https://i.postimg.cc/KcDJXDmH/grey-shirt.jpg",
-      "rating": 4.3,
-      "quantity": 1,
-      "filterParams": {
-        "colors": [
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
-      }
-    },
-    {
-      "id": "22",
-      "name": "Nike Pants",
-      "description": "Nike classic black Pants with symbol",
-      "price": 249.99,
-      "image": "https://i.postimg.cc/8Py4ckJd/moletom.webp",
+      "id": "12",
+      "name": "Floral Women's Kimono",
+      "description": "Silk kimono with floral print",
+      "price": 79.99,
+      "image": "https://i.postimg.cc/dVqBDsSm/Floral-Women-s-Kimono.webp",
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "grey"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["black", "ocean blue", "blue"],
+        "genre": ["female"]
       }
     },
+
+    {
+      "id": "13",
+      "name": "Cropped Women's Jacket",
+      "description": "Cotton jacket with cropped length",
+      "price": 49.99,
+      "image": "https://i.postimg.cc/VL9gYr4k/Cropped-Women-s-Jacket.jpg",
+      "rating": 4.4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["beige", "off-white", "brown"],
+        "genre": ["female"]
+      }
+    },
+
+    {
+      "id": "14",
+      "name": "Striped Men's Shirt",
+      "description": "Cotton shirt with striped pattern",
+      "price": 34.99,
+      "image": "https://i.postimg.cc/MKJt2b7L/Striped-Men-s-Shirt.jpg",
+      "rating": 4.2,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["blue", "black", "green"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "15",
+      "name": "Leather Women's Jacket",
+      "description": "Leather jacket with asymmetrical zipper",
+      "price": 149.99,
+      "image": "https://i.postimg.cc/zvKjHVrp/Leather-Women-s-Jacket.jpg",
+      "rating": 3.9,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["black", "brown"],
+        "genre": ["female"]
+      }
+    },
+
+    {
+      "id": "16",
+      "name": "Slim Men's Jeans",
+      "description": "Slim-fit jeans with distressed details",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/N0CbW3D8/Slim-Men-s-Jeans.webp",
+      "rating": 3.3,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["blue", "black", "grey"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "17",
+      "name": "Ruffle Women's Blouse",
+      "description": "Cotton blouse with ruffled collar",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/cHVhJfVr/Ruffle-Women-s-Blouse.jpg",
+      "rating": 4.1,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["white", "pink", "blue"],
+        "genre": ["female"]
+      }
+    },
+
+    {
+      "id": "18",
+      "name": "Checked Men's Shirt",
+      "description": "Cotton shirt with checked pattern",
+      "price": 29.99,
+      "image": "https://i.postimg.cc/dQynxSyd/Checked-Men-s-Shirt.jpg",
+      "rating": 4.5,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["blue", "black"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "19",
+      "name": "Suede Women's Boots",
+      "description": "Suede ankle boots with buckle detail",
+      "price": 89.99,
+      "image": "https://i.postimg.cc/76mCs4ND/Suede-Women-s-Boots.webp",
+      "rating": 4.2,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["brown", "black", "grey"],
+        "genre": ["female"]
+      }
+    },
+
+    {
+      "id": "20",
+      "name": "Sleeveless Men's Shirt",
+      "description": "Cotton sleeveless shirt with button-down collar",
+      "price": 24.99,
+      "image": "https://i.postimg.cc/V6S41KZx/Sleeveless-Men-s-Shirt.jpg",
+      "rating": 3.9,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["white", "blue", "grey"],
+        "genre": ["male"]
+      }
+    },
+
+    {
+      "id": "21",
+      "name": "Tie-dye Women's Dress",
+      "description": "Cotton dress with tie-dye pattern",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/pLx08Yyj/Tie-dye-Women-s-Dress.jpg",
+      "rating": 4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["yellow", "purple", "blue"],
+        "genre": ["female"]
+      }
+    },
+
+    {
+      "id": "22",
+      "name": "Cargo Men's Shorts",
+      "description": "Cotton shorts with cargo pockets",
+      "price": 39.99,
+      "image": "https://i.postimg.cc/Zq5Vsb8K/Cargo-Men-s-Shorts.webp",
+      "rating": 4,
+      "quantity": 1,
+      "filterParams": {
+        "colors": ["beige", "maroon", "black"],
+        "genre": ["male"]
+      }
+    },
+
     {
       "id": "23",
-      "name": "Social Shoes",
-      "description": "Social Shoes for men's",
-      "price": 149.99,
-      "image": "https://i.postimg.cc/3N1BgYLT/sapato-social-masculino.webp",
-      "rating": 4.3,
+      "name": "Floral Women's Maxi Dress",
+      "description": "Cotton maxi dress with floral print",
+      "price": 69.99,
+      "image": "https://i.postimg.cc/L8TxVYZb/Floral-Women-s-Maxi-Dress.jpg",
+      "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "black",
-          "brown"
-        ],
-        "genre": [
-          "male"
-        ]
+        "colors": ["red", "pink", "green"],
+        "genre": ["female"]
       }
     },
+
     {
       "id": "24",
-      "name": "Women's Floral Social Shirt",
-      "description": "Women's floral social shirt with blue details",
-      "price": 79.99,
-      "image": "https://i.postimg.cc/TY2QT5wY/woman-social-shirt.jpg",
-      "rating": 4.3,
+      "name": "Men's Lacoste Polo",
+      "description": "Classic and stylish, the Men's Lacoste Polo features the iconic crocodile logo",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/dtGHLSQv/Men-s-Lacoste-Polo.jpg",
+      "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": [
-          "white",
-          "grey"
-        ],
-        "genre": [
-          "female"
-        ]
+        "colors": ["green", "black", "navy"],
+        "genre": ["male"]
       }
     }
   ],
