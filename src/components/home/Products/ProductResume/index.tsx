@@ -47,8 +47,6 @@ const ProductResume = ({
   selectRef,
   resetColorsToDefault,
 }: Props) => {
-  const [isLoading, setIsLoading] = useState(true);
-
   const { setCartData } = useContext(CartContext);
   const { selectedProductColor, setSelectedProductColor } =
     useContext(ProductsContext);

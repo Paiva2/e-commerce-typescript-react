@@ -11,10 +11,9 @@ export const MiddleContainer = styled("div", {
 
 export const ProductsContainer = styled("div", {
   display: "flex",
-  w: "100%",
-  height: "100%",
+  w: "auto",
+  height: "auto",
   flexDirection: "column",
-  justifyContent: "center",
   gap: "1.25rem",
 });
 
@@ -24,7 +23,8 @@ export const ProducsTitleWrapper = styled("div", {
 
 export const ProductsWrapper = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(4, 0fr)",
+  gridTemplateColumns: "repeat(4, 1fr)",
+  width: "100%",
   gridGap: "1.875rem",
   alignItems: "center",
 });

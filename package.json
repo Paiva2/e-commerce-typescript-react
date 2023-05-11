@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "dev:server": "json-server backend.json --delay 500"
+    "dev:server": "json-server backend.json --delay 600"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.1",

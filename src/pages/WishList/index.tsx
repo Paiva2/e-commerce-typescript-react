@@ -22,6 +22,7 @@ import { IProduct } from "../../../interfaces/interfaces";
 import { FaHeart } from "react-icons/fa";
 import PlaceHolder from "../../components/PlaceHolder";
 import { alertMessage } from "../../utils/AlertMessage";
+import LoadingCircle from "../../components/LoadingCircle";
 
 const WishList = () => {
   const { wishListData, loading, setWishListData } =
@@ -40,7 +41,7 @@ const WishList = () => {
   };
 
   if (loading) {
-    return <h2>loading...</h2>;
+    return <LoadingCircle />;
   }
 
   if (wishListData.length < 1) {

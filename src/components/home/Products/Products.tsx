@@ -25,6 +25,7 @@ import {
   productBodyDefault,
 } from "../../../../interfaces/interfaces";
 import ProductModal from "./ProductModal";
+import LoadingCircle from "../../LoadingCircle";
 
 const Products = () => {
   const {
@@ -131,6 +132,10 @@ const Products = () => {
 
   const showProducts = handleDisplayProducts();
 
+  if (loading) {
+    return <LoadingCircle />;
+  }
+
   return (
     <>
       <Helmet>
@@ -157,7 +162,6 @@ const Products = () => {
             <h1>Products</h1>
           </ProducsTitleWrapper>
           <ProductsWrapper>
-            {loading && <h1>Loading...</h1>}
             {data &&
               showProducts?.map((product) => {
                 return (

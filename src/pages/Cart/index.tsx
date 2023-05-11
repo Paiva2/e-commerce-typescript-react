@@ -34,7 +34,7 @@ import { priceFormatter } from "../../utils/formatter";
 import { promoCodes } from "./promoCodes";
 import { alertMessage } from "../../utils/AlertMessage";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import LoadingCircle from "../../components/LoadingCircle";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
@@ -75,14 +75,6 @@ const Cart = () => {
     setTotalCartValue(totalValueItemsOnCart - getDiscount);
   }, [cartData]);
 
-  if (loading) {
-    return <h2>loading...</h2>;
-  }
-
-  if (cartData.length < 1) {
-    return <PlaceHolder text="Empty Cart..." color="#00875F" Icon={BsCart} />;
-  }
-
   const handleInsertPromoCode = () => {
     const getPromoCode = promoCodes.find((code) => code.code === promoCode);
 
@@ -111,6 +103,14 @@ const Cart = () => {
 
     alertMessage("success", "Product removed.");
   };
+
+  if (loading) {
+    return <LoadingCircle />;
+  }
+
+  if (cartData.length < 1) {
+    return <PlaceHolder text="Empty Cart..." color="#00875F" Icon={BsCart} />;
+  }
 
   return (
     <>
