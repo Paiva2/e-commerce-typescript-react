@@ -41,7 +41,7 @@ export const PurchaserContainer = styled("div", {
       fontSize: ".75rem",
       color: "#fff",
       padding: "0 .3125rem",
-      br: "50%",
+      borderRadius: "50%",
       verticalAlign: "top",
       width: "1.25rem",
       height: "1.25rem",

@@ -36,8 +36,8 @@ export const DotsContainer = styled("div", {
   ".activeDot": {
     background: "#33b48d",
     transition: "background-color 0.2s ease",
-    br: "10px",
-    w: "1.25rem",
+    borderRadius: ".625rem",
+    width: "1.25rem",
   },
 });
 
@@ -72,7 +72,7 @@ export const ActionsButtonsContainer = styled("div", {
 export const Dots = styled("button", {
   w: ".625rem",
   h: ".625rem",
-  br: "50%",
+  borderRadius: "50%",
   border: "none",
   cursor: "pointer",
   background: "#cccccc",

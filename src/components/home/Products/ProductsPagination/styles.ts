@@ -37,5 +37,5 @@ export const ProductsButtons = styled("button", {
   border: "0",
   width: "1.875rem",
   height: "1.875rem",
-  br: "50%",
+  borderRadius: "50%",
 });

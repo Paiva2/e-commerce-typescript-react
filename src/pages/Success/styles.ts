@@ -38,5 +38,5 @@ export const SuccessMessage = styled("div", {
   width: "7.5rem",
   height: "7.5rem",
   background: "#00B37E",
-  br: "50%",
+  borderRadius: "50%",
 });
