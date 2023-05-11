@@ -61,14 +61,14 @@ export const CopyrightContainer = styled("div", {
 export const NewsLetter = styled("div", {
   "> div": {
     display: "flex",
-    gap: "5px",
+    gap: ".3125rem",
   },
 
   input: {
     w: "15.625rem",
     h: "1.875rem",
     paddingLeft: ".625rem",
-    borderRadius: "8px",
+    br: "8px",
     background: "#323238",
     border: "0",
     color: "#fff",

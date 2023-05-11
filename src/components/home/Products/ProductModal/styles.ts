@@ -21,6 +21,6 @@ export const ModalContent = styled("div", {
   left: "50%",
   transform: "translate(-50%, -50%)",
   background: "#121214",
-  borderRadius: "5px",
+  br: "5px",
   overflow: "hidden",
 });

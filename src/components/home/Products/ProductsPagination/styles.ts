@@ -5,7 +5,7 @@ export const PageButtonsContainer = styled("div", {
   w: "100%",
   alignItems: "center",
   justifyContent: "center",
-  gap: "8px",
+  gap: ".5rem",
   mt: "1.25rem",
 
   ".active": {

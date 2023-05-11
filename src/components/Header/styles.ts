@@ -41,7 +41,7 @@ export const PurchaserContainer = styled("div", {
       fontSize: ".75rem",
       color: "#fff",
       padding: "0 .3125rem",
-      borderRadius: "50%",
+      br: "50%",
       verticalAlign: "top",
       width: "1.25rem",
       height: "1.25rem",
@@ -112,7 +112,7 @@ export const SearchContainer = styled("div", {
   justifyContent: "center",
   width: "21.875rem",
   paddingLeft: ".625rem",
-  borderRadius: "8px",
+  br: "8px",
   background: "#323238",
 
   svg: {
@@ -128,7 +128,7 @@ export const SearchContainer = styled("div", {
     border: "none",
     fontSize: "1.125rem",
     paddingLeft: ".5rem",
-    borderRadius: "20px",
+    br: "20px",
     height: "2.5rem",
     background: "#323238",
     color: "#E1E1E6",

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, FC } from "react";
+import { createContext, useState, useEffect, FC } from "react";
 
 import { Props, cartDefault, IProduct } from "../../interfaces/interfaces";
 import { callApi } from "../utils/apiMethods";

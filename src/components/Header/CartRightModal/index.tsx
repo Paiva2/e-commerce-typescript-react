@@ -22,8 +22,8 @@ import { BsCart } from "react-icons/bs";
 import PlaceHolder from "../../../components/PlaceHolder";
 import { deleteItem } from "../../../utils/apiMethods";
 import { useNavigate } from "react-router-dom";
-import { handleGoToTop } from "../../../utils/goToTop";
 import { alertMessage } from "../../../utils/AlertMessage";
+import { handleGoToTop } from "../../../utils/handleGoToTop";
 
 interface CartModalProps {
   openCartResume: boolean;

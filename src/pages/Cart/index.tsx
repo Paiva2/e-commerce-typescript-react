@@ -12,6 +12,7 @@ import {
   ProductNameWrapper,
   ProductResume,
   ProductWrapper,
+  PromoCodeContainer,
   QuantityWrapper,
   ResumeContainer,
   ResumeTitle,
@@ -200,23 +201,8 @@ const Cart = () => {
                 />
               </label>
               <button onClick={handleInsertPromoCode}>Confirm</button>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "10px",
-                  background: "rgb(32, 32, 36)",
-                  borderRadius: "5px",
-                  padding: "10px",
-                }}
-              >
-                <h2
-                  style={{
-                    alignSelf: "center",
-                  }}
-                >
-                  Available Promo's
-                </h2>
+              <PromoCodeContainer>
+                <h2>Available Promo's</h2>
                 {promoCodes.map((code) => {
                   return (
                     <div key={code.id}>
@@ -225,7 +211,7 @@ const Cart = () => {
                     </div>
                   );
                 })}
-              </div>
+              </PromoCodeContainer>
             </InputsContainer>
             <TotalWrapper>
               <div>

@@ -80,7 +80,7 @@ export const ProductsAndFooterContainer = styled("div", {
 
     "&::-webkit-scrollbar-thumb": {
       background: "#00B37E",
-      borderRadius: "10px",
+      br: "10px",
 
       "&:hover": {
         background: "#00875F",

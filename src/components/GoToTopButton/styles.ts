@@ -10,7 +10,7 @@ export const GoTopButton = styled("button", {
   right: "0",
   fontSize: "2.8125rem",
   zIndex: "100",
-  br: "50%",
+  borderRadius: "50%",
   border: "none",
   cursor: "pointer",
   mb: "3rem",

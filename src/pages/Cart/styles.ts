@@ -5,7 +5,7 @@ export const CartContainer = styled("div", {
   minHeight: "100vh",
   justifyContent: "center",
   background: "#202024",
-  gap: "20px",
+  gap: "1.25rem",
 
   ".icon": {
     cursor: "pointer",
@@ -164,7 +164,7 @@ export const ResumeWrapper = styled("div", {
   flexDirection: "column",
   background: "#121214",
   height: "auto",
-  borderRadius: "5px",
+  br: "5px",
   justifyContent: "space-between",
   padding: ".5rem",
   gap: ".9375rem",
@@ -186,23 +186,23 @@ export const InputsContainer = styled("div", {
     display: "flex",
     flexDirection: "column",
     fontSize: "1.125rem",
-    gap: "8px",
+    gap: ".5rem",
   },
 
   input: {
-    height: "2.5rem",
+    h: "2.5rem",
     border: "0",
     borderBottom: "1px solid grey",
     background: "#202024",
     pd: ".625rem",
     color: "#fff",
-    fontSize: "18px",
+    fontSize: "1.125rem",
     br: "5px",
   },
 
   button: {
-    width: "100%",
-    height: "40px",
+    w: "100%",
+    h: "2.5rem",
     fontSize: "1.25rem",
     cursor: "pointer",
     background: "#00B37E",
@@ -251,5 +251,18 @@ export const CheckoutContainer = styled("div", {
       boxShadow: "inset 17rem 0 0 0 #00B37E",
       border: "0",
     },
+  },
+});
+
+export const PromoCodeContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: ".625rem",
+  background: "rgb(32, 32, 36)",
+  br: "5px",
+  padding: ".625rem",
+
+  h2: {
+    alignSelf: "center",
   },
 });

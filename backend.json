@@ -9,11 +9,16 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "red", "green"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "red",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "2",
       "name": "Floral Women's Dress",
@@ -23,11 +28,16 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["pink", "blue", "yellow"],
-        "genre": ["female"]
+        "colors": [
+          "pink",
+          "blue",
+          "yellow"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "3",
       "name": "Hooded Men's Sweatshirt",
@@ -37,11 +47,16 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "grey", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "black",
+          "grey",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "4",
       "name": "Sleeveless Women's Blouse",
@@ -51,25 +66,35 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black", "pink"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "black",
+          "pink"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "5",
       "name": "V-Neck Men's T-Shirt",
       "description": "Cotton T-shirt with v-neckline",
       "price": 19.99,
       "image": "https://i.postimg.cc/Rh51m4Ht/V-Neck-Men-s-T-Shirt.jpg",
-      "rating": 4.0,
+      "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "6",
       "name": "Lace Women's Blouse",
@@ -79,11 +104,15 @@
       "rating": 3.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "black"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "7",
       "name": "Graphic Men's Hoodie",
@@ -93,11 +122,16 @@
       "rating": 3.6,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "grey", "green"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "grey",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "8",
       "name": "Denim Women's Skirt",
@@ -107,11 +141,16 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "grey", "white"],
-        "genre": ["female"]
+        "colors": [
+          "blue",
+          "grey",
+          "white"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "9",
       "name": "Henley Men's T-Shirt",
@@ -121,11 +160,16 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "ocean blue", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "ocean blue",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "10",
       "name": "Chiffon Women's Dress",
@@ -135,11 +179,16 @@
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["pink", "blue", "green"],
-        "genre": ["female"]
+        "colors": [
+          "pink",
+          "blue",
+          "green"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "11",
       "name": "Herringbone Men's Blazer",
@@ -149,11 +198,16 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["grey", "brown", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "grey",
+          "brown",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "12",
       "name": "Floral Women's Kimono",
@@ -163,11 +217,16 @@
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "ocean blue", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "black",
+          "ocean blue",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "13",
       "name": "Cropped Women's Jacket",
@@ -177,11 +236,16 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["beige", "off-white", "brown"],
-        "genre": ["female"]
+        "colors": [
+          "beige",
+          "off-white",
+          "brown"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "14",
       "name": "Striped Men's Shirt",
@@ -191,11 +255,16 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black", "green"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "15",
       "name": "Leather Women's Jacket",
@@ -205,11 +274,15 @@
       "rating": 3.9,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "brown"],
-        "genre": ["female"]
+        "colors": [
+          "black",
+          "brown"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "16",
       "name": "Slim Men's Jeans",
@@ -219,11 +292,16 @@
       "rating": 3.3,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "17",
       "name": "Ruffle Women's Blouse",
@@ -233,11 +311,16 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "pink", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "pink",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "18",
       "name": "Checked Men's Shirt",
@@ -247,11 +330,15 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "19",
       "name": "Suede Women's Boots",
@@ -261,11 +348,16 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["brown", "black", "grey"],
-        "genre": ["female"]
+        "colors": [
+          "brown",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "20",
       "name": "Sleeveless Men's Shirt",
@@ -275,11 +367,16 @@
       "rating": 3.9,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "blue", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "blue",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "21",
       "name": "Tie-dye Women's Dress",
@@ -289,11 +386,16 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["yellow", "purple", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "yellow",
+          "purple",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "22",
       "name": "Cargo Men's Shorts",
@@ -303,11 +405,16 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["beige", "maroon", "black"],
-        "genre": ["male"]
+        "colors": [
+          "beige",
+          "maroon",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
-
     {
       "id": "23",
       "name": "Floral Women's Maxi Dress",
@@ -317,11 +424,16 @@
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["red", "pink", "green"],
-        "genre": ["female"]
+        "colors": [
+          "red",
+          "pink",
+          "green"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
-
     {
       "id": "24",
       "name": "Men's Lacoste Polo",
@@ -331,8 +443,14 @@
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["green", "black", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "green",
+          "black",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     }
   ],

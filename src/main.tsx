@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { globalStyles } from "../config/styles-config";
 import MainRoutes from "./pages";

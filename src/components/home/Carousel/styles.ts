@@ -37,7 +37,7 @@ export const DotsContainer = styled("div", {
     background: "#33b48d",
     transition: "background-color 0.2s ease",
     br: "10px",
-    width: "20px",
+    w: "1.25rem",
   },
 });
 

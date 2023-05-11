@@ -36,7 +36,7 @@ export const CloseButtonWrapper = styled("div", {
     border: 0,
     color: "#FFF",
     cursor: "pointer",
-    borderRadius: "5px",
+    br: "5px",
     transition: "background-color 0.2s ease-in-out",
 
     "&:hover": {
@@ -55,7 +55,7 @@ export const ProductInformationsWrapper = styled("div", {
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "15px",
+  gap: ".9375rem",
 
   h2: {
     color: "#00B37E",
@@ -86,7 +86,7 @@ export const ActionButton = styled("button", {
         placeContent: "center",
         w: "11.5625rem",
         h: "2.8125rem",
-        borderRadius: "5px",
+        br: "5px",
         background: "#00875F",
         border: "0",
         cursor: "pointer",
@@ -106,7 +106,7 @@ export const ActionButton = styled("button", {
         h: "2.625rem",
         br: "50%",
         background: "#C02121",
-        borderRadius: "50%",
+        br: "50%",
         border: "0",
         cursor: "pointer",
         fontSize: "1.375rem",
@@ -124,7 +124,7 @@ export const ActionButton = styled("button", {
 
 export const AccordionWrapper = styled("div", {
   w: "16.875rem",
-  borderRadius: "5px",
+  br: "5px",
   color: "#000",
   fontSize: ".875rem",
   overflow: "hidden",

@@ -45,7 +45,7 @@ export const { styled, css, getCssText } = createStitches({
     }),
 
     br: (value: string) => ({
-      borderRadius: value,
+      br: value,
     }),
   },
 });

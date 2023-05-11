@@ -20,8 +20,8 @@ export const SuccessContainer = styled("div", {
     cursor: "pointer",
     color: "#fff",
     border: "0",
-    borderRadius: "5px",
-    gap: "10px",
+    br: "5px",
+    gap: ".625rem",
     boxShadow: "0px 6px 9px -3px rgba(0,0,0,0.71)",
     transition: "background 0.3s",
 
@@ -38,5 +38,5 @@ export const SuccessMessage = styled("div", {
   width: "7.5rem",
   height: "7.5rem",
   background: "#00B37E",
-  borderRadius: "50%",
+  br: "50%",
 });
