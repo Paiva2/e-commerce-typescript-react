@@ -68,7 +68,7 @@ export const NewsLetter = styled("div", {
     w: "15.625rem",
     h: "1.875rem",
     paddingLeft: ".625rem",
-    br: "8px",
+    br: "5px",
     background: "#323238",
     border: "0",
     color: "#fff",
@@ -82,7 +82,7 @@ export const NewsLetter = styled("div", {
   button: {
     w: "3.125rem",
     h: "1.875rem",
-    br: "8px",
+    br: "5px",
     border: "0",
     color: "#E1E1E6",
     background: "#00875F",

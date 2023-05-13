@@ -133,6 +133,8 @@ const Products = () => {
 
   const showProducts = handleDisplayProducts();
 
+  const isPriceFiltersActive = !!priceFilters[0] || !!priceFilters[1];
+
   if (loading) {
     return <LoadingCircle />;
   }
@@ -191,9 +193,10 @@ const Products = () => {
                 );
               })}
           </ProductsWrapper>
-          {!genreFilter && !searchValue && !colorFilter && (
-            <ProductsPagination />
-          )}
+          {!genreFilter &&
+            !searchValue &&
+            !colorFilter &&
+            !isPriceFiltersActive && <ProductsPagination />}
         </ProductsContainer>
       </MiddleContainer>
       <GoToTopButton />

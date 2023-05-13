@@ -49,7 +49,13 @@ export const filterProducts = (
 
     case "PRICE_FILTER_MAX":
       if (typeof filterParam === "number") {
-        return data.filter((dataFilter) => dataFilter.price <= filterParam);
+        const filteredProducts = data.filter(
+          (dataFilter) => dataFilter.price <= filterParam
+        );
+        if (filteredProducts.length < 1) {
+          return defaultProducts;
+        }
+        return filteredProducts;
       }
 
     case "PRICE_FILTER_BOTH":
