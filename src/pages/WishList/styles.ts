@@ -66,7 +66,7 @@ export const ProductWrapper = styled("div", {
   background: "#121214",
   br: "8px",
   overflow: "hidden",
-  h: "10.625rem",
+  h: "8.75rem",
 });
 
 export const ProductResume = styled("div", {

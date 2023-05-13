@@ -1,12 +1,12 @@
 import { styled } from "../../../../config/styles-config";
 
 export const CarouselTitle = styled("div", {
-  width: "41.5625rem",
+  width: "50rem",
 });
 
 export const CarouselContainer = styled("div", {
   marginTop: "1.5625rem",
-  maxWidth: "41.5625rem",
+  maxWidth: "50rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -17,13 +17,13 @@ export const CarouselContainer = styled("div", {
 });
 
 export const CarouselWrapper = styled("div", {
-  width: "41.5625rem",
-  height: "20.9375rem",
-  borderRadius: "10px",
+  width: "50rem",
+  height: "21.875rem",
+  borderRadius: "5px",
   padding: ".625rem",
   display: "flex",
   overflow: "hidden",
-  background: "rgb(32, 32, 36)",
+  background: "rgb(32, 32, 36, 0.7)",
 });
 
 export const CarouselItem = styled("div", {
@@ -42,7 +42,7 @@ export const ProductCard = styled("div", {
   background: "#121214",
   borderRadius: "5px",
   overflow: "hidden",
-  width: "12.5rem",
+  width: "15.3125rem",
 });
 
 export const ProductImageWrapper = styled("div", {
@@ -63,18 +63,18 @@ export const ProductCardFooter = styled("div", {
   flexDirection: "column",
   alignItems: "center",
   gap: ".5rem",
-  justifyContent: "space-between",
   fontWeight: 600,
 
   button: {
     display: "grid",
     placeItems: "center",
-    w: "60px",
-    h: "30px",
+    w: "80px",
+    h: "35px",
     br: "1.25rem",
+    fontSize: ".875rem",
     border: "0",
     cursor: "pointer",
-    background: "rgba(0, 0, 0, 0.8)",
+    background: "rgba(0, 0, 0, 0.5)",
     color: "#E1E1E6",
     transition: "background-color 0.2s ease-in-out",
 
