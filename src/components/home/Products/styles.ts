@@ -4,8 +4,8 @@ export const MiddleContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
   pd: "1.25rem",
-  gap: "1.25rem",
   w: "100%",
+  gap: "5px",
   minHeight: "100vh",
 });
 
@@ -14,7 +14,7 @@ export const ProductsContainer = styled("div", {
   w: "auto",
   height: "auto",
   flexDirection: "column",
-  gap: "1.25rem",
+  gap: ".75rem",
 });
 
 export const ProducsTitleWrapper = styled("div", {
@@ -23,14 +23,14 @@ export const ProducsTitleWrapper = styled("div", {
 
 export const ProductsWrapper = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(4, 1fr)",
+  gridTemplateColumns: "repeat(3, 1fr)",
   width: "100%",
-  gridGap: "1.875rem",
+  gridGap: "1.25rem",
   alignItems: "center",
 });
 
 export const ProductsCardStyle = styled("div", {
-  w: "23.125rem",
+  w: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

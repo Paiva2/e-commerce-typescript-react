@@ -22,7 +22,7 @@ export const CarouselItems = styled("div", {
   img: {
     minWidth: "100vw",
     w: "100%",
-    h: "34.375rem",
+    h: "25rem",
     objectFit: "fill",
   },
 });

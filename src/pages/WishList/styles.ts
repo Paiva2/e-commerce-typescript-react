@@ -66,7 +66,7 @@ export const ProductWrapper = styled("div", {
   background: "#121214",
   br: "8px",
   overflow: "hidden",
-  h: "7.5rem",
+  h: "10.625rem",
 });
 
 export const ProductResume = styled("div", {
@@ -76,18 +76,23 @@ export const ProductResume = styled("div", {
   w: "18.75rem",
   wordBreak: "break-word",
 
-  "> div:first-child": {
-    img: {
-      w: "8.125rem",
-      h: "7.75rem",
-    },
-  },
-
   ">div:last-child": {
     display: "flex",
     flexDirection: "column",
-    gap: ".3125rem",
+    gap: ".9375rem",
     w: "9.375rem",
+    h: "85%",
+    justifyContent: "center",
+  },
+});
+
+export const ProductImageWrapper = styled("div", {
+  w: "65%",
+  h: "100%",
+
+  img: {
+    w: "100%",
+    h: "100%",
   },
 });
 
@@ -145,6 +150,7 @@ export const Paragraph = styled("p", {
       },
       description: {
         fontSize: ".75rem",
+        textTransform: "capitalize",
       },
     },
   },

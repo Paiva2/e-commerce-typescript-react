@@ -26,6 +26,7 @@ import {
 } from "../../../../interfaces/interfaces";
 import ProductModal from "./ProductModal";
 import LoadingCircle from "../../LoadingCircle";
+import ProductsCarousel from "../ProductsCarousel";
 
 const Products = () => {
   const {
@@ -143,6 +144,7 @@ const Products = () => {
         <meta name="home" content="Products component" />
       </Helmet>
       <Carousel />
+      <ProductsCarousel />
       <ProductModal
         setOpenProductModal={setOpenProductModal}
         openProductModal={openProductModal}

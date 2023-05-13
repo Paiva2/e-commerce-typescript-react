@@ -10,7 +10,7 @@ export const AsideContainer = styled("div", {
     flexDirection: "column",
     gap: ".625rem",
     background: "#202024",
-    width: "11.25rem",
+    width: "95%",
     padding: ".625rem",
     br: "5px",
   },

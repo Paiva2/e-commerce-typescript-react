@@ -9,6 +9,7 @@ import {
   ActionsWrapper,
   Paragraph,
   ProductContainer,
+  ProductImageWrapper,
   ProductResume,
   ProductWrapper,
   UpSideContainer,
@@ -71,13 +72,16 @@ const WishList = () => {
               return (
                 <ProductWrapper key={product.id}>
                   <ProductResume>
-                    <div>
+                    <ProductImageWrapper>
                       <img src={product.image} alt={product.name} />
-                    </div>
+                    </ProductImageWrapper>
                     <div>
                       <Paragraph type="titleProduct">{product.name}</Paragraph>
                       <Paragraph type="description">
                         {product.description}
+                      </Paragraph>
+                      <Paragraph type="description">
+                        <b>Color:</b> {product.filterParams.colors}
                       </Paragraph>
                     </div>
                   </ProductResume>
