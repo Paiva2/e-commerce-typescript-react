@@ -57,8 +57,6 @@ const ProductResume = ({
     setData: Dispatch<SetStateAction<IProduct[]>>
   ) => {
     sendItemToEndPoint(endpoint, singleProduct, selectedProductColor, setData);
-
-    setSelectedProductColor("");
   };
 
   return (
