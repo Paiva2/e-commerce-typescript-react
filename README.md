@@ -6,5 +6,3 @@
 - Reactjs
 - Stitches
 - JSON Server to mock data
-
-## Not finished yet
