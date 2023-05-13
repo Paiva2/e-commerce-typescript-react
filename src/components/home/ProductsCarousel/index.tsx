@@ -1,15 +1,25 @@
 import { useState } from "react";
 import { setRecentAddedProductsSchema } from "./carouselSchema";
 import {
+  ButtonsWrapper,
   CarouselContainer,
   CarouselItem,
+  CarouselTitle,
   CarouselWrapper,
   ProductCard,
   ProductCardFooter,
   ProductImageWrapper,
 } from "./styles";
 
-const ProductsCarousel = () => {
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { priceFormatter } from "../../../utils/formatter";
+import { IProduct } from "../../../../interfaces/interfaces";
+
+interface ProductsCarouselProps {
+  getProduct: (product: IProduct) => void;
+}
+
+const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const lastAddedProducts = setRecentAddedProductsSchema();
 
@@ -25,22 +35,27 @@ const ProductsCarousel = () => {
 
   return (
     <CarouselContainer>
-      <h2>New Products</h2>
+      <CarouselTitle>
+        <h2>Recently added</h2>
+      </CarouselTitle>
       <CarouselWrapper>
         <CarouselItem
           style={{
             transform: `translateX(-${currentPosition * 100}%)`,
           }}
         >
-          {lastAddedProducts[0].firstPage?.map((firstPage) => {
+          {lastAddedProducts[0].firstPage?.map((firstPageProduct) => {
             return (
               <ProductCard>
                 <ProductImageWrapper>
-                  <img src={firstPage.image} />
+                  <img src={firstPageProduct.image} />
                 </ProductImageWrapper>
                 <ProductCardFooter>
-                  <p>{firstPage.name}</p>
-                  <p>{firstPage.price}</p>
+                  <p>{firstPageProduct.name}</p>
+                  <button onClick={() => getProduct(firstPageProduct)}>
+                    Details
+                  </button>
+                  <p>{priceFormatter.format(firstPageProduct.price)}</p>
                 </ProductCardFooter>
               </ProductCard>
             );
@@ -52,37 +67,44 @@ const ProductsCarousel = () => {
             transform: `translateX(-${currentPosition * 100}%)`,
           }}
         >
-          {lastAddedProducts[1].secondPage?.map((secondPage) => {
+          {lastAddedProducts[1].secondPage?.map((secondPageProduct) => {
             return (
               <ProductCard>
                 <ProductImageWrapper>
-                  <img src={secondPage.image} />
+                  <img src={secondPageProduct.image} />
                 </ProductImageWrapper>
                 <ProductCardFooter>
-                  <p>{secondPage.name}</p>
-                  <p>{secondPage.price}</p>
+                  <p>{secondPageProduct.name}</p>
+                  <button onClick={() => getProduct(secondPageProduct)}>
+                    Details
+                  </button>
+                  <p>{priceFormatter.format(secondPageProduct.price)}</p>
                 </ProductCardFooter>
               </ProductCard>
             );
           })}
         </CarouselItem>
       </CarouselWrapper>
-      <button
-        onClick={() =>
-          handleUpdateSlide(
-            currentPosition === slideLength ? slideLength : currentPosition + 1
-          )
-        }
-      >
-        Next
-      </button>
-      <button
-        onClick={() =>
-          handleUpdateSlide(currentPosition < 0 ? 0 : currentPosition - 1)
-        }
-      >
-        Previous
-      </button>
+      <ButtonsWrapper>
+        <button
+          onClick={() =>
+            handleUpdateSlide(currentPosition < 0 ? 0 : currentPosition - 1)
+          }
+        >
+          <MdKeyboardArrowLeft size={25} />
+        </button>
+        <button
+          onClick={() =>
+            handleUpdateSlide(
+              currentPosition === slideLength
+                ? slideLength
+                : currentPosition + 1
+            )
+          }
+        >
+          <MdKeyboardArrowRight size={25} />
+        </button>
+      </ButtonsWrapper>
     </CarouselContainer>
   );
 };

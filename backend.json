@@ -9,8 +9,14 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "red", "green"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "red",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -22,8 +28,14 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["pink", "blue", "yellow"],
-        "genre": ["female"]
+        "colors": [
+          "pink",
+          "blue",
+          "yellow"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -35,8 +47,14 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "grey", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "black",
+          "grey",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -48,8 +66,14 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black", "pink"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "black",
+          "pink"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -61,8 +85,14 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -74,8 +104,13 @@
       "rating": 3.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "black"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "black"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -87,8 +122,14 @@
       "rating": 3.6,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "grey", "green"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "grey",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -100,8 +141,14 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "grey", "white"],
-        "genre": ["female"]
+        "colors": [
+          "blue",
+          "grey",
+          "white"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -113,8 +160,14 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "ocean blue", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "ocean blue",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -126,8 +179,14 @@
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["pink", "blue", "green"],
-        "genre": ["female"]
+        "colors": [
+          "pink",
+          "blue",
+          "green"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -139,8 +198,14 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["grey", "brown", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "grey",
+          "brown",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -152,8 +217,14 @@
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "ocean blue", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "black",
+          "ocean blue",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -165,8 +236,14 @@
       "rating": 4.4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["beige", "off-white", "brown"],
-        "genre": ["female"]
+        "colors": [
+          "beige",
+          "off-white",
+          "brown"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -178,8 +255,14 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black", "green"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black",
+          "green"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -191,8 +274,13 @@
       "rating": 3.9,
       "quantity": 1,
       "filterParams": {
-        "colors": ["black", "brown"],
-        "genre": ["female"]
+        "colors": [
+          "black",
+          "brown"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -204,8 +292,14 @@
       "rating": 3.3,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -217,8 +311,14 @@
       "rating": 4.1,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "pink", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "white",
+          "pink",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -230,8 +330,13 @@
       "rating": 4.5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["blue", "black"],
-        "genre": ["male"]
+        "colors": [
+          "blue",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -243,8 +348,14 @@
       "rating": 4.2,
       "quantity": 1,
       "filterParams": {
-        "colors": ["brown", "black", "grey"],
-        "genre": ["female"]
+        "colors": [
+          "brown",
+          "black",
+          "grey"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -256,8 +367,14 @@
       "rating": 3.9,
       "quantity": 1,
       "filterParams": {
-        "colors": ["white", "blue", "grey"],
-        "genre": ["male"]
+        "colors": [
+          "white",
+          "blue",
+          "grey"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -269,8 +386,14 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["yellow", "purple", "blue"],
-        "genre": ["female"]
+        "colors": [
+          "yellow",
+          "purple",
+          "blue"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -282,8 +405,14 @@
       "rating": 4,
       "quantity": 1,
       "filterParams": {
-        "colors": ["beige", "maroon", "black"],
-        "genre": ["male"]
+        "colors": [
+          "beige",
+          "maroon",
+          "black"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     },
     {
@@ -295,8 +424,14 @@
       "rating": 4.8,
       "quantity": 1,
       "filterParams": {
-        "colors": ["red", "pink", "green"],
-        "genre": ["female"]
+        "colors": [
+          "red",
+          "pink",
+          "green"
+        ],
+        "genre": [
+          "female"
+        ]
       }
     },
     {
@@ -308,8 +443,14 @@
       "rating": 5,
       "quantity": 1,
       "filterParams": {
-        "colors": ["green", "black", "navy"],
-        "genre": ["male"]
+        "colors": [
+          "green",
+          "black",
+          "navy"
+        ],
+        "genre": [
+          "male"
+        ]
       }
     }
   ],

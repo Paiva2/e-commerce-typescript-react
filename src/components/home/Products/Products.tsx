@@ -144,7 +144,7 @@ const Products = () => {
         <meta name="home" content="Products component" />
       </Helmet>
       <Carousel />
-      <ProductsCarousel />
+      <ProductsCarousel getProduct={handleGetSelectedProduct} />
       <ProductModal
         setOpenProductModal={setOpenProductModal}
         openProductModal={openProductModal}
