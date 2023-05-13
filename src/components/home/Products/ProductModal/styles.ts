@@ -14,8 +14,7 @@ export const ModalBackground = styled("div", {
 
 export const ModalContent = styled("div", {
   width: "47rem",
-  maxWidth: "100%",
-  height: "40rem",
+  height: "90%",
   position: "fixed",
   top: "50%",
   left: "50%",

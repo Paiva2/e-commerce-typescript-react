@@ -48,14 +48,14 @@ export const CloseButtonWrapper = styled("div", {
 export const ProductInformationsWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
-  pd: ".9375rem",
-  gap: "1.25rem",
+  pd: ".5rem",
+  gap: "5px",
 });
 
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: ".9375rem",
+  gap: ".3125rem",
 
   h2: {
     color: "#00B37E",
