@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { setRecentAddedProductsSchema } from "./carouselSchema";
+import {
+  CarouselContainer,
+  CarouselItem,
+  CarouselWrapper,
+  ProductCard,
+  ProductCardFooter,
+  ProductImageWrapper,
+} from "./styles";
 
 const ProductsCarousel = () => {
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -16,106 +24,49 @@ const ProductsCarousel = () => {
   };
 
   return (
-    <div
-      style={{
-        marginTop: "20px",
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+    <CarouselContainer>
       <h2>New Products</h2>
-      <div
-        style={{
-          width: "800px",
-          height: "300px",
-          border: "1px solid red",
-          display: "flex",
-          overflow: "hidden",
-        }}
-      >
-        <div
+      <CarouselWrapper>
+        <CarouselItem
           style={{
-            border: "1px solid green",
-            minWidth: "100%",
-            display: "flex",
-            justifyContent: "center",
-            gap: "30px",
             transform: `translateX(-${currentPosition * 100}%)`,
-            transition: "all 0.3s ease-in-out 0s",
-            height: "100%",
           }}
         >
           {lastAddedProducts[0].firstPage?.map((firstPage) => {
             return (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  border: "1px solid blue",
-                  width: "200px",
-                }}
-              >
-                <h2>{firstPage.name}</h2>
-                <div>
-                  <img
-                    style={{
-                      width: "200px",
-                    }}
-                    src={firstPage.image}
-                  />
-                </div>
-                <div>
-                  <p>Genre: {firstPage.genre}</p>
+              <ProductCard>
+                <ProductImageWrapper>
+                  <img src={firstPage.image} />
+                </ProductImageWrapper>
+                <ProductCardFooter>
+                  <p>{firstPage.name}</p>
                   <p>{firstPage.price}</p>
-                </div>
-              </div>
+                </ProductCardFooter>
+              </ProductCard>
             );
           })}
-        </div>
-        <div
+        </CarouselItem>
+
+        <CarouselItem
           style={{
-            border: "1px solid green",
-            minWidth: "100%",
-            display: "flex",
-            justifyContent: "center",
-            gap: "30px",
             transform: `translateX(-${currentPosition * 100}%)`,
-            transition: "all 0.3s ease-in-out 0s",
           }}
         >
           {lastAddedProducts[1].secondPage?.map((secondPage) => {
             return (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  border: "1px solid blue",
-                  width: "200px",
-                }}
-              >
-                <h2>{secondPage.name}</h2>
-                <div>
-                  <img
-                    style={{
-                      width: "200px",
-                    }}
-                    src={secondPage.image}
-                  />
-                </div>
-                <div>
-                  <p>Genre: {secondPage.genre}</p>
+              <ProductCard>
+                <ProductImageWrapper>
+                  <img src={secondPage.image} />
+                </ProductImageWrapper>
+                <ProductCardFooter>
+                  <p>{secondPage.name}</p>
                   <p>{secondPage.price}</p>
-                </div>
-              </div>
+                </ProductCardFooter>
+              </ProductCard>
             );
           })}
-        </div>
-      </div>
+        </CarouselItem>
+      </CarouselWrapper>
       <button
         onClick={() =>
           handleUpdateSlide(
@@ -132,7 +83,7 @@ const ProductsCarousel = () => {
       >
         Previous
       </button>
-    </div>
+    </CarouselContainer>
   );
 };
 
