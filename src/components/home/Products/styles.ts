@@ -30,7 +30,7 @@ export const ProductsWrapper = styled("div", {
 });
 
 export const ProductsCardStyle = styled("div", {
-  w: "100%",
+  w: "21.25rem",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

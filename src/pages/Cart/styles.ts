@@ -205,14 +205,14 @@ export const InputsContainer = styled("div", {
     h: "2.5rem",
     fontSize: "1.25rem",
     cursor: "pointer",
-    background: "#00B37E",
+    background: "#00875F",
     border: "0",
     color: "#fff",
     br: "5px",
     transition: "background 0.4s",
 
     "&:hover": {
-      background: "#20DCA4",
+      background: "#0BB07F",
     },
   },
 });
@@ -248,7 +248,7 @@ export const CheckoutContainer = styled("div", {
     transition: "box-shadow 0.4s",
 
     "&:hover, &:focus": {
-      boxShadow: "inset 17rem 0 0 0 #00B37E",
+      boxShadow: "inset 17rem 0 0 0 #0BB07F",
       border: "0",
     },
   },

@@ -1,7 +1,7 @@
 import { styled } from "../../../../config/styles-config";
 
 export const CarouselTitle = styled("div", {
-  width: "50rem",
+  width: "44rem",
 });
 
 export const CarouselContainer = styled("div", {
@@ -17,8 +17,8 @@ export const CarouselContainer = styled("div", {
 });
 
 export const CarouselWrapper = styled("div", {
-  width: "50rem",
-  height: "21.875rem",
+  width: "44rem",
+  height: "20rem",
   borderRadius: "5px",
   padding: ".625rem",
   display: "flex",
@@ -42,7 +42,7 @@ export const ProductCard = styled("div", {
   background: "#121214",
   borderRadius: "5px",
   overflow: "hidden",
-  width: "15.3125rem",
+  width: "13.125rem",
 });
 
 export const ProductImageWrapper = styled("div", {
@@ -102,16 +102,21 @@ export const ButtonsWrapper = styled("div", {
     h: "2.1875rem",
     border: 0,
     br: "50%",
-    background: "rgb(0, 135, 95)",
+    background: "#00875F",
     color: "#ffff",
     cursor: "pointer",
+    transition: "background .3s ease-in-out",
+
+    "&:hover": {
+      background: "#0BB07F",
+    },
   },
 
   "> button:first-child": {
-    left: "-20px",
+    left: "30px",
   },
 
   "> button:last-child": {
-    right: "-20px",
+    right: "30px",
   },
 });

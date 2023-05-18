@@ -63,7 +63,7 @@ export const PurchaserContainer = styled("div", {
 
     ".cart-icon": {
       "&:hover": {
-        color: "#00875F",
+        color: "#0BB07F",
       },
     },
 

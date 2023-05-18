@@ -184,7 +184,7 @@ export const FooterButtons = styled("button", {
         transition: "background-color 0.2s ease-in-out",
 
         "&:hover": {
-          background: "#00B37E",
+          background: "#0BB07F",
         },
       },
 

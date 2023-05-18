@@ -16,5 +16,10 @@ export const GoTopButton = styled("button", {
   mb: "3rem",
   mr: "2rem",
   color: "#E1E1E6",
-  transition: "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
+  transition:
+    "background .3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
+
+  "&:hover": {
+    background: "#0BB07F",
+  },
 });

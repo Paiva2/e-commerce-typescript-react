@@ -55,7 +55,6 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
                   <button onClick={() => getProduct(firstPageProduct)}>
                     Details
                   </button>
-                  <p>{priceFormatter.format(firstPageProduct.price)}</p>
                 </ProductCardFooter>
               </ProductCard>
             );
@@ -78,7 +77,6 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
                   <button onClick={() => getProduct(secondPageProduct)}>
                     Details
                   </button>
-                  <p>{priceFormatter.format(secondPageProduct.price)}</p>
                 </ProductCardFooter>
               </ProductCard>
             );
