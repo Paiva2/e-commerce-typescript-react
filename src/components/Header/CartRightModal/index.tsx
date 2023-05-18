@@ -102,6 +102,9 @@ const CartRightModal = ({
                     <div>
                       <h3>{product.name}</h3>
                       <p>{product.description}</p>
+                      <p>
+                        Color: <span>{product.filterParams.colors}</span>
+                      </p>
                     </div>
                   </CardLeftSide>
                   <CardRightSide>

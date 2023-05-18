@@ -92,7 +92,7 @@ export const ProductsAndFooterContainer = styled("div", {
 export const ProductCard = styled("div", {
   display: "flex",
   justifyContent: "space-between",
-  h: "6.875rem",
+  h: "120px",
   br: "5px",
   mr: ".3125rem",
   background: "#121214",
@@ -106,16 +106,20 @@ export const CardLeftSide = styled("div", {
 
   img: {
     w: "7.1875rem",
-    h: "6.875rem",
+    h: "100%",
   },
 
   "> div:last-child": {
-    w: "40%",
+    w: "50%",
     display: "flex",
     flexDirection: "column",
     pd: ".3125rem",
     wordBreak: "break-word",
     gap: ".3125rem",
+
+    span: {
+      textTransform: "capitalize",
+    },
 
     p: {
       fontSize: ".875rem",

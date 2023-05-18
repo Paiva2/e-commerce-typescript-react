@@ -5,7 +5,7 @@ export const MiddleContainer = styled("div", {
   justifyContent: "center",
   pd: "1.25rem",
   w: "100%",
-  gap: "5px",
+  gap: "1.25rem",
   minHeight: "100vh",
 });
 
@@ -77,7 +77,7 @@ export const ProductsCardStyle = styled("div", {
 
   img: {
     w: "100%",
-    h: "23.75rem",
+    h: "20.625rem",
   },
 
   "&:hover": {

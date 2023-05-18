@@ -58,7 +58,10 @@ export const insertItem = (
     .then(() => {
       callApi(endpoint, setData);
 
-      alertMessage("success", `Product added to ${endpoint}!`);
+      alertMessage(
+        "success",
+        `Product added to ${endpoint === "wish-list" ? "wish List" : endpoint}!`
+      );
     })
     .catch((err) => {
       const isItemAlreadyOnEndpoint = err.response.data.match(
@@ -70,7 +73,9 @@ export const insertItem = (
           "warning",
           `${
             isItemAlreadyOnEndpoint
-              ? `This product is already on ${endpoint}!`
+              ? `This product is already on ${
+                  endpoint === "wish-list" ? "wish List" : endpoint
+                }!`
               : "Undefined, please contact system support."
           }`
         );

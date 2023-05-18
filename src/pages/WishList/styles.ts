@@ -79,9 +79,8 @@ export const ProductResume = styled("div", {
   ">div:last-child": {
     display: "flex",
     flexDirection: "column",
-    gap: ".9375rem",
+    gap: ".625rem",
     w: "9.375rem",
-    h: "85%",
     justifyContent: "center",
   },
 });
