@@ -38,6 +38,7 @@ import LoadingCircle from "../../components/LoadingCircle";
 
 const Cart = () => {
   const { cartData, loading, setCartData } = useContext(CartContext);
+
   const [promoCode, setPromoCode] = useState("");
   const [totalCartValue, setTotalCartValue] = useState(0);
   const [getDiscount, setGetDiscount] = useState(0);
@@ -66,42 +67,52 @@ const Cart = () => {
     }
   };
 
-  useEffect(() => {
-    const totalValueItemsOnCart = cartData.reduce((acc, products) => {
+  const calculateAllCartValue = () => {
+    let totalValueItemsOnCart = 0;
+
+    totalValueItemsOnCart = cartData.reduce((acc, products) => {
       const totalProducts = products.price * products.quantity;
       return (acc += totalProducts);
     }, 0);
 
-    setTotalCartValue(totalValueItemsOnCart - getDiscount);
-  }, [cartData]);
-
-  const handleInsertPromoCode = () => {
-    const getPromoCode = promoCodes.find((code) => code.code === promoCode);
-
-    if (getDiscount > 0) {
-      return alertMessage("warning", "A promo code is already beeing used!");
-    }
-
-    if (getPromoCode) {
-      setTotalCartValue((prevTotal) => {
-        const discount = (prevTotal * getPromoCode.discountValue) / 100;
-        setGetDiscount(discount);
-
-        setPromoCode("");
-
-        return prevTotal - discount;
-      });
-    }
+    return totalValueItemsOnCart;
   };
 
-  const finishCheckout = () => {
-    cartData.forEach((product) => deleteItem("cart", product.id, setCartData));
+  const discountCalc = () => {
+    if (promoCode) {
+      const getPromoCode = promoCodes.find((code) => code.code === promoCode);
+      const discountToApply = getPromoCode
+        ? (calculateAllCartValue() * getPromoCode?.discountValue) / 100
+        : 0;
+
+      setGetDiscount(discountToApply);
+    }
   };
 
   const handleRemoveItemFromCart = (id: string) => {
     deleteItem("cart", id, setCartData);
 
     alertMessage("success", "Product removed.");
+  };
+
+  useEffect(() => {
+    const cartValueCalc = calculateAllCartValue();
+
+    discountCalc();
+
+    setTotalCartValue(cartValueCalc - getDiscount);
+  }, [cartData, getDiscount]);
+
+  const handleInsertPromoCode = () => {
+    if (getDiscount > 0) {
+      return alertMessage("warning", "A promo code is already beeing used!");
+    }
+
+    discountCalc();
+  };
+
+  const finishCheckout = () => {
+    cartData.forEach((product) => deleteItem("cart", product.id, setCartData));
   };
 
   if (loading) {

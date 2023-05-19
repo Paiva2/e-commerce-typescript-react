@@ -12,7 +12,6 @@ import {
 } from "./styles";
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { priceFormatter } from "../../../utils/formatter";
 import { IProduct } from "../../../../interfaces/interfaces";
 
 interface ProductsCarouselProps {
@@ -46,7 +45,7 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
         >
           {lastAddedProducts[0].firstPage?.map((firstPageProduct) => {
             return (
-              <ProductCard>
+              <ProductCard key={firstPageProduct.id}>
                 <ProductImageWrapper>
                   <img src={firstPageProduct.image} />
                 </ProductImageWrapper>
@@ -68,7 +67,7 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
         >
           {lastAddedProducts[1].secondPage?.map((secondPageProduct) => {
             return (
-              <ProductCard>
+              <ProductCard key={secondPageProduct.id}>
                 <ProductImageWrapper>
                   <img src={secondPageProduct.image} />
                 </ProductImageWrapper>
