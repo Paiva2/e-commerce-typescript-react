@@ -454,6 +454,38 @@
       }
     }
   ],
-  "cart": [],
-  "wish-list": []
+  "cart": [
+    {
+      "id": "7",
+      "name": "Graphic Men's Hoodie",
+      "description": "Cotton hoodie with graphic print",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/3wqCLgrn/Graphic-Men-s-Hoodie.jpg",
+      "rating": 3.6,
+      "quantity": 1,
+      "filterParams": {
+        "colors": "white",
+        "genre": [
+          "male"
+        ]
+      }
+    }
+  ],
+  "wish-list": [
+    {
+      "id": "7",
+      "name": "Graphic Men's Hoodie",
+      "description": "Cotton hoodie with graphic print",
+      "price": 59.99,
+      "image": "https://i.postimg.cc/3wqCLgrn/Graphic-Men-s-Hoodie.jpg",
+      "rating": 3.6,
+      "quantity": 1,
+      "filterParams": {
+        "colors": "white",
+        "genre": [
+          "male"
+        ]
+      }
+    }
+  ]
 }
