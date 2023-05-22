@@ -454,22 +454,6 @@
       }
     }
   ],
-  "cart": [
-    {
-      "id": "2",
-      "name": "Floral Women's Dress",
-      "description": "Cotton dress with floral print",
-      "price": 59.99,
-      "image": "https://i.postimg.cc/BbTTQkTV/Floral-Women-s-Dress.jpg",
-      "rating": 4.1,
-      "quantity": 1,
-      "filterParams": {
-        "colors": "pink",
-        "genre": [
-          "female"
-        ]
-      }
-    }
-  ],
+  "cart": [],
   "wish-list": []
 }

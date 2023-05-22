@@ -51,6 +51,7 @@ const Header = () => {
           <input
             type="search"
             onChange={(e) => setSearchValue(e.target.value.toLowerCase())}
+            placeholder="What are you looking for?"
           />
         </SearchContainer>
         <PurchaserContainer>

@@ -1,11 +1,10 @@
 import { styled } from "../../../../config/styles-config";
 
 export const CarouselTitle = styled("div", {
-  width: "44rem",
+  width: "40.625rem",
 });
 
 export const CarouselContainer = styled("div", {
-  marginTop: "1.5625rem",
   maxWidth: "50rem",
   display: "flex",
   alignItems: "center",
@@ -13,17 +12,17 @@ export const CarouselContainer = styled("div", {
   flexDirection: "column",
   position: "relative",
   margin: "0 auto",
-  gap: ".3125rem",
+  marginBottom: "1.25rem",
 });
 
 export const CarouselWrapper = styled("div", {
   width: "44rem",
-  height: "20rem",
+  height: "15rem",
   borderRadius: "5px",
   padding: ".625rem",
   display: "flex",
   overflow: "hidden",
-  background: "rgb(32, 32, 36, 0.7)",
+  background: "transparent",
 });
 
 export const CarouselItem = styled("div", {
@@ -39,7 +38,7 @@ export const ProductCard = styled("div", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  background: "#121214",
+  background: "rgb(32, 32, 36)",
   borderRadius: "5px",
   overflow: "hidden",
   width: "13.125rem",
@@ -97,7 +96,7 @@ export const ButtonsWrapper = styled("div", {
     display: "grid",
     placeContent: "center",
     position: "absolute",
-    top: "180px",
+    top: "130px",
     w: "2.1875rem",
     h: "2.1875rem",
     border: 0,
@@ -113,10 +112,10 @@ export const ButtonsWrapper = styled("div", {
   },
 
   "> button:first-child": {
-    left: "30px",
+    left: "60px",
   },
 
   "> button:last-child": {
-    right: "30px",
+    right: "60px",
   },
 });

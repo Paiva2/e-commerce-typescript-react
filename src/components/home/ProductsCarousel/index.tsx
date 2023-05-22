@@ -50,7 +50,6 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
                   <img src={firstPageProduct.image} />
                 </ProductImageWrapper>
                 <ProductCardFooter>
-                  <p>{firstPageProduct.name}</p>
                   <button onClick={() => getProduct(firstPageProduct)}>
                     Details
                   </button>
@@ -72,7 +71,6 @@ const ProductsCarousel = ({ getProduct }: ProductsCarouselProps) => {
                   <img src={secondPageProduct.image} />
                 </ProductImageWrapper>
                 <ProductCardFooter>
-                  <p>{secondPageProduct.name}</p>
                   <button onClick={() => getProduct(secondPageProduct)}>
                     Details
                   </button>

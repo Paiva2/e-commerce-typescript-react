@@ -6,6 +6,7 @@ export const CarouselContainer = styled("div", {
   position: "relative",
   w: "100%",
   gap: ".625rem",
+  marginBottom: "1.25rem",
 });
 
 export const CarouselItemsWrapper = styled("div", {
